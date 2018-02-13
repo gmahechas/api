@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'America/Bogota',
 
     /*
     |--------------------------------------------------------------------------
@@ -168,7 +168,6 @@ return [
          * Package Service Providers...
          */
         Rebing\GraphQL\GraphQLServiceProvider::class,
-        Graphiql\GraphiqlServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
         /*
          * Application Service Providers...

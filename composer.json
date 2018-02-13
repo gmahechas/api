@@ -10,7 +10,6 @@
         "fideloper/proxy": "~3.3",
         "laravel/framework": "5.5.*",
         "laravel/tinker": "~1.0",
-        "noh4ck/graphiql": "@dev",
         "rebing/graphql-laravel": "~1.7"
     },
     "require-dev": {

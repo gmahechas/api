@@ -85,11 +85,18 @@ return [
     //
     'schemas' => [
         'default' => [
+            'query' => [],
+            'mutation' => [],
+            'middleware' => []
+        ],
+        'country' => [
             'query' => [
-
+                'countries' => 'App\GraphQL\Query\Modules\One\Country\ShowCountry'
             ],
             'mutation' => [
-
+                'storeCountry' => 'App\GraphQL\Mutation\Modules\One\Country\StoreCountry',
+                'updateCountry' => 'App\GraphQL\Mutation\Modules\One\Country\UpdateCountry',
+                'destroyCountry' => 'App\GraphQL\Mutation\Modules\One\Country\DestroyCountry'
             ],
             'middleware' => []
         ],
@@ -105,8 +112,7 @@ return [
     // ]
     //
     'types' => [
-   
-
+        'Country' => 'App\GraphQL\Type\Modules\One\CountryType'
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

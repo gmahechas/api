@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2db1ea923c44fea625b53e4cb866cafe",
+    "content-hash": "83cd8538cd42aa94337d366413b77409",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1025,55 +1025,6 @@
                 "php"
             ],
             "time": "2018-01-25T21:31:33+00:00"
-        },
-        {
-            "name": "noh4ck/graphiql",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/noh4ck/laravel-graphiql.git",
-                "reference": "3770b9476c061c623537c11cc7651abefd8aa129"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/noh4ck/laravel-graphiql/zipball/3770b9476c061c623537c11cc7651abefd8aa129",
-                "reference": "3770b9476c061c623537c11cc7651abefd8aa129",
-                "shasum": ""
-            },
-            "require": {
-                "laravel/framework": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*",
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Graphiql\\GraphiqlServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Graphiql\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jonas Rudlang",
-                    "email": "jonas.rudlang@gmail.com"
-                }
-            ],
-            "description": "Graphiql ui for laravel",
-            "keywords": [
-                "graphiql",
-                "graphql",
-                "laravel"
-            ],
-            "time": "2017-09-13T20:16:34+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -4236,9 +4187,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "noh4ck/graphiql": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

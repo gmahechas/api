@@ -1,38 +1,44 @@
 <?php
 
-namespace App\GraphQL\Mutation\Modules\One\Country;
+namespace App\GraphQL\Mutation\Modules\Two\User;
 
 use GraphQL;
+use App\Models\Modules\Two\User;
 use GraphQL\Type\Definition\Type;
-use App\Models\Modules\One\Country;
 use Rebing\GraphQL\Support\Mutation;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class UpdateCountry extends Mutation
+class UpdateUser extends Mutation
 {
     protected $attributes = [
-        'name' => 'UpdateCountry'
+        'name' => 'UpdateUser'
     ];
 
     public function type()
     {
-        return GraphQL::type('Country');
+        return GraphQL::type('User');
     }
 
     public function args()
     {
         return [
-            'country_id' => [
+            'user_id' => [
                 'type' => Type::nonNull(Type::id()),
                 'rules' => ['required']
             ],
-            'country_name' => [
-                'type' => Type::string()            
-            ],
-            'country_code' => [
+            'name' => [
                 'type' => Type::string()
-            ]
+            ],
+            'email' => [
+                'type' => Type::string()
+            ],
+            'password' => [
+                'type' => Type::string()
+            ],
+            'person_id' => [
+                'type' => Type::id(),
+            ],
         ];
     }
 
@@ -41,7 +47,7 @@ class UpdateCountry extends Mutation
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        if($data = Country::select($select)->with($with)->find($args['country_id']))
+        if($data = User::select($select)->with($with)->find($args['user_id']))
         {
             foreach($args as $key => $value)
             {
@@ -62,6 +68,5 @@ class UpdateCountry extends Mutation
         } else {
             return null;
         }
-
     }
 }

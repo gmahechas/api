@@ -24,7 +24,7 @@ class ShowCountry extends Query
     {
         return [
             'country_id' => [
-                'type' => Type::int()
+                'type' => Type::id()
             ],
             'country_name' => [
                 'type' => Type::string()
@@ -45,9 +45,11 @@ class ShowCountry extends Query
     {
         $select = $fields->getSelect();
         $with = $fields->getRelations();
+
         $country_id = isset($args['country_id']) ? $args['country_id'] : false;
         $country_name = isset($args['country_name']) ? $args['country_name'] : false;
         $country_code = isset($args['country_code']) ? $args['country_code'] : false;
+        
         $limit = isset($args['limit']) ? $args['limit'] : 10000;
         $page = isset($args['page']) ? $args['page'] : 1;
 

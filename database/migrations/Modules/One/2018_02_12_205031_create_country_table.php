@@ -17,6 +17,7 @@ class CreateCountryTable extends Migration
             $table->increments('country_id');
             $table->string('country_name', 64);
             $table->string('country_code', 8);
+            
             $table->timestamp('country_created_at')->nullable();
             $table->timestamp('country_updated_at')->nullable();
             $table->softDeletes('country_deleted_at');

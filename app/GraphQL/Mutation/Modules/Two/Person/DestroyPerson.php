@@ -1,29 +1,29 @@
 <?php
 
-namespace App\GraphQL\Mutation\Modules\One\Country;
+namespace App\GraphQL\Mutation\Modules\Two\Person;
 
 use GraphQL;
 use GraphQL\Type\Definition\Type;
-use App\Models\Modules\One\Country;
+use App\Models\Modules\Two\Person;
 use Rebing\GraphQL\Support\Mutation;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class DestroyCountry extends Mutation
+class DestroyPerson extends Mutation
 {
     protected $attributes = [
-        'name' => 'DestroyCountry'
+        'name' => 'DestroyPerson'
     ];
 
     public function type()
     {
-        return GraphQL::type('Country');
+        return GraphQL::type('Person');
     }
 
     public function args()
     {
         return [
-            'country_id' => [
+            'person_id' => [
                 'type' => Type::nonNull(Type::id()),
                 'rules' => ['required']
             ],
@@ -35,7 +35,7 @@ class DestroyCountry extends Mutation
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        if($data = Country::select($select)->with($with)->find($args['country_id']))
+        if($data = Person::select($select)->with($with)->find($args['person_id']))
         {
             return $data->delete();
         } else {

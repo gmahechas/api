@@ -43,7 +43,7 @@ return [
     // The name of the default schema used when no argument is provided
     // to GraphQL::schema() or when the route is used without the graphql_schema
     // parameter.
-    'default_schema' => 'default',
+    'default_schema' => 'auth',
 
     // The schemas for query and/or mutation. It expects an array of schemas to provide
     // both the 'query' fields and the 'mutation' fields.
@@ -84,7 +84,7 @@ return [
     //  ]
     //
     'schemas' => [
-        'default' => [
+        'auth' => [
             'query' => [],
             'mutation' => [],
             'middleware' => []
@@ -100,6 +100,95 @@ return [
             ],
             'middleware' => []
         ],
+        'state' => [
+            'query' => [
+                'states' => 'App\GraphQL\Query\Modules\One\State\ShowState'
+            ],
+            'mutation' => [
+                'storeState' => 'App\GraphQL\Mutation\Modules\One\State\StoreState',
+                'updateState' => 'App\GraphQL\Mutation\Modules\One\State\UpdateState',
+                'destroyState' => 'App\GraphQL\Mutation\Modules\One\State\DestroyState'
+            ],
+            'middleware' => []
+        ],
+        'city' => [
+            'query' => [
+                'cities' => 'App\GraphQL\Query\Modules\One\City\ShowCity'
+            ],
+            'mutation' => [
+                'storeCity' => 'App\GraphQL\Mutation\Modules\One\City\StoreCity',
+                'updateCity' => 'App\GraphQL\Mutation\Modules\One\City\UpdateCity',
+                'destroyCity' => 'App\GraphQL\Mutation\Modules\One\City\DestroyCity'
+            ],
+            'middleware' => []
+        ],
+        'company' => [
+            'query' => [
+                'companies' => 'App\GraphQL\Query\Modules\One\Company\ShowCompany'
+            ],
+            'mutation' => [],
+            'middleware' => []
+        ],
+        'office' => [
+            'query' => [
+                'offices' => 'App\GraphQL\Query\Modules\One\Office\ShowOffice'
+            ],
+            'mutation' => [
+                'storeOffice' => 'App\GraphQL\Mutation\Modules\One\Office\StoreOffice',
+                'updateOffice' => 'App\GraphQL\Mutation\Modules\One\Office\UpdateOffice',
+                'destroyOffice' => 'App\GraphQL\Mutation\Modules\One\Office\DestroyOffice'
+            ],
+            'middleware' => []
+        ],
+        'profile' => [
+            'query' => [
+                'profiles' => 'App\GraphQL\Query\Modules\Two\Profile\ShowProfile'
+            ],
+            'mutation' => [
+                'storeProfile' => 'App\GraphQL\Mutation\Modules\Two\Profile\StoreProfile',
+                'updateProfile' => 'App\GraphQL\Mutation\Modules\Two\Profile\UpdateProfile',
+                'destroyProfile' => 'App\GraphQL\Mutation\Modules\Two\Profile\DestroyProfile'
+            ],
+            'middleware' => []
+        ],
+        'menu' => [
+            'query' => [
+                'menus' => 'App\GraphQL\Query\Modules\Two\Menu\ShowMenu'
+            ],
+            'mutation' => [],
+            'middleware' => []
+        ],
+        'profile_menu' => [
+            'query' => [
+                'profile_menus' => 'App\GraphQL\Query\Modules\Two\ProfileMenu\ShowProfileMenu'
+            ],
+            'mutation' => [
+                'updateProfileMenu' => 'App\GraphQL\Mutation\Modules\Two\ProfileMenu\UpdateProfileMenu',
+            ],
+            'middleware' => []
+        ],
+        'person' => [
+            'query' => [
+                'persons' => 'App\GraphQL\Query\Modules\Two\Person\ShowPerson'
+            ],
+            'mutation' => [
+                'storePerson' => 'App\GraphQL\Mutation\Modules\Two\Person\StorePerson',
+                'updatePerson' => 'App\GraphQL\Mutation\Modules\Two\Person\UpdatePerson',
+                'destroyPerson' => 'App\GraphQL\Mutation\Modules\Two\Person\DestroyPerson'
+            ],
+            'middleware' => []
+        ],
+        'user' => [
+            'query' => [
+                'users' => 'App\GraphQL\Query\Modules\Two\User\ShowUser'
+            ],
+            'mutation' => [
+                'storeUser' => 'App\GraphQL\Mutation\Modules\Two\User\StoreUser',
+                'updateUser' => 'App\GraphQL\Mutation\Modules\Two\User\UpdateUser',
+                'destroyUser' => 'App\GraphQL\Mutation\Modules\Two\User\DestroyUser'
+            ],
+            'middleware' => []
+        ]
     ],
     
     // The types available in the application. You can then access it from the
@@ -112,7 +201,17 @@ return [
     // ]
     //
     'types' => [
-        'Country' => 'App\GraphQL\Type\Modules\One\CountryType'
+        'Country' => 'App\GraphQL\Type\Modules\One\CountryType',
+        'State' => 'App\GraphQL\Type\Modules\One\StateType',
+        'City' => 'App\GraphQL\Type\Modules\One\CityType',
+        'Company' => 'App\GraphQL\Type\Modules\One\CompanyType',
+        'Office' => 'App\GraphQL\Type\Modules\One\OfficeType',
+        'Profile' => 'App\GraphQL\Type\Modules\Two\ProfileType',
+        'Menu' => 'App\GraphQL\Type\Modules\Two\MenuType',
+        'ProfileMenu' => 'App\GraphQL\Type\Modules\Two\ProfileMenuType',
+        'Menu' => 'App\GraphQL\Type\Modules\Two\MenuType',
+        'Person' => 'App\GraphQL\Type\Modules\Two\PersonType',
+        'User' => 'App\GraphQL\Type\Modules\Two\UserType'
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

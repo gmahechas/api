@@ -24,4 +24,9 @@ class Country extends Model
 		'country_updated_at',
 		'country_deleted_at'
 	];
+
+	/*Out*/
+	public function states(){
+		return $this->hasMany(State::class, 'country_id');
+	}
 }

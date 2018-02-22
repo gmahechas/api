@@ -2,6 +2,7 @@
 
 namespace App\GraphQL\Type\Modules\One;
 
+use GraphQL;
 use App\GraphQL\Field\DateField;
 use GraphQL\Type\Definition\Type;
 use App\Models\Modules\One\Country;
@@ -29,6 +30,10 @@ class CountryType extends GraphQLType
             'country_created_at' => DateField::class,
             'country_updated_at' => DateField::class,
             'country_deleted_at' => DateField::class,
+            /*Out*/
+            'states' => [
+                'type' => Type::listOf(GraphQL::type('State'))
+            ],
         ];
     }
 }

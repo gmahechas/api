@@ -1,38 +1,36 @@
 <?php
 
-namespace App\GraphQL\Mutation\Modules\One\Country;
+namespace App\GraphQL\Mutation\Modules\Two\ProfileMenu;
 
 use GraphQL;
 use GraphQL\Type\Definition\Type;
-use App\Models\Modules\One\Country;
 use Rebing\GraphQL\Support\Mutation;
+use App\Models\Modules\Two\ProfileMenu;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class UpdateCountry extends Mutation
+class UpdateProfileMenu extends Mutation
 {
     protected $attributes = [
-        'name' => 'UpdateCountry'
+        'name' => 'UpdateProfileMenu'
     ];
 
     public function type()
     {
-        return GraphQL::type('Country');
+        return GraphQL::type('ProfileMenu');
     }
 
     public function args()
     {
         return [
-            'country_id' => [
+            'profile_menu_id' => [
                 'type' => Type::nonNull(Type::id()),
                 'rules' => ['required']
             ],
-            'country_name' => [
-                'type' => Type::string()            
+            'profile_menu_status' => [
+                'type' => Type::string(),
+                'rules' => ['required']
             ],
-            'country_code' => [
-                'type' => Type::string()
-            ]
         ];
     }
 
@@ -41,7 +39,7 @@ class UpdateCountry extends Mutation
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        if($data = Country::select($select)->with($with)->find($args['country_id']))
+        if($data = ProfileMenu::select($select)->with($with)->find($args['profile_menu_id']))
         {
             foreach($args as $key => $value)
             {
@@ -62,6 +60,5 @@ class UpdateCountry extends Mutation
         } else {
             return null;
         }
-
     }
 }

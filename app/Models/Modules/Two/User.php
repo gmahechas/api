@@ -2,13 +2,14 @@
 
 namespace App\Models\Modules\Two;
 
+use Laravel\Passport\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use Notifiable, SoftDeletes;
+    use Notifiable, HasApiTokens, SoftDeletes;
 
     const CREATED_AT = 'user_created_at';
 	const UPDATED_AT = 'user_updated_at';

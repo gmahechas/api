@@ -150,6 +150,7 @@ return [
         /*
          * Package Service Providers...
          */
+        Laravel\Passport\PassportServiceProvider::class,
         Rebing\GraphQL\GraphQLServiceProvider::class,
         Barryvdh\Cors\ServiceProvider::class,
         /*

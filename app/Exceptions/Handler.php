@@ -92,5 +92,4 @@ class Handler extends ExceptionHandler
         }
         return $this->errorResponse('Internal server error. Try later', 500);
     }
-
 }

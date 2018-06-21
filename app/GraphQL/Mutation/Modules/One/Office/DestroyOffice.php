@@ -37,7 +37,9 @@ class DestroyOffice extends Mutation
 
         if($data = Office::select($select)->with($with)->find($args['office_id']))
         {
-            return $data->delete();
+            $data_return = $data;
+            $data->delete();
+            return $data_return;
         } else {
             return null;
         }

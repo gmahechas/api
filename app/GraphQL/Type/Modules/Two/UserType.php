@@ -21,7 +21,7 @@ class UserType extends GraphQLType
             'user_id' => [
             	'type' => Type::id()
             ],
-            'name' => [
+            'username' => [
             	'type' => Type::string()
             ],
             'email' => [
@@ -39,12 +39,18 @@ class UserType extends GraphQLType
             'person_id' => [
                 'type' => Type::id()
             ],
+            'profile_id' => [
+                'type' => Type::id()
+            ],
             /*In*/
             'person' => [
                 'type' => GraphQL::type('Person')
             ],
             'profile' => [
-                'type' => GraphQL::type('Profile')
+                'type' => GraphQL::type('Profile'),
+                'query' => function(array $args, $query) {
+                    return $query->where('profile_id', '=', $args['profile_id']);
+                }
             ],
         ];
     }

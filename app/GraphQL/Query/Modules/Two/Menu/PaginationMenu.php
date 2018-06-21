@@ -1,32 +1,32 @@
 <?php
 
-namespace App\GraphQL\Query\Modules\Two\Profile;
+namespace App\GraphQL\Query\Modules\Two\Menu;
 
 use GraphQL;
+use App\Models\Modules\Two\Menu;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
-use App\Models\Modules\Two\Profile;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class ShowProfile extends Query
+class PaginationMenu extends Query
 {
     protected $attributes = [
-        'name' => 'ShowProfile'
+        'name' => 'PaginationMenu'
     ];
 
     public function type()
     {
-        return GraphQL::paginate('Profile');
+        return GraphQL::paginate('Menu');
     }
 
     public function args()
     {
         return [
-            'profile_id' => [
+            'menu_id' => [
                 'type' => Type::id()
             ],
-            'profile_name' => [
+            'menu_name' => [
                 'type' => Type::string()
             ],
             'limit' => [
@@ -43,18 +43,18 @@ class ShowProfile extends Query
         $select = $fields->getSelect();
         $with = $fields->getRelations();
         
-        $profile_id = isset($args['profile_id']) ? $args['profile_id'] : false;
-        $profile_name = isset($args['profile_name']) ? $args['profile_name'] : false;
+        $menu_id = isset($args['menu_id']) ? $args['menu_id'] : false;
+        $menu_name = isset($args['menu_name']) ? $args['menu_name'] : false;
 
-        $limit = isset($args['limit']) ? $args['limit'] : 10000;
+        $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
 
-        return Profile::select($select)
-                        ->when($profile_id, function ($query) use ($profile_id) {
-                            return $query->where('profile_id', '=', $profile_id);
+        return Menu::select($select)
+                        ->when($menu_id, function ($query) use ($menu_id) {
+                            return $query->where('menu_id', '=', $menu_id);
                         })
-                        ->when($profile_name, function ($query) use ($profile_name) {
-                            return $query->where('profile_name', 'like', '%'.$profile_name.'%');
+                        ->when($menu_name, function ($query) use ($menu_name) {
+                            return $query->where('menu_name', 'like', '%'.$menu_name.'%');
                         })
                         ->with($with)
                         ->paginate($limit, ['*'], 'pages', $page);

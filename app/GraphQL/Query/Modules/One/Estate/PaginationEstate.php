@@ -1,35 +1,35 @@
 <?php
 
-namespace App\GraphQL\Query\Modules\One\State;
+namespace App\GraphQL\Query\Modules\One\Estate;
 
 use GraphQL;
-use App\Models\Modules\One\State;
+use App\Models\Modules\One\Estate;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class ShowState extends Query
+class PaginationEstate extends Query
 {
     protected $attributes = [
-        'name' => 'ShowState'
+        'name' => 'PaginationEstate'
     ];
 
     public function type()
     {
-        return GraphQL::paginate('State');
+        return GraphQL::paginate('Estate');
     }
 
     public function args()
     {
         return [
-            'state_id' => [
+            'estate_id' => [
                 'type' => Type::id()
             ],
-            'state_name' => [
+            'estate_name' => [
                 'type' => Type::string()
             ],
-            'state_code' => [
+            'estate_code' => [
                 'type' => Type::string()
             ],
             'country_id' => [
@@ -49,23 +49,23 @@ class ShowState extends Query
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        $state_id = isset($args['state_id']) ? $args['state_id'] : false;
-        $state_name = isset($args['state_name']) ? $args['state_name'] : false;
-        $state_code = isset($args['state_code']) ? $args['state_code'] : false;
+        $estate_id = isset($args['estate_id']) ? $args['estate_id'] : false;
+        $estate_name = isset($args['estate_name']) ? $args['estate_name'] : false;
+        $estate_code = isset($args['estate_code']) ? $args['estate_code'] : false;
         $country_id = isset($args['country_id']) ? $args['country_id'] : false;
 
-        $limit = isset($args['limit']) ? $args['limit'] : 10000;
+        $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
 
-        return State::select($select)
-                        ->when($state_id, function ($query) use ($state_id) {
-                            return $query->where('state_id', '=', $state_id);
+        return Estate::select($select)
+                        ->when($estate_id, function ($query) use ($estate_id) {
+                            return $query->where('estate_id', '=', $estate_id);
                         })
-                        ->when($state_name, function ($query) use ($state_name) {
-                            return $query->where('state_name', 'like', '%'.$state_name.'%');
+                        ->when($estate_name, function ($query) use ($estate_name) {
+                            return $query->where('estate_name', 'like', '%'.$estate_name.'%');
                         })
-                        ->when($state_code, function ($query) use ($state_code) {
-                            return $query->where('state_code', 'like', '%'.$state_code.'%');
+                        ->when($estate_code, function ($query) use ($estate_code) {
+                            return $query->where('estate_code', 'like', '%'.$estate_code.'%');
                         })
                         ->when($country_id, function ($query) use ($country_id) {
                             return $query->where('country_id', '=', $country_id);

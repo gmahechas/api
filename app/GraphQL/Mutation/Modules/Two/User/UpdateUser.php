@@ -27,7 +27,7 @@ class UpdateUser extends Mutation
                 'type' => Type::nonNull(Type::id()),
                 'rules' => ['required']
             ],
-            'name' => [
+            'username' => [
                 'type' => Type::string()
             ],
             'email' => [
@@ -60,7 +60,7 @@ class UpdateUser extends Mutation
             if($data->isDirty())
             {
                 $data->save();
-                return $data;
+                return $data->refresh();
             } else {
                 return null;
             }

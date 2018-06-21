@@ -26,7 +26,7 @@ class Country extends Model
 	];
 
 	/*Out*/
-	public function states(){
-		return $this->hasMany(State::class, 'country_id');
+	public function estates(){
+		return $this->hasMany(Estate::class, 'country_id');
 	}
 }

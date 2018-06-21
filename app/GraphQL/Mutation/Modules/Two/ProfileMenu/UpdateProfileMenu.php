@@ -52,7 +52,7 @@ class UpdateProfileMenu extends Mutation
             if($data->isDirty())
             {
                 $data->save();
-                return $data;
+                return $data->refresh();
             } else {
                 return null;
             }

@@ -37,7 +37,9 @@ class DestroyCity extends Mutation
 
         if($data = City::select($select)->with($with)->find($args['city_id']))
         {
-            return $data->delete();
+            $data_return = $data;
+            $data->delete();
+            return $data_return;
         } else {
             return null;
         }

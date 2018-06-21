@@ -14,6 +14,6 @@ class CountrySeeder extends Seeder
     {
         Country::truncate();
         Country::flushEventListeners();
-        factory(Country::class, 30)->create();
+        factory(Country::class, 100)->create();
     }
 }

@@ -30,12 +30,12 @@ class CityType extends GraphQLType
             'city_created_at' => DateField::class,
             'city_updated_at' => DateField::class,
             'city_deleted_at' => DateField::class,
-            'state_id' => [
+            'estate_id' => [
                 'type' => Type::id()
             ],
             /*In*/
-            'state' => [
-                'type' => GraphQL::type('State')
+            'estate' => [
+                'type' => GraphQL::type('Estate')
             ],
             /*Out*/
             'persons' => [

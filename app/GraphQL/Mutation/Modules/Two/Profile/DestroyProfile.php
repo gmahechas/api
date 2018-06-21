@@ -37,7 +37,9 @@ class DestroyProfile extends Mutation
 
         if($data = Profile::select($select)->with($with)->find($args['profile_id']))
         {
-            return $data->delete();
+            $data_return = $data;
+            $data->delete();
+            return $data_return;
         } else {
             return null;
         }

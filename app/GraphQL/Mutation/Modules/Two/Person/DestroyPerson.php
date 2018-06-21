@@ -37,7 +37,9 @@ class DestroyPerson extends Mutation
 
         if($data = Person::select($select)->with($with)->find($args['person_id']))
         {
-            return $data->delete();
+            $data_return = $data;
+            $data->delete();
+            return $data_return;
         } else {
             return null;
         }

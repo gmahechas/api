@@ -9,10 +9,10 @@ use App\Models\Modules\One\Country;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class ShowCountry extends Query
+class PaginationCountry extends Query
 {
     protected $attributes = [
-        'name' => 'ShowCountry'
+        'name' => 'PaginationCountry'
     ];
 
     public function type()
@@ -50,8 +50,10 @@ class ShowCountry extends Query
         $country_name = isset($args['country_name']) ? $args['country_name'] : false;
         $country_code = isset($args['country_code']) ? $args['country_code'] : false;
         
-        $limit = isset($args['limit']) ? $args['limit'] : 10000;
+        $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
+
+        // sleep(3);
 
         return Country::select($select)
                         ->when($country_id, function ($query) use ($country_id) {

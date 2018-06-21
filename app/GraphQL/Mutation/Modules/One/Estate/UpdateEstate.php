@@ -1,36 +1,36 @@
 <?php
 
-namespace App\GraphQL\Mutation\Modules\One\State;
+namespace App\GraphQL\Mutation\Modules\One\Estate;
 
 use GraphQL;
-use App\Models\Modules\One\State;
+use App\Models\Modules\One\Estate;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Mutation;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class UpdateState extends Mutation
+class UpdateEstate extends Mutation
 {
     protected $attributes = [
-        'name' => 'UpdateState'
+        'name' => 'UpdateEstate'
     ];
 
     public function type()
     {
-        return GraphQL::type('State');
+        return GraphQL::type('Estate');
     }
 
     public function args()
     {
         return [
-            'state_id' => [
+            'estate_id' => [
                 'type' => Type::nonNull(Type::id()),
                 'rules' => ['required']
             ],
-            'state_name' => [
+            'estate_name' => [
                 'type' => Type::string()            
             ],
-            'state_code' => [
+            'estate_code' => [
                 'type' => Type::string()
             ],
             'country_id' => [
@@ -44,7 +44,7 @@ class UpdateState extends Mutation
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        if($data = State::select($select)->with($with)->find($args['state_id']))
+        if($data = Estate::select($select)->with($with)->find($args['estate_id']))
         {
             foreach($args as $key => $value)
             {
@@ -57,7 +57,7 @@ class UpdateState extends Mutation
             if($data->isDirty())
             {
                 $data->save();
-                return $data;
+                return $data->refresh();
             } else {
                 return null;
             }

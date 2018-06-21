@@ -9,10 +9,10 @@ use App\Models\Modules\Two\ProfileMenu;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class ShowProfileMenu extends Query
+class PaginationProfileMenu extends Query
 {
     protected $attributes = [
-        'name' => 'ShowProfileMenu',
+        'name' => 'PaginationProfileMenu',
     ];
 
     public function type()
@@ -54,7 +54,7 @@ class ShowProfileMenu extends Query
         $profile_id = isset($args['profile_id']) ? $args['profile_id'] : false;
         $menu_id = isset($args['menu_id']) ? $args['menu_id'] : false;
 
-        $limit = isset($args['limit']) ? $args['limit'] : 10000;
+        $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
 
         return ProfileMenu::select($select)

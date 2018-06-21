@@ -9,10 +9,10 @@ use App\Models\Modules\One\Company;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class ShowCompany extends Query
+class PaginationCompany extends Query
 {
     protected $attributes = [
-        'name' => 'ShowCompany',
+        'name' => 'PaginationCompany',
     ];
 
     public function type()
@@ -32,7 +32,7 @@ class ShowCompany extends Query
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        $limit = isset($args['limit']) ? $args['limit'] : 10000;
+        $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
 
         return Company::select($select)

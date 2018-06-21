@@ -37,7 +37,9 @@ class DestroyUser extends Mutation
 
         if($data = User::select($select)->with($with)->find($args['user_id']))
         {
-            return $data->delete();
+            $data_return = $data;
+            $data->delete();
+            return $data_return;
         } else {
             return null;
         }

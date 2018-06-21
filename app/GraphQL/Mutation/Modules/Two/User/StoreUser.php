@@ -23,7 +23,7 @@ class StoreUser extends Mutation
     public function args()
     {
         return [
-            'name' => [
+            'username' => [
                 'type' => Type::string(),
                 'rules' => ['required']
             ],

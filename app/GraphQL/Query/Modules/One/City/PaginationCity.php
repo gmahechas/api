@@ -9,10 +9,10 @@ use Rebing\GraphQL\Support\Query;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class ShowCity extends Query
+class PaginationCity extends Query
 {
     protected $attributes = [
-        'name' => 'ShowCity'
+        'name' => 'PaginationCity'
     ];
 
     public function type()
@@ -32,7 +32,7 @@ class ShowCity extends Query
             'city_code' => [
                 'type' => Type::string()
             ],
-            'state_id' => [
+            'estate_id' => [
                 'type' => Type::id()
             ],
             'limit' => [
@@ -52,11 +52,11 @@ class ShowCity extends Query
         $city_id = isset($args['city_id']) ? $args['city_id'] : false;
         $city_name = isset($args['city_name']) ? $args['city_name'] : false;
         $city_code = isset($args['city_code']) ? $args['city_code'] : false;
-        $state_id = isset($args['state_id']) ? $args['state_id'] : false;
+        $estate_id = isset($args['estate_id']) ? $args['estate_id'] : false;
 
-        $limit = isset($args['limit']) ? $args['limit'] : 10000;
+        $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
-
+        
         return City::select($select)
                         ->when($city_id, function ($query) use ($city_id) {
                             return $query->where('city_id', '=', $city_id);
@@ -67,8 +67,8 @@ class ShowCity extends Query
                         ->when($city_code, function ($query) use ($city_code) {
                             return $query->where('city_code', 'like', '%'.$city_code.'%');
                         })
-                        ->when($state_id, function ($query) use ($state_id) {
-                            return $query->where('state_id', '=', $state_id);
+                        ->when($estate_id, function ($query) use ($estate_id) {
+                            return $query->where('estate_id', '=', $estate_id);
                         })
                         ->with($with)
                         ->paginate($limit, ['*'], 'pages', $page);

@@ -9,10 +9,10 @@ use App\Models\Modules\One\Office;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class ShowOffice extends Query
+class PaginationOffice extends Query
 {
     protected $attributes = [
-        'name' => 'ShowOffice',
+        'name' => 'PaginationOffice',
         'description' => 'A query'
     ];
 
@@ -47,7 +47,7 @@ class ShowOffice extends Query
         $office_id = isset($args['office_id']) ? $args['office_id'] : false;
         $office_name = isset($args['office_name']) ? $args['office_name'] : false;
         
-        $limit = isset($args['limit']) ? $args['limit'] : 10000;
+        $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
 
         return Office::select($select)

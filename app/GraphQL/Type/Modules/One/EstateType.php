@@ -4,32 +4,32 @@ namespace App\GraphQL\Type\Modules\One;
 
 use GraphQL;
 use App\GraphQL\Field\DateField;
-use App\Models\Modules\One\State;
+use App\Models\Modules\One\Estate;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
-class StateType extends GraphQLType
+class EstateType extends GraphQLType
 {
     protected $attributes = [
-        'name' => 'StateType',
-        'model' => State::class
+        'name' => 'EstateType',
+        'model' => Estate::class
     ];
 
     public function fields()
     {
         return [
-            'state_id' => [
+            'estate_id' => [
             	'type' => Type::id()
             ],
-            'state_name' => [
+            'estate_name' => [
             	'type' => Type::string()
             ],
-            'state_code' => [
+            'estate_code' => [
             	'type' => Type::string()
             ],
-            'state_created_at' => DateField::class,
-            'state_updated_at' => DateField::class,
-            'state_deleted_at' => DateField::class,
+            'estate_created_at' => DateField::class,
+            'estate_updated_at' => DateField::class,
+            'estate_deleted_at' => DateField::class,
             'country_id' => [
                 'type' => Type::id()
             ],

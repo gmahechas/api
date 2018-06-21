@@ -19,7 +19,7 @@ class City extends Model
 	protected $fillable = [
 		'city_name',
 		'city_code',
-		'state_id'
+		'estate_id'
 	];
 	protected $dates = [
 		'city_created_at',
@@ -28,8 +28,8 @@ class City extends Model
 	];
 
 	/*In*/
-	public function state(){
-		return $this->belongsTo(State::class, 'state_id');
+	public function estate(){
+		return $this->belongsTo(Estate::class, 'estate_id');
 	}
 	/*Out*/
 	public function persons(){

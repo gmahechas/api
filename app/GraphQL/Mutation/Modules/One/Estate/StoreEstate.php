@@ -1,33 +1,33 @@
 <?php
 
-namespace App\GraphQL\Mutation\Modules\One\State;
+namespace App\GraphQL\Mutation\Modules\One\Estate;
 
 use GraphQL;
-use App\Models\Modules\One\State;
+use App\Models\Modules\One\Estate;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Mutation;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class StoreState extends Mutation
+class StoreEstate extends Mutation
 {
     protected $attributes = [
-        'name' => 'StoreState'
+        'name' => 'StoreEstate'
     ];
 
     public function type()
     {
-        return GraphQL::type('State');
+        return GraphQL::type('Estate');
     }
 
     public function args()
     {
         return [
-            'state_name' => [
+            'estate_name' => [
                 'type' => Type::string(),
                 'rules' => ['required']
             ],
-            'state_code' => [
+            'estate_code' => [
                 'type' => Type::string(),
                 'rules' => ['required']
             ],
@@ -40,6 +40,6 @@ class StoreState extends Mutation
 
     public function resolve($root, $args, SelectFields $fields, ResolveInfo $info)
     {
-        return State::create($args);
+        return Estate::create($args);
     }
 }

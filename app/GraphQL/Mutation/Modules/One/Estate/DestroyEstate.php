@@ -1,29 +1,29 @@
 <?php
 
-namespace App\GraphQL\Mutation\Modules\One\State;
+namespace App\GraphQL\Mutation\Modules\One\Estate;
 
 use GraphQL;
-use App\Models\Modules\One\State;
+use App\Models\Modules\One\Estate;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Mutation;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class DestroyState extends Mutation
+class DestroyEstate extends Mutation
 {
     protected $attributes = [
-        'name' => 'DestroyState'
+        'name' => 'DestroyEstate'
     ];
 
     public function type()
     {
-        return GraphQL::type('State');
+        return GraphQL::type('Estate');
     }
 
     public function args()
     {
         return [
-            'state_id' => [
+            'estate_id' => [
                 'type' => Type::nonNull(Type::id()),
                 'rules' => ['required']
             ],
@@ -35,9 +35,11 @@ class DestroyState extends Mutation
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        if($data = State::select($select)->with($with)->find($args['state_id']))
+        if($data = Estate::select($select)->with($with)->find($args['estate_id']))
         {
-            return $data->delete();
+            $data_return = $data;
+            $data->delete();
+            return $data_return;
         } else {
             return null;
         }

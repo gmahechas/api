@@ -31,8 +31,8 @@ class CountryType extends GraphQLType
             'country_updated_at' => DateField::class,
             'country_deleted_at' => DateField::class,
             /*Out*/
-            'states' => [
-                'type' => Type::listOf(GraphQL::type('State'))
+            'estates' => [
+                'type' => Type::listOf(GraphQL::type('Estate'))
             ],
         ];
     }

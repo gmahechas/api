@@ -22,10 +22,10 @@ class CreateCityTable extends Migration
             $table->timestamp('city_updated_at')->nullable();
             $table->softDeletes('city_deleted_at');
 
-            $table->integer('state_id')->unsigned();
-            $table->foreign('state_id')
-                  ->references('state_id')
-                  ->on('one_state')
+            $table->integer('estate_id')->unsigned();
+            $table->foreign('estate_id')
+                  ->references('estate_id')
+                  ->on('one_estate')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });

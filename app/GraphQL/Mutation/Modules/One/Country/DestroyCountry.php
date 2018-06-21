@@ -37,7 +37,9 @@ class DestroyCountry extends Mutation
 
         if($data = Country::select($select)->with($with)->find($args['country_id']))
         {
-            return $data->delete();
+            $data_return = $data;
+            $data->delete();
+            return $data_return;
         } else {
             return null;
         }

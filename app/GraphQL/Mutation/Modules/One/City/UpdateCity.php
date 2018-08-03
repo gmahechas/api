@@ -33,8 +33,8 @@ class UpdateCity extends Mutation
             'city_code' => [
                 'type' => Type::string()
             ],
-            'state_id' => [
-                'type' => Type::int()
+            'estate_id' => [
+                'type' => Type::id()
             ]
         ];
     }

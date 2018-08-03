@@ -31,7 +31,7 @@ class StoreCity extends Mutation
                 'type' => Type::string(),
                 'rules' => ['required']
             ],
-            'state_id' => [
+            'estate_id' => [
                 'type' => Type::id(),
                 'rules' => ['required']
             ]

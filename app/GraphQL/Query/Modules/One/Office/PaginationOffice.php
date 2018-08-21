@@ -25,10 +25,13 @@ class PaginationOffice extends Query
     {
         return [
             'office_id' => [
-                'type' => Type::int()
+                'type' => Type::id()
             ],
             'office_name' => [
                 'type' => Type::string()
+            ],
+            'city_id' => [
+                'type' => Type::id()
             ],
             'limit' => [
                 'type' => Type::int()
@@ -46,6 +49,7 @@ class PaginationOffice extends Query
 
         $office_id = isset($args['office_id']) ? $args['office_id'] : false;
         $office_name = isset($args['office_name']) ? $args['office_name'] : false;
+        $city_id = isset($args['city_id']) ? $args['city_id'] : false;
         
         $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
@@ -56,6 +60,9 @@ class PaginationOffice extends Query
                         })
                         ->when($office_name, function ($query) use ($office_name) {
                             return $query->where('office_name', 'like', '%'.$office_name.'%');
+                        })
+                        ->when($city_id, function ($query) use ($city_id) {
+                            return $query->where('city_id', '=', $city_id);
                         })
                         ->with($with)
                         ->paginate($limit, ['*'], 'pages', $page);

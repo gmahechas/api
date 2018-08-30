@@ -14,6 +14,6 @@ class OfficeSeeder extends Seeder
     {
         Office::truncate();
         Office::flushEventListeners();
-        factory(Office::class, 3)->create();
+        factory(Office::class, 23)->create();
     }
 }

@@ -47,10 +47,7 @@ class UserType extends GraphQLType
                 'type' => GraphQL::type('Person')
             ],
             'profile' => [
-                'type' => GraphQL::type('Profile'),
-                'query' => function(array $args, $query) {
-                    return $query->where('profile_id', '=', $args['profile_id']);
-                }
+                'type' => GraphQL::type('Profile')
             ],
         ];
     }

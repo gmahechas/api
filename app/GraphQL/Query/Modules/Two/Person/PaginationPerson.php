@@ -24,7 +24,10 @@ class PaginationPerson extends Query
     {
         return [
             'person_id' => [
-                'type' => Type::int()
+                'type' => Type::id()
+            ],
+            'person_identification' => [
+                'type' => Type::string()
             ],
             'limit' => [
                 'type' => Type::int()
@@ -41,6 +44,7 @@ class PaginationPerson extends Query
         $with = $fields->getRelations();
 
         $person_id = isset($args['person_id']) ? $args['person_id'] : false;
+        $person_identification = isset($args['person_identification']) ? $args['person_identification'] : false;
 
         $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
@@ -48,6 +52,9 @@ class PaginationPerson extends Query
         return Person::select($select)
                         ->when($person_id, function ($query) use ($person_id) {
                             return $query->where('person_id', '=', $person_id);
+                        })
+                        ->when($person_identification, function ($query) use ($person_identification) {
+                            return $query->where('person_identification', '=', $person_identification);
                         })
                         ->with($with)
                         ->paginate($limit, ['*'], 'pages', $page);

@@ -38,6 +38,9 @@ class StoreUser extends Mutation
             'person_id' => [
                 'type' => Type::id(),
             ],
+            'profile_id' => [
+                'type' => Type::id(),
+            ],
         ];
     }
 

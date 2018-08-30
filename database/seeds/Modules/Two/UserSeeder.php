@@ -14,6 +14,6 @@ class UserSeeder extends Seeder
     {
         User::truncate();
         User::flushEventListeners();
-        factory(User::class, 3)->create();
+        factory(User::class, 31)->create();
     }
 }

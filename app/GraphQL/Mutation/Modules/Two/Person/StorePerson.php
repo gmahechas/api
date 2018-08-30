@@ -36,15 +36,13 @@ class StorePerson extends Mutation
                 'rules' => ['required']
             ],
             'person_first_name' => [
-                'type' => Type::string(),
-                'rules' => ['required']
+                'type' => Type::string()
             ],
             'person_second_name' => [
                 'type' => Type::string()
             ],
             'person_first_surname' => [
-                'type' => Type::string(),
-                'rules' => ['required']
+                'type' => Type::string()
             ],
             'person_second_surname' => [
                 'type' => Type::string()

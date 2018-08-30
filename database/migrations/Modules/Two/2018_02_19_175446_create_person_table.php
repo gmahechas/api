@@ -18,10 +18,11 @@ class CreatePersonTable extends Migration
             $table->enum('person_business_type', ['1', '2']);
             $table->enum('person_identification_type', ['1', '2']);
             $table->string('person_identification', 64);
-            $table->string('person_first_name', 64);
+            $table->string('person_first_name', 64)->nullable();
             $table->string('person_second_name', 64)->nullable();
-            $table->string('person_first_surname', 64);
+            $table->string('person_first_surname', 64)->nullable();
             $table->string('person_second_surname', 64)->nullable();
+            $table->string('person_legal_name', 128)->nullable();
 
             $table->timestamp('person_created_at')->nullable();
             $table->timestamp('person_updated_at')->nullable();

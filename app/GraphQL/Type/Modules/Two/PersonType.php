@@ -42,6 +42,9 @@ class PersonType extends GraphQLType
             'person_second_surname' => [
             	'type' => Type::string()
             ],
+            'person_legal_name' => [
+                'type' => Type::string()
+            ],
             'person_created_at' => DateField::class,
             'person_updated_at' => DateField::class,
             'person_deleted_at' => DateField::class,

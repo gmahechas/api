@@ -49,6 +49,9 @@ class StorePerson extends Mutation
             'person_second_surname' => [
                 'type' => Type::string()
             ],
+            'person_legal_name' => [
+                'type' => Type::string()
+            ],
             'city_id' => [
                 'type' => Type::id(),
                 'rules' => ['required']

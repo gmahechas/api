@@ -24,6 +24,7 @@ class Person extends Model
 		'person_second_name',
 		'person_first_surname',
 		'person_second_surname',
+		'person_legal_name',
 		'city_id'
 	];
 

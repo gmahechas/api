@@ -86,18 +86,23 @@ return [
     'schemas' => [
         'admin' => [
             'query' => [
+                /** One **/
                 'paginationCountry' => 'App\GraphQL\Query\Modules\One\Country\PaginationCountry',
                 'paginationEstate' => 'App\GraphQL\Query\Modules\One\Estate\PaginationEstate',
                 'paginationCity' => 'App\GraphQL\Query\Modules\One\City\PaginationCity',
                 'paginationCompany' => 'App\GraphQL\Query\Modules\One\Company\PaginationCompany',
                 'paginationOffice' => 'App\GraphQL\Query\Modules\One\Office\PaginationOffice',
+                /** Two **/
                 'paginationProfile' => 'App\GraphQL\Query\Modules\Two\Profile\PaginationProfile',
                 'paginationMenu' => 'App\GraphQL\Query\Modules\Two\Menu\PaginationMenu',
                 'paginationProfile_menu' => 'App\GraphQL\Query\Modules\Two\ProfileMenu\PaginationProfileMenu',
                 'paginationPerson' => 'App\GraphQL\Query\Modules\Two\Person\PaginationPerson',
-                'paginationUser' => 'App\GraphQL\Query\Modules\Two\User\PaginationUser'
+                'paginationUser' => 'App\GraphQL\Query\Modules\Two\User\PaginationUser',
+                /** Three **/
+                'paginationMacroproject' => 'App\GraphQL\Query\Modules\Three\Macroproject\PaginationMacroproject'
             ],
             'mutation' => [
+                /** One **/
                 'storeCountry' => 'App\GraphQL\Mutation\Modules\One\Country\StoreCountry', /** Country **/
                 'updateCountry' => 'App\GraphQL\Mutation\Modules\One\Country\UpdateCountry',
                 'destroyCountry' => 'App\GraphQL\Mutation\Modules\One\Country\DestroyCountry',
@@ -110,6 +115,7 @@ return [
                 'storeOffice' => 'App\GraphQL\Mutation\Modules\One\Office\StoreOffice', /** Office **/
                 'updateOffice' => 'App\GraphQL\Mutation\Modules\One\Office\UpdateOffice',
                 'destroyOffice' => 'App\GraphQL\Mutation\Modules\One\Office\DestroyOffice',
+                /** Two **/
                 'storeProfile' => 'App\GraphQL\Mutation\Modules\Two\Profile\StoreProfile', /** Profile **/
                 'updateProfile' => 'App\GraphQL\Mutation\Modules\Two\Profile\UpdateProfile',
                 'destroyProfile' => 'App\GraphQL\Mutation\Modules\Two\Profile\DestroyProfile',
@@ -119,7 +125,11 @@ return [
                 'destroyPerson' => 'App\GraphQL\Mutation\Modules\Two\Person\DestroyPerson',
                 'storeUser' => 'App\GraphQL\Mutation\Modules\Two\User\StoreUser', /** User **/
                 'updateUser' => 'App\GraphQL\Mutation\Modules\Two\User\UpdateUser',
-                'destroyUser' => 'App\GraphQL\Mutation\Modules\Two\User\DestroyUser'
+                'destroyUser' => 'App\GraphQL\Mutation\Modules\Two\User\DestroyUser',
+                /** Three **/
+                'storeMacroproject' => 'App\GraphQL\Mutation\Modules\Three\Macroproject\StoreMacroproject', /** Macroproject **/
+                'updateMacroproject' => 'App\GraphQL\Mutation\Modules\Three\Macroproject\UpdateMacroproject',
+                'destroyMacroproject' => 'App\GraphQL\Mutation\Modules\Three\Macroproject\DestroyMacroproject',
             ],
             'middleware' => []
         ]
@@ -135,17 +145,21 @@ return [
     // ]
     //
     'types' => [
+        /** One **/
         'Country' => 'App\GraphQL\Type\Modules\One\CountryType',
         'Estate' => 'App\GraphQL\Type\Modules\One\EstateType',
         'City' => 'App\GraphQL\Type\Modules\One\CityType',
         'Company' => 'App\GraphQL\Type\Modules\One\CompanyType',
         'Office' => 'App\GraphQL\Type\Modules\One\OfficeType',
+        /** Two **/
         'Profile' => 'App\GraphQL\Type\Modules\Two\ProfileType',
         'Menu' => 'App\GraphQL\Type\Modules\Two\MenuType',
         'ProfileMenu' => 'App\GraphQL\Type\Modules\Two\ProfileMenuType',
         'Menu' => 'App\GraphQL\Type\Modules\Two\MenuType',
         'Person' => 'App\GraphQL\Type\Modules\Two\PersonType',
-        'User' => 'App\GraphQL\Type\Modules\Two\UserType'
+        'User' => 'App\GraphQL\Type\Modules\Two\UserType',
+        /** Three **/
+        'Macroproject' => 'App\GraphQL\Type\Modules\Three\MacroprojectType'
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

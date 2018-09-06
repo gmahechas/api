@@ -24,6 +24,8 @@ class DatabaseSeeder extends Seeder
         $this->call(ProfileMenuSeeder::class);
         $this->call(PersonSeeder::class);
         $this->call(UserSeeder::class);
+        /** Three **/
+        $this->call(MacroprojectSeeder::class);
         Schema::enableForeignKeyConstraints();
     }
 }

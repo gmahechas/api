@@ -1,36 +1,35 @@
 <?php
 
-namespace App\GraphQL\Query\Modules\One\Office;
+namespace App\GraphQL\Query\Three\Project;
 
 use GraphQL;
+use App\Models\Three\Project;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
-use App\Models\One\Office;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class PaginationOffice extends Query
+class PaginationProject extends Query
 {
     protected $attributes = [
-        'name' => 'PaginationOffice',
-        'description' => 'A query'
+        'name' => 'PaginationProject'
     ];
 
     public function type()
     {
-        return GraphQL::paginate('Office');
+        return GraphQL::paginate('Project');
     }
 
     public function args()
     {
         return [
-            'office_id' => [
+            'project_id' => [
                 'type' => Type::id()
             ],
-            'office_name' => [
+            'project_name' => [
                 'type' => Type::string()
             ],
-            'city_id' => [
+            'macroproject_id' => [
                 'type' => Type::id()
             ],
             'limit' => [
@@ -47,22 +46,22 @@ class PaginationOffice extends Query
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        $office_id = isset($args['office_id']) ? $args['office_id'] : false;
-        $office_name = isset($args['office_name']) ? $args['office_name'] : false;
-        $city_id = isset($args['city_id']) ? $args['city_id'] : false;
+        $project_id = isset($args['project_id']) ? $args['project_id'] : false;
+        $project_name = isset($args['project_name']) ? $args['project_name'] : false;
+        $macroproject_id = isset($args['macroproject_id']) ? $args['macroproject_id'] : false;
         
         $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
 
-        return Office::select($select)
-                        ->when($office_id, function ($query) use ($office_id) {
-                            return $query->where('office_id', '=', $office_id);
+        return Project::select($select)
+                        ->when($project_id, function ($query) use ($project_id) {
+                            return $query->where('project_id', '=', $project_id);
                         })
-                        ->when($office_name, function ($query) use ($office_name) {
-                            return $query->where('office_name', 'like', '%'.$office_name.'%');
+                        ->when($project_name, function ($query) use ($project_name) {
+                            return $query->where('project_name', 'like', '%'.$project_name.'%');
                         })
-                        ->when($city_id, function ($query) use ($city_id) {
-                            return $query->where('city_id', '=', $city_id);
+                        ->when($macroproject_id, function ($query) use ($macroproject_id) {
+                            return $query->where('macroproject_id', '=', $macroproject_id);
                         })
                         ->with($with)
                         ->paginate($limit, ['*'], 'pages', $page);

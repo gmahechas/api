@@ -1,6 +1,6 @@
 <?php
 
-namespace App\GraphQL\Query\Modules\Three\Macroproject;
+namespace App\GraphQL\Query\Three\Macroproject;
 
 use GraphQL;
 use GraphQL\Type\Definition\Type;

@@ -87,20 +87,20 @@ return [
         'admin' => [
             'query' => [
                 /** One **/
-                'paginationCountry' => 'App\GraphQL\Query\Modules\One\Country\PaginationCountry',
-                'paginationEstate' => 'App\GraphQL\Query\Modules\One\Estate\PaginationEstate',
-                'paginationCity' => 'App\GraphQL\Query\Modules\One\City\PaginationCity',
-                'paginationCompany' => 'App\GraphQL\Query\Modules\One\Company\PaginationCompany',
-                'paginationOffice' => 'App\GraphQL\Query\Modules\One\Office\PaginationOffice',
+                'paginationCountry' => 'App\GraphQL\Query\One\Country\PaginationCountry',
+                'paginationEstate' => 'App\GraphQL\Query\One\Estate\PaginationEstate',
+                'paginationCity' => 'App\GraphQL\Query\One\City\PaginationCity',
+                'paginationCompany' => 'App\GraphQL\Query\One\Company\PaginationCompany',
+                'paginationOffice' => 'App\GraphQL\Query\One\Office\PaginationOffice',
                 /** Two **/
-                'paginationProfile' => 'App\GraphQL\Query\Modules\Two\Profile\PaginationProfile',
-                'paginationMenu' => 'App\GraphQL\Query\Modules\Two\Menu\PaginationMenu',
-                'paginationProfileMenu' => 'App\GraphQL\Query\Modules\Two\ProfileMenu\PaginationProfileMenu',
-                'paginationPerson' => 'App\GraphQL\Query\Modules\Two\Person\PaginationPerson',
-                'paginationUser' => 'App\GraphQL\Query\Modules\Two\User\PaginationUser',
+                'paginationProfile' => 'App\GraphQL\Query\Two\Profile\PaginationProfile',
+                'paginationMenu' => 'App\GraphQL\Query\Two\Menu\PaginationMenu',
+                'paginationProfileMenu' => 'App\GraphQL\Query\Two\ProfileMenu\PaginationProfileMenu',
+                'paginationPerson' => 'App\GraphQL\Query\Two\Person\PaginationPerson',
+                'paginationUser' => 'App\GraphQL\Query\Two\User\PaginationUser',
                 /** Three **/
-                'paginationMacroproject' => 'App\GraphQL\Query\Modules\Three\Macroproject\PaginationMacroproject',
-                'paginationProject' => 'App\GraphQL\Query\Modules\Three\Project\PaginationProject'
+                'paginationMacroproject' => 'App\GraphQL\Query\Three\Macroproject\PaginationMacroproject',
+                'paginationProject' => 'App\GraphQL\Query\Three\Project\PaginationProject'
             ],
             'mutation' => [
                 /** One **/

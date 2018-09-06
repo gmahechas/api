@@ -1,6 +1,6 @@
 <?php
 
-namespace App\GraphQL\Query\Modules\One\Country;
+namespace App\GraphQL\Query\One\Country;
 
 use GraphQL;
 use GraphQL\Type\Definition\Type;

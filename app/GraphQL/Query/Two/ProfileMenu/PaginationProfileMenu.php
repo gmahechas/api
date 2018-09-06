@@ -1,41 +1,38 @@
 <?php
 
-namespace App\GraphQL\Query\Modules\Two\User;
+namespace App\GraphQL\Query\Two\ProfileMenu;
 
 use GraphQL;
-use App\Models\Two\User;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
+use App\Models\Two\ProfileMenu;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class PaginationUser extends Query
+class PaginationProfileMenu extends Query
 {
     protected $attributes = [
-        'name' => 'PaginationUser'
+        'name' => 'PaginationProfileMenu',
     ];
 
     public function type()
     {
-        return GraphQL::paginate('User');
+        return GraphQL::paginate('ProfileMenu');
     }
 
     public function args()
     {
         return [
-            'user_id' => [
+            'profile_menu_id' => [
                 'type' => Type::id()
             ],
-            'username' => [
+            'profile_menu_status' => [
                 'type' => Type::string()
-            ],
-            'email' => [
-                'type' => Type::string()
-            ],
-            'person_id' => [
-                'type' => Type::id()
             ],
             'profile_id' => [
+                'type' => Type::id()
+            ],
+            'menu_id' => [
                 'type' => Type::id()
             ],
             'limit' => [
@@ -48,36 +45,33 @@ class PaginationUser extends Query
     }
 
     public function resolve($root, $args, SelectFields $fields, ResolveInfo $info)
-    {
+    {   
         $select = $fields->getSelect();
         $with = $fields->getRelations();
-
-        $user_id = isset($args['user_id']) ? $args['user_id'] : false;
-        $username = isset($args['username']) ? $args['username'] : false;
-        $email = isset($args['email']) ? $args['email'] : false;
-        $person_id = isset($args['person_id']) ? $args['person_id'] : false;
+        
+        $profile_menu_id = isset($args['profile_menu_id']) ? $args['profile_menu_id'] : false;
+        $profile_menu_status = isset($args['profile_menu_status']) ? $args['profile_menu_status'] : false;
         $profile_id = isset($args['profile_id']) ? $args['profile_id'] : false;
+        $menu_id = isset($args['menu_id']) ? $args['menu_id'] : false;
 
         $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
 
-        return User::select($select)
-                        ->when($user_id, function ($query) use ($user_id) {
-                            return $query->where('user_id', '=', $user_id);
+        return ProfileMenu::select($select)
+                        ->when($profile_menu_id, function ($query) use ($profile_menu_id) {
+                            return $query->where('profile_menu_id', '=', $profile_menu_id);
                         })
-                        ->when($username, function ($query) use ($username) {
-                            return $query->where('username', 'like', '%'.$username.'%');
-                        })
-                        ->when($email, function ($query) use ($email) {
-                            return $query->where('email', 'like', '%'.$email.'%');
-                        })
-                        ->when($person_id, function ($query) use ($person_id) {
-                            return $query->where('person_id', '=', $person_id);
+                        ->when($profile_menu_status, function ($query) use ($profile_menu_status) {
+                            return $query->where('profile_menu_status', '=', '"' . $profile_menu_status . '"');
                         })
                         ->when($profile_id, function ($query) use ($profile_id) {
                             return $query->where('profile_id', '=', $profile_id);
                         })
+                        ->when($menu_id, function ($query) use ($menu_id) {
+                            return $query->where('menu_id', '=', $menu_id);
+                        })
                         ->with($with)
                         ->paginate($limit, ['*'], 'pages', $page);
+
     }
 }

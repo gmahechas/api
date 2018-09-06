@@ -1,38 +1,38 @@
 <?php
 
-namespace App\GraphQL\Query\Modules\One\Estate;
+namespace App\GraphQL\Query\One\City;
 
 use GraphQL;
-use App\Models\One\Estate;
+use App\Models\One\City;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class PaginationEstate extends Query
+class PaginationCity extends Query
 {
     protected $attributes = [
-        'name' => 'PaginationEstate'
+        'name' => 'PaginationCity'
     ];
 
     public function type()
     {
-        return GraphQL::paginate('Estate');
+        return GraphQL::paginate('City');
     }
 
     public function args()
     {
         return [
-            'estate_id' => [
+            'city_id' => [
                 'type' => Type::id()
             ],
-            'estate_name' => [
+            'city_name' => [
                 'type' => Type::string()
             ],
-            'estate_code' => [
+            'city_code' => [
                 'type' => Type::string()
             ],
-            'country_id' => [
+            'estate_id' => [
                 'type' => Type::id()
             ],
             'limit' => [
@@ -49,26 +49,26 @@ class PaginationEstate extends Query
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
+        $city_id = isset($args['city_id']) ? $args['city_id'] : false;
+        $city_name = isset($args['city_name']) ? $args['city_name'] : false;
+        $city_code = isset($args['city_code']) ? $args['city_code'] : false;
         $estate_id = isset($args['estate_id']) ? $args['estate_id'] : false;
-        $estate_name = isset($args['estate_name']) ? $args['estate_name'] : false;
-        $estate_code = isset($args['estate_code']) ? $args['estate_code'] : false;
-        $country_id = isset($args['country_id']) ? $args['country_id'] : false;
 
         $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
-
-        return Estate::select($select)
+        
+        return City::select($select)
+                        ->when($city_id, function ($query) use ($city_id) {
+                            return $query->where('city_id', '=', $city_id);
+                        })
+                        ->when($city_name, function ($query) use ($city_name) {
+                            return $query->where('city_name', 'like', '%'.$city_name.'%');
+                        })
+                        ->when($city_code, function ($query) use ($city_code) {
+                            return $query->where('city_code', 'like', '%'.$city_code.'%');
+                        })
                         ->when($estate_id, function ($query) use ($estate_id) {
                             return $query->where('estate_id', '=', $estate_id);
-                        })
-                        ->when($estate_name, function ($query) use ($estate_name) {
-                            return $query->where('estate_name', 'like', '%'.$estate_name.'%');
-                        })
-                        ->when($estate_code, function ($query) use ($estate_code) {
-                            return $query->where('estate_code', 'like', '%'.$estate_code.'%');
-                        })
-                        ->when($country_id, function ($query) use ($country_id) {
-                            return $query->where('country_id', '=', $country_id);
                         })
                         ->with($with)
                         ->paginate($limit, ['*'], 'pages', $page);

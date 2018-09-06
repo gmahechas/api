@@ -1,6 +1,6 @@
 <?php
 
-namespace App\GraphQL\Query\Modules\Two\Menu;
+namespace App\GraphQL\Query\Two\Menu;
 
 use GraphQL;
 use App\Models\Two\Menu;

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\GraphQL\Query\Modules\Two\Profile;
+namespace App\GraphQL\Query\Two\Profile;
 
 use GraphQL;
 use GraphQL\Type\Definition\Type;

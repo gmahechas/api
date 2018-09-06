@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
         /** Three **/
         $this->call(MacroprojectSeeder::class);
         $this->call(ProjectSeeder::class);
+        $this->call(UserOfficeSeeder::class);
         Schema::enableForeignKeyConstraints();
     }
 }

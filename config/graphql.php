@@ -98,6 +98,7 @@ return [
                 'paginationProfileMenu' => 'App\GraphQL\Query\Two\ProfileMenu\PaginationProfileMenu',
                 'paginationPerson' => 'App\GraphQL\Query\Two\Person\PaginationPerson',
                 'paginationUser' => 'App\GraphQL\Query\Two\User\PaginationUser',
+                'paginationUserOffice' => 'App\GraphQL\Query\Two\UserOffice\PaginationUserOffice',
                 /** Three **/
                 'paginationMacroproject' => 'App\GraphQL\Query\Three\Macroproject\PaginationMacroproject',
                 'paginationProject' => 'App\GraphQL\Query\Three\Project\PaginationProject'
@@ -127,6 +128,7 @@ return [
                 'storeUser' => 'App\GraphQL\Mutation\Two\User\StoreUser', /** User **/
                 'updateUser' => 'App\GraphQL\Mutation\Two\User\UpdateUser',
                 'destroyUser' => 'App\GraphQL\Mutation\Two\User\DestroyUser',
+                'updateUserOffice' => 'App\GraphQL\Mutation\Two\UserOffice\UpdateUserOffice', /** UserOffice **/
                 /** Three **/
                 'storeMacroproject' => 'App\GraphQL\Mutation\Three\Macroproject\StoreMacroproject', /** Macroproject **/
                 'updateMacroproject' => 'App\GraphQL\Mutation\Three\Macroproject\UpdateMacroproject',
@@ -162,6 +164,7 @@ return [
         'Menu' => 'App\GraphQL\Type\Two\MenuType',
         'Person' => 'App\GraphQL\Type\Two\PersonType',
         'User' => 'App\GraphQL\Type\Two\UserType',
+        'UserOffice' => 'App\GraphQL\Type\Two\UserOfficeType',
         /** Three **/
         'Macroproject' => 'App\GraphQL\Type\Three\MacroprojectType',
         'Project' => 'App\GraphQL\Type\Three\ProjectType'

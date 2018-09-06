@@ -1,29 +1,29 @@
 <?php
 
-namespace App\GraphQL\Mutation\Modules\Three\Macroproject;
+namespace App\GraphQL\Mutation\Modules\Three\Project;
 
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Mutation;
+use App\Models\Modules\Three\Project;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
-use App\Models\Modules\Three\Macroproject;
 
-class DestroyMacroproject extends Mutation
+class DestroyProject extends Mutation
 {
     protected $attributes = [
-        'name' => 'DestroyMacroproject'
+        'name' => 'DestroyProject'
     ];
 
     public function type()
     {
-        return GraphQL::type('Macroproject');
+        return GraphQL::type('Project');
     }
 
     public function args()
     {
         return [
-            'macroproject_id' => [
+            'project_id' => [
                 'type' => Type::nonNull(Type::id()),
                 'rules' => ['required']
             ],
@@ -35,7 +35,7 @@ class DestroyMacroproject extends Mutation
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        if($data = Macroproject::select($select)->with($with)->find($args['macroproject_id']))
+        if($data = Project::select($select)->with($with)->find($args['project_id']))
         {
             $data_return = $data;
             $data->delete();

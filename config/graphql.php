@@ -130,6 +130,9 @@ return [
                 'storeMacroproject' => 'App\GraphQL\Mutation\Modules\Three\Macroproject\StoreMacroproject', /** Macroproject **/
                 'updateMacroproject' => 'App\GraphQL\Mutation\Modules\Three\Macroproject\UpdateMacroproject',
                 'destroyMacroproject' => 'App\GraphQL\Mutation\Modules\Three\Macroproject\DestroyMacroproject',
+                'storeProject' => 'App\GraphQL\Mutation\Modules\Three\Project\StoreProject', /** Project **/
+                'updateProject' => 'App\GraphQL\Mutation\Modules\Three\Project\UpdateProject',
+                'destroyProject' => 'App\GraphQL\Mutation\Modules\Three\Project\DestroyProject',
             ],
             'middleware' => []
         ]
@@ -159,7 +162,8 @@ return [
         'Person' => 'App\GraphQL\Type\Modules\Two\PersonType',
         'User' => 'App\GraphQL\Type\Modules\Two\UserType',
         /** Three **/
-        'Macroproject' => 'App\GraphQL\Type\Modules\Three\MacroprojectType'
+        'Macroproject' => 'App\GraphQL\Type\Modules\Three\MacroprojectType',
+        'Project' => 'App\GraphQL\Type\Modules\Three\ProjectType'
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

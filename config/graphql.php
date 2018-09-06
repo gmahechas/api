@@ -104,36 +104,36 @@ return [
             ],
             'mutation' => [
                 /** One **/
-                'storeCountry' => 'App\GraphQL\Mutation\Modules\One\Country\StoreCountry', /** Country **/
-                'updateCountry' => 'App\GraphQL\Mutation\Modules\One\Country\UpdateCountry',
-                'destroyCountry' => 'App\GraphQL\Mutation\Modules\One\Country\DestroyCountry',
-                'storeEstate' => 'App\GraphQL\Mutation\Modules\One\Estate\StoreEstate', /** Estate **/
-                'updateEstate' => 'App\GraphQL\Mutation\Modules\One\Estate\UpdateEstate',
-                'destroyEstate' => 'App\GraphQL\Mutation\Modules\One\Estate\DestroyEstate',
-                'storeCity' => 'App\GraphQL\Mutation\Modules\One\City\StoreCity', /** City **/
-                'updateCity' => 'App\GraphQL\Mutation\Modules\One\City\UpdateCity',
-                'destroyCity' => 'App\GraphQL\Mutation\Modules\One\City\DestroyCity',
-                'storeOffice' => 'App\GraphQL\Mutation\Modules\One\Office\StoreOffice', /** Office **/
-                'updateOffice' => 'App\GraphQL\Mutation\Modules\One\Office\UpdateOffice',
-                'destroyOffice' => 'App\GraphQL\Mutation\Modules\One\Office\DestroyOffice',
+                'storeCountry' => 'App\GraphQL\Mutation\One\Country\StoreCountry', /** Country **/
+                'updateCountry' => 'App\GraphQL\Mutation\One\Country\UpdateCountry',
+                'destroyCountry' => 'App\GraphQL\Mutation\One\Country\DestroyCountry',
+                'storeEstate' => 'App\GraphQL\Mutation\One\Estate\StoreEstate', /** Estate **/
+                'updateEstate' => 'App\GraphQL\Mutation\One\Estate\UpdateEstate',
+                'destroyEstate' => 'App\GraphQL\Mutation\One\Estate\DestroyEstate',
+                'storeCity' => 'App\GraphQL\Mutation\One\City\StoreCity', /** City **/
+                'updateCity' => 'App\GraphQL\Mutation\One\City\UpdateCity',
+                'destroyCity' => 'App\GraphQL\Mutation\One\City\DestroyCity',
+                'storeOffice' => 'App\GraphQL\Mutation\One\Office\StoreOffice', /** Office **/
+                'updateOffice' => 'App\GraphQL\Mutation\One\Office\UpdateOffice',
+                'destroyOffice' => 'App\GraphQL\Mutation\One\Office\DestroyOffice',
                 /** Two **/
-                'storeProfile' => 'App\GraphQL\Mutation\Modules\Two\Profile\StoreProfile', /** Profile **/
-                'updateProfile' => 'App\GraphQL\Mutation\Modules\Two\Profile\UpdateProfile',
-                'destroyProfile' => 'App\GraphQL\Mutation\Modules\Two\Profile\DestroyProfile',
-                'updateProfileMenu' => 'App\GraphQL\Mutation\Modules\Two\ProfileMenu\UpdateProfileMenu', /** ProfileMenu **/
-                'storePerson' => 'App\GraphQL\Mutation\Modules\Two\Person\StorePerson', /** Person **/
-                'updatePerson' => 'App\GraphQL\Mutation\Modules\Two\Person\UpdatePerson',
-                'destroyPerson' => 'App\GraphQL\Mutation\Modules\Two\Person\DestroyPerson',
-                'storeUser' => 'App\GraphQL\Mutation\Modules\Two\User\StoreUser', /** User **/
-                'updateUser' => 'App\GraphQL\Mutation\Modules\Two\User\UpdateUser',
-                'destroyUser' => 'App\GraphQL\Mutation\Modules\Two\User\DestroyUser',
+                'storeProfile' => 'App\GraphQL\Mutation\Two\Profile\StoreProfile', /** Profile **/
+                'updateProfile' => 'App\GraphQL\Mutation\Two\Profile\UpdateProfile',
+                'destroyProfile' => 'App\GraphQL\Mutation\Two\Profile\DestroyProfile',
+                'updateProfileMenu' => 'App\GraphQL\Mutation\Two\ProfileMenu\UpdateProfileMenu', /** ProfileMenu **/
+                'storePerson' => 'App\GraphQL\Mutation\Two\Person\StorePerson', /** Person **/
+                'updatePerson' => 'App\GraphQL\Mutation\Two\Person\UpdatePerson',
+                'destroyPerson' => 'App\GraphQL\Mutation\Two\Person\DestroyPerson',
+                'storeUser' => 'App\GraphQL\Mutation\Two\User\StoreUser', /** User **/
+                'updateUser' => 'App\GraphQL\Mutation\Two\User\UpdateUser',
+                'destroyUser' => 'App\GraphQL\Mutation\Two\User\DestroyUser',
                 /** Three **/
-                'storeMacroproject' => 'App\GraphQL\Mutation\Modules\Three\Macroproject\StoreMacroproject', /** Macroproject **/
-                'updateMacroproject' => 'App\GraphQL\Mutation\Modules\Three\Macroproject\UpdateMacroproject',
-                'destroyMacroproject' => 'App\GraphQL\Mutation\Modules\Three\Macroproject\DestroyMacroproject',
-                'storeProject' => 'App\GraphQL\Mutation\Modules\Three\Project\StoreProject', /** Project **/
-                'updateProject' => 'App\GraphQL\Mutation\Modules\Three\Project\UpdateProject',
-                'destroyProject' => 'App\GraphQL\Mutation\Modules\Three\Project\DestroyProject',
+                'storeMacroproject' => 'App\GraphQL\Mutation\Three\Macroproject\StoreMacroproject', /** Macroproject **/
+                'updateMacroproject' => 'App\GraphQL\Mutation\Three\Macroproject\UpdateMacroproject',
+                'destroyMacroproject' => 'App\GraphQL\Mutation\Three\Macroproject\DestroyMacroproject',
+                'storeProject' => 'App\GraphQL\Mutation\Three\Project\StoreProject', /** Project **/
+                'updateProject' => 'App\GraphQL\Mutation\Three\Project\UpdateProject',
+                'destroyProject' => 'App\GraphQL\Mutation\Three\Project\DestroyProject',
             ],
             'middleware' => []
         ]

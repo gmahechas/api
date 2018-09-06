@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Modules\Two\Profile;
+use App\Models\Two\Profile;
 
 class ProfileSeeder extends Seeder
 {

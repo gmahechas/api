@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Modules\One\City;
+use App\Models\One\City;
 
 class CitySeeder extends Seeder
 {

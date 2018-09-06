@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Modules\Two\Menu;
+use App\Models\Two\Menu;
 
 class MenuSeeder extends Seeder
 {

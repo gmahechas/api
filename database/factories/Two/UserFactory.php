@@ -1,9 +1,9 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Models\Modules\Two\User;
-use App\Models\Modules\Two\Person;
-use App\Models\Modules\Two\Profile;
+use App\Models\Two\User;
+use App\Models\Two\Person;
+use App\Models\Two\Profile;
 
 $factory->define(User::class, function (Faker $faker) {
 

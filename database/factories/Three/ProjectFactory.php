@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Models\Modules\Three\Project;
-use App\Models\Modules\Three\Macroproject;
+use App\Models\Three\Project;
+use App\Models\Three\Macroproject;
 
 $factory->define(Project::class, function (Faker $faker) {
     return [

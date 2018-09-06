@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Modules\Three\Macroproject;
+use App\Models\Three\Macroproject;
 
 class MacroprojectSeeder extends Seeder
 {

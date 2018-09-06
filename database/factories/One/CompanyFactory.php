@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Models\Modules\One\City;
-use App\Models\Modules\One\Company;
+use App\Models\One\City;
+use App\Models\One\Company;
 
 $factory->define(Company::class, function (Faker $faker) {
 

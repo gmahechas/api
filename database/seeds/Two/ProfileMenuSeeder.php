@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Modules\Two\ProfileMenu;
+use App\Models\Two\ProfileMenu;
 
 class ProfileMenuSeeder extends Seeder
 {

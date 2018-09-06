@@ -1,9 +1,9 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Models\Modules\One\City;
-use App\Models\Modules\One\Office;
-use App\Models\Modules\One\Company;
+use App\Models\One\City;
+use App\Models\One\Office;
+use App\Models\One\Company;
 
 $factory->define(Office::class, function (Faker $faker) {
 

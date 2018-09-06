@@ -1,9 +1,9 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Models\Modules\One\City;
-use App\Models\Modules\One\Office;
-use App\Models\Modules\Three\Macroproject;
+use App\Models\One\City;
+use App\Models\One\Office;
+use App\Models\Three\Macroproject;
 
 $factory->define(Macroproject::class, function (Faker $faker) {
     return [

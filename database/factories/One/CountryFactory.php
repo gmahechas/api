@@ -1,7 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Models\Modules\One\Country;
+use App\Models\One\Country;
 
 $factory->define(Country::class, function (Faker $faker) {
 

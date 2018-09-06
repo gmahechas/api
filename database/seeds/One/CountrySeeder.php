@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Modules\One\Country;
+use App\Models\One\Country;
 
 class CountrySeeder extends Seeder
 {

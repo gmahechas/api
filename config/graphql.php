@@ -150,21 +150,21 @@ return [
     //
     'types' => [
         /** One **/
-        'Country' => 'App\GraphQL\Type\Modules\One\CountryType',
-        'Estate' => 'App\GraphQL\Type\Modules\One\EstateType',
-        'City' => 'App\GraphQL\Type\Modules\One\CityType',
-        'Company' => 'App\GraphQL\Type\Modules\One\CompanyType',
-        'Office' => 'App\GraphQL\Type\Modules\One\OfficeType',
+        'Country' => 'App\GraphQL\Type\One\CountryType',
+        'Estate' => 'App\GraphQL\Type\One\EstateType',
+        'City' => 'App\GraphQL\Type\One\CityType',
+        'Company' => 'App\GraphQL\Type\One\CompanyType',
+        'Office' => 'App\GraphQL\Type\One\OfficeType',
         /** Two **/
-        'Profile' => 'App\GraphQL\Type\Modules\Two\ProfileType',
-        'Menu' => 'App\GraphQL\Type\Modules\Two\MenuType',
-        'ProfileMenu' => 'App\GraphQL\Type\Modules\Two\ProfileMenuType',
-        'Menu' => 'App\GraphQL\Type\Modules\Two\MenuType',
-        'Person' => 'App\GraphQL\Type\Modules\Two\PersonType',
-        'User' => 'App\GraphQL\Type\Modules\Two\UserType',
+        'Profile' => 'App\GraphQL\Type\Two\ProfileType',
+        'Menu' => 'App\GraphQL\Type\Two\MenuType',
+        'ProfileMenu' => 'App\GraphQL\Type\Two\ProfileMenuType',
+        'Menu' => 'App\GraphQL\Type\Two\MenuType',
+        'Person' => 'App\GraphQL\Type\Two\PersonType',
+        'User' => 'App\GraphQL\Type\Two\UserType',
         /** Three **/
-        'Macroproject' => 'App\GraphQL\Type\Modules\Three\MacroprojectType',
-        'Project' => 'App\GraphQL\Type\Modules\Three\ProjectType'
+        'Macroproject' => 'App\GraphQL\Type\Three\MacroprojectType',
+        'Project' => 'App\GraphQL\Type\Three\ProjectType'
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

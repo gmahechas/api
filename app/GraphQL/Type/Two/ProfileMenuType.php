@@ -1,6 +1,6 @@
 <?php
 
-namespace App\GraphQL\Type\Modules\Two;
+namespace App\GraphQL\Type\Two;
 
 use GraphQL;
 use App\GraphQL\Field\DateField;

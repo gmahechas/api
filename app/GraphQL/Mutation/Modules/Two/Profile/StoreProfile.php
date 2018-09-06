@@ -4,7 +4,7 @@ namespace App\GraphQL\Mutation\Modules\Two\Profile;
 
 use GraphQL;
 use GraphQL\Type\Definition\Type;
-use App\Models\Modules\Two\Profile;
+use App\Models\Two\Profile;
 use Rebing\GraphQL\Support\Mutation;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;

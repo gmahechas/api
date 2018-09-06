@@ -5,7 +5,7 @@ namespace App\GraphQL\Query\Modules\One\Country;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
-use App\Models\Modules\One\Country;
+use App\Models\One\Country;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 

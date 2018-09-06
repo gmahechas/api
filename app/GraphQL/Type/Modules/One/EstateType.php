@@ -4,7 +4,7 @@ namespace App\GraphQL\Type\Modules\One;
 
 use GraphQL;
 use App\GraphQL\Field\DateField;
-use App\Models\Modules\One\Estate;
+use App\Models\One\Estate;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 

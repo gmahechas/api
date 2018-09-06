@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\Modules\Two;
 use GraphQL;
 use App\GraphQL\Field\DateField;
 use GraphQL\Type\Definition\Type;
-use App\Models\Modules\Two\ProfileMenu;
+use App\Models\Two\ProfileMenu;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
 class ProfileMenuType extends GraphQLType

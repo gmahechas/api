@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\Modules\One;
 use GraphQL;
 use App\GraphQL\Field\DateField;
 use GraphQL\Type\Definition\Type;
-use App\Models\Modules\One\Company;
+use App\Models\One\Company;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
 class CompanyType extends GraphQLType

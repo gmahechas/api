@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Modules\Two;
+namespace App\Models\Two;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

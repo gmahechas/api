@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models\Modules\Three;
+namespace App\Models\Three;
 
-use App\Models\Modules\One\City;
-use App\Models\Modules\One\Office;
+use App\Models\One\City;
+use App\Models\One\Office;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 

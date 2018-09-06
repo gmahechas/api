@@ -4,7 +4,7 @@ namespace App\GraphQL\Type\Modules\Two;
 
 use GraphQL;
 use App\GraphQL\Field\DateField;
-use App\Models\Modules\Two\User;
+use App\Models\Two\User;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 

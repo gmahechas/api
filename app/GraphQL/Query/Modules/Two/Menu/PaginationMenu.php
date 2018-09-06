@@ -3,7 +3,7 @@
 namespace App\GraphQL\Query\Modules\Two\Menu;
 
 use GraphQL;
-use App\Models\Modules\Two\Menu;
+use App\Models\Two\Menu;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
 use GraphQL\Type\Definition\ResolveInfo;

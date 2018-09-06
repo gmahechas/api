@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\Modules\One;
 use GraphQL;
 use App\GraphQL\Field\DateField;
 use GraphQL\Type\Definition\Type;
-use App\Models\Modules\One\Country;
+use App\Models\One\Country;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
 class CountryType extends GraphQLType

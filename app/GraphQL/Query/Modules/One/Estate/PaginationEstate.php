@@ -3,7 +3,7 @@
 namespace App\GraphQL\Query\Modules\One\Estate;
 
 use GraphQL;
-use App\Models\Modules\One\Estate;
+use App\Models\One\Estate;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
 use GraphQL\Type\Definition\ResolveInfo;

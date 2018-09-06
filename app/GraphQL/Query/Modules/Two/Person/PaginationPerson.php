@@ -5,7 +5,7 @@ namespace App\GraphQL\Query\Modules\Two\Person;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
-use App\Models\Modules\Two\Person;
+use App\Models\Two\Person;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 

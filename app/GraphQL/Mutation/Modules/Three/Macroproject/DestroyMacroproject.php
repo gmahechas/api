@@ -7,7 +7,7 @@ use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Mutation;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
-use App\Models\Modules\Three\Macroproject;
+use App\Models\Three\Macroproject;
 
 class DestroyMacroproject extends Mutation
 {

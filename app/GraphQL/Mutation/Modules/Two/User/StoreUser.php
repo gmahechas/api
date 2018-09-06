@@ -3,7 +3,7 @@
 namespace App\GraphQL\Mutation\Modules\Two\User;
 
 use GraphQL;
-use App\Models\Modules\Two\User;
+use App\Models\Two\User;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Mutation;
 use GraphQL\Type\Definition\ResolveInfo;

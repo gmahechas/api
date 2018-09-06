@@ -4,7 +4,7 @@ namespace App\GraphQL\Mutation\Modules\One\Country;
 
 use GraphQL;
 use GraphQL\Type\Definition\Type;
-use App\Models\Modules\One\Country;
+use App\Models\One\Country;
 use Rebing\GraphQL\Support\Mutation;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;

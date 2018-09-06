@@ -5,7 +5,7 @@ namespace App\GraphQL\Mutation\Modules\Three\Project;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Mutation;
-use App\Models\Modules\Three\Project;
+use App\Models\Three\Project;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 

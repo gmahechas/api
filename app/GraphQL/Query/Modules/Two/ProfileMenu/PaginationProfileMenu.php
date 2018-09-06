@@ -5,7 +5,7 @@ namespace App\GraphQL\Query\Modules\Two\ProfileMenu;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
-use App\Models\Modules\Two\ProfileMenu;
+use App\Models\Two\ProfileMenu;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 

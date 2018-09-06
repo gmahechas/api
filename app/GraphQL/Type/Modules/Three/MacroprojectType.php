@@ -5,7 +5,7 @@ namespace App\GraphQL\Type\Modules\Three;
 use GraphQL;
 use App\GraphQL\Field\DateField;
 use GraphQL\Type\Definition\Type;
-use App\Models\Modules\Three\Macroproject;
+use App\Models\Three\Macroproject;
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
 class MacroprojectType extends GraphQLType

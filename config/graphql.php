@@ -95,11 +95,12 @@ return [
                 /** Two **/
                 'paginationProfile' => 'App\GraphQL\Query\Modules\Two\Profile\PaginationProfile',
                 'paginationMenu' => 'App\GraphQL\Query\Modules\Two\Menu\PaginationMenu',
-                'paginationProfile_menu' => 'App\GraphQL\Query\Modules\Two\ProfileMenu\PaginationProfileMenu',
+                'paginationProfileMenu' => 'App\GraphQL\Query\Modules\Two\ProfileMenu\PaginationProfileMenu',
                 'paginationPerson' => 'App\GraphQL\Query\Modules\Two\Person\PaginationPerson',
                 'paginationUser' => 'App\GraphQL\Query\Modules\Two\User\PaginationUser',
                 /** Three **/
-                'paginationMacroproject' => 'App\GraphQL\Query\Modules\Three\Macroproject\PaginationMacroproject'
+                'paginationMacroproject' => 'App\GraphQL\Query\Modules\Three\Macroproject\PaginationMacroproject',
+                'paginationProject' => 'App\GraphQL\Query\Modules\Three\Project\PaginationProject'
             ],
             'mutation' => [
                 /** One **/

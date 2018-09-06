@@ -5,7 +5,7 @@ namespace App\GraphQL\Query\Modules\One\Office;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
-use App\Models\Modules\One\Office;
+use App\Models\One\Office;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 

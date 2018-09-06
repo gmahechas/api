@@ -4,7 +4,7 @@ namespace App\GraphQL\Mutation\Modules\One\Office;
 
 use GraphQL;
 use GraphQL\Type\Definition\Type;
-use App\Models\Modules\One\Office;
+use App\Models\One\Office;
 use Rebing\GraphQL\Support\Mutation;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;

@@ -7,13 +7,12 @@ use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
-use App\Models\Modules\Three\Macroproject;
+use App\Models\Three\Macroproject;
 
 class PaginationMacroproject extends Query
 {
     protected $attributes = [
-        'name' => 'PaginationMacroproject',
-        'description' => 'A query'
+        'name' => 'PaginationMacroproject'
     ];
 
     public function type()

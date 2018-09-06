@@ -2,16 +2,17 @@
 
 namespace App\GraphQL\Query\Modules\Three\Project;
 
+use GraphQL;
+use App\Models\Three\Project;
 use GraphQL\Type\Definition\Type;
+use Rebing\GraphQL\Support\Query;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
-use Rebing\GraphQL\Support\Query;
 
 class PaginationProject extends Query
 {
     protected $attributes = [
-        'name' => 'PaginationProject',
-        'description' => 'A query'
+        'name' => 'PaginationProject'
     ];
 
     public function type()
@@ -52,7 +53,7 @@ class PaginationProject extends Query
         $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
 
-        return Macroproject::select($select)
+        return Project::select($select)
                         ->when($project_id, function ($query) use ($project_id) {
                             return $query->where('project_id', '=', $project_id);
                         })

@@ -24,10 +24,11 @@ class DatabaseSeeder extends Seeder
         $this->call(ProfileMenuSeeder::class);
         $this->call(PersonSeeder::class);
         $this->call(UserSeeder::class);
+        $this->call(UserOfficeSeeder::class);
         /** Three **/
         $this->call(MacroprojectSeeder::class);
         $this->call(ProjectSeeder::class);
-        $this->call(UserOfficeSeeder::class);
+        $this->call(UserOfficeProjectSeeder::class);
         Schema::enableForeignKeyConstraints();
     }
 }

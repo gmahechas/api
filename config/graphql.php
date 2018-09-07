@@ -101,7 +101,8 @@ return [
                 'paginationUserOffice' => 'App\GraphQL\Query\Two\UserOffice\PaginationUserOffice',
                 /** Three **/
                 'paginationMacroproject' => 'App\GraphQL\Query\Three\Macroproject\PaginationMacroproject',
-                'paginationProject' => 'App\GraphQL\Query\Three\Project\PaginationProject'
+                'paginationProject' => 'App\GraphQL\Query\Three\Project\PaginationProject',
+                'paginationUserOfficeProject' => 'App\GraphQL\Query\Three\UserOfficeProject\PaginationUserOfficeProject'
             ],
             'mutation' => [
                 /** One **/
@@ -136,6 +137,7 @@ return [
                 'storeProject' => 'App\GraphQL\Mutation\Three\Project\StoreProject', /** Project **/
                 'updateProject' => 'App\GraphQL\Mutation\Three\Project\UpdateProject',
                 'destroyProject' => 'App\GraphQL\Mutation\Three\Project\DestroyProject',
+                'updateUserOfficeProject' => 'App\GraphQL\Mutation\Three\UserOfficeProject\UpdateUserOfficeProject', /** UserOfficeProject **/
             ],
             'middleware' => []
         ]
@@ -167,7 +169,8 @@ return [
         'UserOffice' => 'App\GraphQL\Type\Two\UserOfficeType',
         /** Three **/
         'Macroproject' => 'App\GraphQL\Type\Three\MacroprojectType',
-        'Project' => 'App\GraphQL\Type\Three\ProjectType'
+        'Project' => 'App\GraphQL\Type\Three\ProjectType',
+        'UserOfficeProject' => 'App\GraphQL\Type\Three\UserOfficeProjectType'
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

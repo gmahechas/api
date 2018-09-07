@@ -25,7 +25,7 @@ class PersonType extends GraphQLType
             	'type' => GraphQL::type('PersonBusinessTypeEnum')
             ],
             'person_identification_type' => [
-            	'type' => Type::string()
+            	'type' => GraphQL::type('PersonIdentificationTypeEnum')
             ],
             'person_identification' => [
             	'type' => Type::string()

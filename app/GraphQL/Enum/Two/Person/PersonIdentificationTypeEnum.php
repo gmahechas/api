@@ -5,15 +5,15 @@ namespace App\GraphQL\Enum\Two\Person;
 
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
-class PersonBusinessTypeEnum extends GraphQLType {
+class PersonIdentificationTypeEnum extends GraphQLType {
 
     protected $enumObject = true;
 
     protected $attributes = [
-        'name' => 'PersonBusinessTypeEnum',
+        'name' => 'PersonIdentificationTypeEnum',
         'values' => [
-            'NATURAL' => '1',
-            'JURIDICA' => '2'
+            'CEDULA' => '1',
+            'NIT' => '2'
         ],
     ];
     

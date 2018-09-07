@@ -174,6 +174,7 @@ return [
         /************************* Enum *************************/
         /** Two **/
         'PersonBusinessTypeEnum' => 'App\GraphQL\Enum\Two\Person\PersonBusinessTypeEnum',
+        'PersonIdentificationTypeEnum' => 'App\GraphQL\Enum\Two\Person\PersonIdentificationTypeEnum',
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

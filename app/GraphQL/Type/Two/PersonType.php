@@ -22,7 +22,7 @@ class PersonType extends GraphQLType
             	'type' => Type::id()
             ],
             'person_business_type' => [
-            	'type' => Type::string()
+            	'type' => GraphQL::type('PersonBusinessTypeEnum')
             ],
             'person_identification_type' => [
             	'type' => Type::string()

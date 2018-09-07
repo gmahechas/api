@@ -170,7 +170,10 @@ return [
         /** Three **/
         'Macroproject' => 'App\GraphQL\Type\Three\MacroprojectType',
         'Project' => 'App\GraphQL\Type\Three\ProjectType',
-        'UserOfficeProject' => 'App\GraphQL\Type\Three\UserOfficeProjectType'
+        'UserOfficeProject' => 'App\GraphQL\Type\Three\UserOfficeProjectType',
+        /************************* Enum *************************/
+        /** Two **/
+        'PersonBusinessTypeEnum' => 'App\GraphQL\Enum\Two\Person\PersonBusinessTypeEnum',
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

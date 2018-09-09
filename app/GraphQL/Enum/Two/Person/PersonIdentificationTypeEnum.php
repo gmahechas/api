@@ -2,7 +2,6 @@
 
 namespace App\GraphQL\Enum\Two\Person;
 
-
 use Rebing\GraphQL\Support\Type as GraphQLType;
 
 class PersonIdentificationTypeEnum extends GraphQLType {

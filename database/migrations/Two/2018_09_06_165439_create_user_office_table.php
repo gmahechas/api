@@ -15,7 +15,7 @@ class CreateUserOfficeTable extends Migration
     {
         Schema::create('two_user_office', function (Blueprint $table) {
             $table->increments('user_office_id');
-            $table->enum('user_office_status', ['1', '2']);
+            $table->boolean('user_office_status');
 
             $table->timestamp('user_office_created_at')->nullable();
             $table->timestamp('user_office_updated_at')->nullable();

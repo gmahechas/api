@@ -22,7 +22,7 @@ class UserOfficeProjectType extends GraphQLType
             	'type' => Type::id()
             ],
             'user_office_project_status' => [
-            	'type' => Type::string()
+            	'type' => Type::boolean()
             ],
             'user_office_project_created_at' => DateField::class,
             'user_office_project_updated_at' => DateField::class,

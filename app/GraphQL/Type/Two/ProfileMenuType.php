@@ -22,7 +22,7 @@ class ProfileMenuType extends GraphQLType
             	'type' => Type::id()
             ],
             'profile_menu_status' => [
-            	'type' => Type::string()
+            	'type' => Type::boolean()
             ],
             'profile_menu_created_at' => DateField::class,
             'profile_menu_updated_at' => DateField::class,

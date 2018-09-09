@@ -22,7 +22,7 @@ class UserOfficeType extends GraphQLType
             	'type' => Type::id()
             ],
             'user_office_status' => [
-            	'type' => Type::string()
+            	'type' => Type::boolean()
             ],
             'user_office_created_at' => DateField::class,
             'user_office_updated_at' => DateField::class,

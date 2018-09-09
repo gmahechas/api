@@ -15,82 +15,82 @@ class ProfileMenuSeeder extends Seeder
         ProfileMenu::truncate();
         ProfileMenu::flushEventListeners();
         ProfileMenu::create([
-        	'profile_menu_status' => '1',
+        	'profile_menu_status' => true,
             'profile_id' => 1,
         	'menu_id' => 1
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 2
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 3
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 4
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 5
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 6
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 7
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 8
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 1
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 2
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 3
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 4
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 5
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 6
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 7
         ]);
         ProfileMenu::create([
-            'profile_menu_status' => '1',
+            'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 8
         ]);

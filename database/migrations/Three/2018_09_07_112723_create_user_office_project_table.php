@@ -15,7 +15,7 @@ class CreateUserOfficeProjectTable extends Migration
     {
         Schema::create('three_user_office_project', function (Blueprint $table) {
             $table->increments('user_office_project_id');
-            $table->enum('user_office_project_status', ['1', '2']);
+            $table->boolean('user_office_project_status');
 
             $table->timestamp('user_office_project_created_at')->nullable();
             $table->timestamp('user_office_project_updated_at')->nullable();

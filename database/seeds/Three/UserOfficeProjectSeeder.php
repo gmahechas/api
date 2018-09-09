@@ -15,12 +15,12 @@ class UserOfficeProjectSeeder extends Seeder
         UserOfficeProject::truncate();
         UserOfficeProject::flushEventListeners();
         UserOfficeProject::create([
-        	'user_office_project_status' => '1',
+        	'user_office_project_status' => true,
         	'user_office_id' => 1,
         	'project_id' => 1
         ]);
         UserOfficeProject::create([
-        	'user_office_project_status' => '1',
+        	'user_office_project_status' => true,
         	'user_office_id' => 1,
         	'project_id' => 2
         ]);

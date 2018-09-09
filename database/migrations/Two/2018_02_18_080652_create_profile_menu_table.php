@@ -15,7 +15,7 @@ class CreateProfileMenuTable extends Migration
     {
         Schema::create('two_profile_menu', function (Blueprint $table) {
             $table->increments('profile_menu_id');
-            $table->enum('profile_menu_status', ['1', '2']);
+            $table->boolean('profile_menu_status');
 
             $table->timestamp('profile_menu_created_at')->nullable();
             $table->timestamp('profile_menu_updated_at')->nullable();

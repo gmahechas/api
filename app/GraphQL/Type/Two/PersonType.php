@@ -56,8 +56,8 @@ class PersonType extends GraphQLType
                 'type' => GraphQL::type('City')
             ],
             /*Out*/
-            'users' => [
-                'type' => Type::listOf(GraphQL::type('User'))
+            'user' => [
+                'type' => GraphQL::type('User')
             ],
         ];
     }

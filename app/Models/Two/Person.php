@@ -41,6 +41,6 @@ class Person extends Model
 
 	/*Out*/
 	public function user(){
-		return $this->hasMany(User::class, 'person_id');
+		return $this->hasOne(User::class, 'person_id');
 	}
 }

@@ -15,7 +15,7 @@ class CreateUserTable extends Migration
     {
         Schema::create('two_user', function (Blueprint $table) {
             $table->increments('user_id');
-            $table->string('username', 64);
+            $table->string('username', 64)->unique();
             $table->string('email')->unique();
             $table->string('password', 128);
             $table->rememberToken();
@@ -24,14 +24,14 @@ class CreateUserTable extends Migration
             $table->timestamp('user_updated_at')->nullable();
             $table->softDeletes('user_deleted_at');
 
-            $table->integer('person_id')->nullable()->unsigned();
+            $table->integer('person_id')->unique()->unsigned();
             $table->foreign('person_id')
                   ->references('person_id')
                   ->on('two_person')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
 
-            $table->integer('profile_id')->nullable()->unsigned();
+            $table->integer('profile_id')->unsigned();
             $table->foreign('profile_id')
                   ->references('profile_id')
                   ->on('two_profile')

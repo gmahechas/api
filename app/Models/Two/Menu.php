@@ -18,7 +18,7 @@ class Menu extends Model
 	protected $fillable = [
 		'menu_name',
 		'menu_uri',
-		'menu_id_parent'
+		'menu_parent_id'
 	];
 
 	protected $dates = [
@@ -26,6 +26,10 @@ class Menu extends Model
 		'menu_updated_at',
 		'menu_deleted_at'
 	];
+	/*In*/
+	public function menu_parent(){
+		return $this->belongsTo(Menu::class, 'menu_parent_id');
+	}
 
 	/*Out*/
 	public function profile_menus(){

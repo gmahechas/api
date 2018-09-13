@@ -22,8 +22,8 @@ class CreateMenuTable extends Migration
             $table->timestamp('menu_updated_at')->nullable();
             $table->softDeletes('menu_deleted_at');
 
-            $table->integer('menu_id_parent')->nullable()->unsigned();
-            $table->foreign('menu_id_parent')
+            $table->integer('menu_parent_id')->nullable()->unsigned();
+            $table->foreign('menu_parent_id')
                   ->references('menu_id')
                   ->on('two_menu')
                   ->onDelete('restrict')

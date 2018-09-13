@@ -30,6 +30,13 @@ class MenuType extends GraphQLType
             'menu_created_at' => DateField::class,
             'menu_updated_at' => DateField::class,
             'menu_deleted_at' => DateField::class,
+            'menu_parent_id' => [
+                'type' => Type::id()
+            ],
+            /*In*/
+            'menu_parent' => [
+                'type' => GraphQL::type('Menu')
+            ],
             /*Out*/
             'profile_menus' => [
                 'type' => GraphQL::type('ProfileMenu')

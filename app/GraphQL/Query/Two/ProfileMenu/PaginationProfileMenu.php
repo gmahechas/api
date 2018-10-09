@@ -17,7 +17,7 @@ class PaginationProfileMenu extends Query
 
     public function type()
     {
-        return GraphQL::paginate('ProfileMenu');
+        return Type::listOf(GraphQL::type('ProfileMenu'));
     }
 
     public function args()
@@ -54,8 +54,8 @@ class PaginationProfileMenu extends Query
         $profile_id = isset($args['profile_id']) ? $args['profile_id'] : false;
         $menu_id = isset($args['menu_id']) ? $args['menu_id'] : false;
 
-        $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
-        $page = isset($args['page']) ? $args['page'] : 1;
+        // $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
+        // $page = isset($args['page']) ? $args['page'] : 1;
 
         return ProfileMenu::select($select)
                         ->when($profile_menu_id, function ($query) use ($profile_menu_id) {
@@ -71,7 +71,7 @@ class PaginationProfileMenu extends Query
                             return $query->where('menu_id', '=', $menu_id);
                         })
                         ->with($with)
-                        ->paginate($limit, ['*'], 'pages', $page);
+                        ->get();
 
     }
 }

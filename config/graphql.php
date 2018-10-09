@@ -98,6 +98,7 @@ return [
                 'paginationProfileMenu' => 'App\GraphQL\Query\Two\ProfileMenu\PaginationProfileMenu',
                 'paginationPerson' => 'App\GraphQL\Query\Two\Person\PaginationPerson',
                 'paginationUser' => 'App\GraphQL\Query\Two\User\PaginationUser',
+                'authenticationUser' => 'App\GraphQL\Query\Two\User\AuthenticationUser',
                 'paginationUserOffice' => 'App\GraphQL\Query\Two\UserOffice\PaginationUserOffice',
                 /** Three **/
                 'paginationMacroproject' => 'App\GraphQL\Query\Three\Macroproject\PaginationMacroproject',
@@ -166,6 +167,7 @@ return [
         'Menu' => 'App\GraphQL\Type\Two\MenuType',
         'Person' => 'App\GraphQL\Type\Two\PersonType',
         'User' => 'App\GraphQL\Type\Two\UserType',
+        'Passport' => 'App\GraphQL\Type\Two\PassportType',
         'UserOffice' => 'App\GraphQL\Type\Two\UserOfficeType',
         /** Three **/
         'Macroproject' => 'App\GraphQL\Type\Three\MacroprojectType',

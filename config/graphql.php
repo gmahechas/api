@@ -3,7 +3,7 @@
 return [
 
     // The prefix for routes
-    'prefix' => 'graphql',
+    'prefix' => 'api',
 
     // The routes to make GraphQL request. Either a string that will apply
     // to both query and mutation or an array containing the key 'query' and/or
@@ -22,7 +22,7 @@ return [
     //     'mutation' => 'mutation/{graphql_schema?}',
     // ]
     //
-    'routes' => 'admin',
+    'routes' => 'graphql',
 
     // The controller to use in GraphQL request. Either a string that will apply
     // to both query and mutation or an array containing the key 'query' and/or
@@ -43,7 +43,7 @@ return [
     // The name of the default schema used when no argument is provided
     // to GraphQL::schema() or when the route is used without the graphql_schema
     // parameter.
-    'default_schema' => 'admin',
+    'default_schema' => 'graphql',
 
     // The schemas for query and/or mutation. It expects an array of schemas to provide
     // both the 'query' fields and the 'mutation' fields.
@@ -84,7 +84,7 @@ return [
     //  ]
     //
     'schemas' => [
-        'admin' => [
+        'graphql' => [
             'query' => [
                 /** One **/
                 'paginationCountry' => 'App\GraphQL\Query\One\Country\PaginationCountry',
@@ -98,7 +98,6 @@ return [
                 'paginationProfileMenu' => 'App\GraphQL\Query\Two\ProfileMenu\PaginationProfileMenu',
                 'paginationPerson' => 'App\GraphQL\Query\Two\Person\PaginationPerson',
                 'paginationUser' => 'App\GraphQL\Query\Two\User\PaginationUser',
-                'authenticationUser' => 'App\GraphQL\Query\Two\User\AuthenticationUser',
                 'paginationUserOffice' => 'App\GraphQL\Query\Two\UserOffice\PaginationUserOffice',
                 /** Three **/
                 'paginationMacroproject' => 'App\GraphQL\Query\Three\Macroproject\PaginationMacroproject',
@@ -167,7 +166,6 @@ return [
         'Menu' => 'App\GraphQL\Type\Two\MenuType',
         'Person' => 'App\GraphQL\Type\Two\PersonType',
         'User' => 'App\GraphQL\Type\Two\UserType',
-        'Passport' => 'App\GraphQL\Type\Two\PassportType',
         'UserOffice' => 'App\GraphQL\Type\Two\UserOfficeType',
         /** Three **/
         'Macroproject' => 'App\GraphQL\Type\Three\MacroprojectType',

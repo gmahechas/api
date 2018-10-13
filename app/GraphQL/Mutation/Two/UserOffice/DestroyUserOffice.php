@@ -9,10 +9,10 @@ use Rebing\GraphQL\Support\Mutation;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
-class UpdateUserOffice extends Mutation
+class DestroyUserOffice extends Mutation
 {
     protected $attributes = [
-        'name' => 'UpdateUserOffice'
+        'name' => 'DestroyUserOffice',
     ];
 
     public function type()
@@ -26,9 +26,6 @@ class UpdateUserOffice extends Mutation
             'user_office_id' => [
                 'type' => Type::nonNull(Type::id()),
                 'rules' => ['required']
-            ],
-            'user_office_status' => [
-                'type' => Type::boolean()
             ]
         ];
     }
@@ -40,22 +37,9 @@ class UpdateUserOffice extends Mutation
 
         if($data = UserOffice::select($select)->with($with)->find($args['user_office_id']))
         {
-            foreach($args as $key => $value)
-            {
-                if($data->{$key} != $value)
-                {
-                    $data->{$key} = $value;
-                }
-            }
-
-            if($data->isDirty())
-            {
-                $data->save();
-                return $data->refresh();
-            } else {
-                return null;
-            }
-
+            $data_return = $data;
+            $data->delete();
+            return $data_return;
         } else {
             return null;
         }

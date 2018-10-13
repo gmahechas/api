@@ -130,6 +130,7 @@ return [
                 'updateUser' => 'App\GraphQL\Mutation\Two\User\UpdateUser',
                 'destroyUser' => 'App\GraphQL\Mutation\Two\User\DestroyUser',
                 'updateUserOffice' => 'App\GraphQL\Mutation\Two\UserOffice\UpdateUserOffice', /** UserOffice **/
+                'destroyUserOffice' => 'App\GraphQL\Mutation\Two\UserOffice\DestroyUserOffice',
                 /** Three **/
                 'storeMacroproject' => 'App\GraphQL\Mutation\Three\Macroproject\StoreMacroproject', /** Macroproject **/
                 'updateMacroproject' => 'App\GraphQL\Mutation\Three\Macroproject\UpdateMacroproject',

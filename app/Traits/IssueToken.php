@@ -3,8 +3,9 @@
 namespace App\Traits;
 
 use App\Models\Two\User;
-use Laravel\Passport\Client;
+use App\Models\One\Company;
 use Illuminate\Http\Request;
+use Laravel\Passport\Client;
 use Illuminate\Support\Facades\Route;
 
 trait IssueToken
@@ -28,13 +29,15 @@ trait IssueToken
     	$proxy = Request::create('api/oauth/token', 'POST');
 
         $user = User::with('person', 'profile.profile_menus.menu')->where('username', $params['username'])->first();
+        $company = Company::with('city')->where('company_id', 1)->first();
 
         $response = Route::dispatch($proxy);
 
         if (200 === $response->status()) {
             return response()->json([
                 'token' => json_decode($response->getContent(), true),
-                'user' => $user
+                'user' => $user,
+                'company' => $company
             ]);
         } else {
             return $response;

@@ -15,8 +15,8 @@ class MenuSeeder extends Seeder
         Menu::truncate();
         Menu::flushEventListeners();
         Menu::create([
-        	'menu_name' => 'Modulo 1',
-        	'menu_uri' => 'menu1',
+        	'menu_name' => 'Paises',
+        	'menu_uri' => 'country',
         	'menu_parent_id' => null
         ]);
         Menu::create([
@@ -35,8 +35,8 @@ class MenuSeeder extends Seeder
         	'menu_parent_id' => 3
         ]);
         Menu::create([
-        	'menu_name' => 'Modulo 2',
-        	'menu_uri' => 'menu5',
+        	'menu_name' => 'Estados',
+        	'menu_uri' => 'estate',
         	'menu_parent_id' => null
         ]);
         Menu::create([

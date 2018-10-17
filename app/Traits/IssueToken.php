@@ -26,7 +26,7 @@ trait IssueToken
     	];
 
     	$request->request->add($params);
-    	$proxy = Request::create('api/oauth/token', 'POST');
+    	$proxy = Request::create('api/auth/token', 'POST');
 
         $user = User::with('person', 'profile.profile_menus.menu')->where('username', $params['username'])->first();
         $company = Company::with('city')->where('company_id', 1)->first();

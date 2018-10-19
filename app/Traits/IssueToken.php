@@ -28,20 +28,32 @@ trait IssueToken
     	$request->request->add($params);
     	$proxy = Request::create('api/auth/token', 'POST');
 
-        $user = User::with('person', 'profile.profile_menus.menu')->where('username', $params['username'])->first();
-        $company = Company::with('city')->where('company_id', 1)->first();
-
         $response = Route::dispatch($proxy);
 
         if (200 === $response->status()) {
-            return response()->json([
-                'token' => json_decode($response->getContent(), true),
-                'user' => $user,
-                'company' => $company
-            ]);
+            return $this->responseAuth($grantType, $params, $response);
         } else {
             return $response;
         }
 
 	}
+
+    private function responseAuth($grantType, $params, $response)
+    {
+        switch ($grantType) {
+            case 'password':
+                return response()->json([
+                    'token' => json_decode($response->getContent(), true),
+                    'user' => User::with('person', 'profile.profile_menus.menu')->where('username', $params['username'])->first(),
+                    'company' => Company::with('city')->where('company_id', 1)->first()
+                ]);
+                break;
+            
+            case 'refresh_token':
+                return response()->json([
+                    'token' => json_decode($response->getContent(), true)
+                ]);
+                break;
+        }
+    }
 }

@@ -50,9 +50,7 @@ trait IssueToken
                 break;
             
             case 'refresh_token':
-                return response()->json([
-                    'token' => json_decode($response->getContent(), true)
-                ]);
+                return response()->json(json_decode($response->getContent(), true));
                 break;
         }
     }

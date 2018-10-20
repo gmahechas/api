@@ -28,13 +28,4 @@ class AuthController extends Controller
     	]);
     	return $this->issueToken($request, 'refresh_token');
     }
-
-    public function check(Request $request)
-    {
-        return response()->json([
-            'user' => auth()->guard('api')->user()->load('person', 'profile.profile_menus'),
-            'company' => Company::with('city')->where('company_id', 1)->first()
-        ]);
-    }
-
 }

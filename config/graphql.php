@@ -86,6 +86,8 @@ return [
     'schemas' => [
         'graphql' => [
             'query' => [
+                /** Auth **/
+                'checkAuth' => 'App\GraphQL\Query\Auth\CheckAuth',
                 /** One **/
                 'paginationCountry' => 'App\GraphQL\Query\One\Country\PaginationCountry',
                 'paginationEstate' => 'App\GraphQL\Query\One\Estate\PaginationEstate',
@@ -154,6 +156,8 @@ return [
     // ]
     //
     'types' => [
+        /** Auth **/
+        'CheckAuth' => 'App\GraphQL\Type\Auth\CheckAuthType',
         /** One **/
         'Country' => 'App\GraphQL\Type\One\CountryType',
         'Estate' => 'App\GraphQL\Type\One\EstateType',

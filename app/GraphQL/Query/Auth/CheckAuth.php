@@ -6,6 +6,7 @@ use GraphQL;
 use App\Models\One\Company;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
+use Illuminate\Support\Facades\Auth;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
 
@@ -33,7 +34,7 @@ class CheckAuth extends Query
         $with = $fields->getRelations();
 
         return [
-            'user' => auth()->guard('api')->user(),
+            'user' => Auth::user(),
             'company' => Company::with('city')->where('company_id', 1)->first()
         ];
     }

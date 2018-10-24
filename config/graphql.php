@@ -88,6 +88,7 @@ return [
             'query' => [
                 /** Auth **/
                 'checkAuth' => 'App\GraphQL\Query\Auth\CheckAuth',
+                'logoutAuth' => 'App\GraphQL\Query\Auth\LogoutAuth',
                 /** One **/
                 'paginationCountry' => 'App\GraphQL\Query\One\Country\PaginationCountry',
                 'paginationEstate' => 'App\GraphQL\Query\One\Estate\PaginationEstate',

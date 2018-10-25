@@ -20,39 +20,49 @@ class MenuSeeder extends Seeder
         	'menu_parent_id' => null
         ]);
         Menu::create([
-        	'menu_name' => 'Menu 1 - Modulo 1',
-        	'menu_uri' => 'menu2',
-        	'menu_parent_id' => 1
-        ]);
-        Menu::create([
-        	'menu_name' => 'Menu 2 - Modulo 1',
-        	'menu_uri' => 'menu3',
-        	'menu_parent_id' => 1
-        ]);
-        Menu::create([
-        	'menu_name' => 'Menu 3 - Modulo 1',
-        	'menu_uri' => 'menu4',
-        	'menu_parent_id' => 3
-        ]);
-        Menu::create([
         	'menu_name' => 'Estados',
         	'menu_uri' => 'estate',
         	'menu_parent_id' => null
         ]);
         Menu::create([
-        	'menu_name' => 'Menu 4 - Modulo 2',
-        	'menu_uri' => 'menu6',
-        	'menu_parent_id' => 5
+        	'menu_name' => 'Ciudades',
+        	'menu_uri' => 'city',
+        	'menu_parent_id' => null
         ]);
         Menu::create([
-        	'menu_name' => 'Menu 5 - Modulo 2',
-        	'menu_uri' => 'menu7',
-        	'menu_parent_id' => 6
+        	'menu_name' => 'Sucursales',
+        	'menu_uri' => 'office',
+        	'menu_parent_id' => null
         ]);
         Menu::create([
-        	'menu_name' => 'Menu 6 - Modulo 2',
-        	'menu_uri' => 'menu8',
-        	'menu_parent_id' => 5
+        	'menu_name' => 'Empresa',
+        	'menu_uri' => 'company',
+        	'menu_parent_id' => null
+        ]);
+        Menu::create([
+        	'menu_name' => 'Personas',
+        	'menu_uri' => 'person',
+        	'menu_parent_id' => null
+        ]);
+        Menu::create([
+        	'menu_name' => 'Perfiles',
+        	'menu_uri' => 'profile',
+        	'menu_parent_id' => null
+        ]);
+        Menu::create([
+        	'menu_name' => 'Usuarios',
+        	'menu_uri' => 'user',
+        	'menu_parent_id' => null
+        ]);
+        Menu::create([
+            'menu_name' => 'Macro Proyecto',
+            'menu_uri' => 'macroproject',
+            'menu_parent_id' => null
+        ]);
+        Menu::create([
+            'menu_name' => 'Proyecto',
+            'menu_uri' => 'project',
+            'menu_parent_id' => null
         ]);
     }
 }

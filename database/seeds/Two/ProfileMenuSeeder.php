@@ -56,6 +56,16 @@ class ProfileMenuSeeder extends Seeder
         ]);
         ProfileMenu::create([
             'profile_menu_status' => true,
+            'profile_id' => 1,
+            'menu_id' => 9
+        ]);
+        ProfileMenu::create([
+            'profile_menu_status' => true,
+            'profile_id' => 1,
+            'menu_id' => 10
+        ]);
+        ProfileMenu::create([
+            'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 1
         ]);
@@ -93,6 +103,16 @@ class ProfileMenuSeeder extends Seeder
             'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 8
+        ]);
+        ProfileMenu::create([
+            'profile_menu_status' => true,
+            'profile_id' => 2,
+            'menu_id' => 9
+        ]);
+        ProfileMenu::create([
+            'profile_menu_status' => true,
+            'profile_id' => 2,
+            'menu_id' => 10
         ]);
     }
 }

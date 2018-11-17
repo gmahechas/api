@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Two\Person;
 
 class PersonSeeder extends Seeder
 {
@@ -14,6 +13,6 @@ class PersonSeeder extends Seeder
     {
         Person::truncate();
         Person::flushEventListeners();
-        factory(Person::class, 30)->create();
+        factory(\App\Modules\Features\C\Person\Models\Person::class, 30)->create();
     }
 }

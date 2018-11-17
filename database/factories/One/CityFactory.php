@@ -1,10 +1,9 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Models\One\City;
-use App\Models\One\Estate;
+use App\Modules\Features\A\Estate\Models\Estate;
 
-$factory->define(City::class, function (Faker $faker) {
+$factory->define(\App\Modules\Features\A\City\Models\City::class, function (Faker $faker) {
 
     return [
         'city_name' => $faker->city,

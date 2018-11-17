@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\One\Estate;
+use App\Modules\Features\A\Estate\Models\Estate;
 
 class EstateSeeder extends Seeder
 {

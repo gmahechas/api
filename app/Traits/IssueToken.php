@@ -2,8 +2,8 @@
 
 namespace App\Traits;
 
-use App\Models\Two\User;
-use App\Models\One\Company;
+use App\Modules\Features\C\User\Models\User;
+use App\Modules\Features\B\Company\Models\Company;
 use Illuminate\Http\Request;
 use Laravel\Passport\Client;
 use Illuminate\Support\Facades\Route;

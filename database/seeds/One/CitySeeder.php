@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\One\City;
 
 class CitySeeder extends Seeder
 {
@@ -14,6 +13,6 @@ class CitySeeder extends Seeder
     {
         City::truncate();
         City::flushEventListeners();
-        factory(City::class, 30)->create();
+        factory(\App\Modules\Features\A\City\Models\City::class, 30)->create();
     }
 }

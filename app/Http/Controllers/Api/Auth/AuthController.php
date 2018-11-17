@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Api\Auth;
 
 use App\Traits\IssueToken;
-use App\Models\One\Company;
+use App\Modules\Features\B\Company\Models\Company;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 

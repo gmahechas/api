@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Three\Project;
 
 class ProjectSeeder extends Seeder
 {
@@ -14,6 +13,6 @@ class ProjectSeeder extends Seeder
     {
         Project::truncate();
         Project::flushEventListeners();
-        factory(Project::class, 10)->create();
+        factory(\App\Modules\Features\D\Project\Models\Project::class, 10)->create();
     }
 }

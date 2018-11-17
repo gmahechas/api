@@ -1,14 +1,12 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Models\Three\Project;
-use App\Models\Three\Macroproject;
 
-$factory->define(Project::class, function (Faker $faker) {
+$factory->define(\App\Modules\Features\D\Project\Models\Project::class, function (Faker $faker) {
     return [
         'project_name' => $faker->company,
         'project_address' => $faker->address,
         'project_phone' => $faker->phoneNumber,
-        'macroproject_id' => Macroproject::all()->random()->macroproject_id
+        'macroproject_id' => \App\Modules\Features\D\Macroproject\Models\Macroproject::all()->random()->macroproject_id
     ];
 });

@@ -1,8 +1,8 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Models\One\Estate;
-use App\Models\One\Country;
+use App\Modules\Features\A\Estate\Models\Estate;
+use App\Modules\Features\A\Country\Models\Country;
 
 $factory->define(Estate::class, function (Faker $faker) {
 

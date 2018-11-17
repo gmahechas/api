@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Three\UserOfficeProject;
+use App\Modules\Features\D\UserOfficeProject\Models\UserOfficeProject;
 
 class UserOfficeProjectSeeder extends Seeder
 {

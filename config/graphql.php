@@ -87,61 +87,63 @@ return [
         'graphql' => [
             'query' => [
                 /** Auth **/
-                'checkAuth' => 'App\GraphQL\Query\Auth\CheckAuth',
-                'logoutAuth' => 'App\GraphQL\Query\Auth\LogoutAuth',
-                /** One **/
-                'paginationCountry' => 'App\GraphQL\Query\One\Country\PaginationCountry',
-                'paginationEstate' => 'App\GraphQL\Query\One\Estate\PaginationEstate',
-                'paginationCity' => 'App\GraphQL\Query\One\City\PaginationCity',
-                'paginationCompany' => 'App\GraphQL\Query\One\Company\PaginationCompany',
-                'paginationOffice' => 'App\GraphQL\Query\One\Office\PaginationOffice',
-                /** Two **/
-                'paginationProfile' => 'App\GraphQL\Query\Two\Profile\PaginationProfile',
-                'paginationMenu' => 'App\GraphQL\Query\Two\Menu\PaginationMenu',
-                'paginationProfileMenu' => 'App\GraphQL\Query\Two\ProfileMenu\PaginationProfileMenu',
-                'paginationPerson' => 'App\GraphQL\Query\Two\Person\PaginationPerson',
-                'paginationUser' => 'App\GraphQL\Query\Two\User\PaginationUser',
-                'paginationUserOffice' => 'App\GraphQL\Query\Two\UserOffice\PaginationUserOffice',
-                /** Three **/
-                'paginationMacroproject' => 'App\GraphQL\Query\Three\Macroproject\PaginationMacroproject',
-                'paginationProject' => 'App\GraphQL\Query\Three\Project\PaginationProject',
-                'paginationUserOfficeProject' => 'App\GraphQL\Query\Three\UserOfficeProject\PaginationUserOfficeProject'
+                'checkAuth' => 'App\Modules\Auth\GraphQL\Query\CheckAuth',
+                'logoutAuth' => 'App\Modules\Auth\GraphQL\Query\LogoutAuth',
+                /** A **/
+                'paginationCountry' => 'App\Modules\Features\A\Country\GraphQL\Query\PaginationCountry',
+                'paginationEstate' => 'App\Modules\Features\A\Estate\GraphQL\Query\PaginationEstate',
+                'paginationCity' => 'App\Modules\Features\A\City\GraphQL\Query\PaginationCity',
+                /** B **/
+                'paginationCompany' => 'App\Modules\Features\B\Company\GraphQL\Query\PaginationCompany',
+                'paginationOffice' => 'App\Modules\Features\B\Office\GraphQL\Query\PaginationOffice',
+                /** C **/
+                'paginationProfile' => 'App\Modules\Features\C\Profile\GraphQL\Query\PaginationProfile',
+                'paginationMenu' => 'App\Modules\Features\C\Menu\GraphQL\Query\PaginationMenu',
+                'paginationProfileMenu' => 'App\Modules\Features\C\ProfileMenu\GraphQL\Query\PaginationProfileMenu',
+                'paginationPerson' => 'App\Modules\Features\C\Person\GraphQL\Query\PaginationPerson',
+                'paginationUser' => 'App\Modules\Features\C\User\GraphQL\Query\PaginationUser',
+                'paginationUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Query\PaginationUserOffice',
+                /** D **/
+                'paginationMacroproject' => 'App\Modules\Features\D\Macroproject\GraphQL\Query\PaginationMacroproject',
+                'paginationProject' => 'App\Modules\Features\D\Project\GraphQL\Query\PaginationProject',
+                'paginationUserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Query\PaginationUserOfficeProject'
             ],
             'mutation' => [
-                /** One **/
-                'storeCountry' => 'App\GraphQL\Mutation\One\Country\StoreCountry', /** Country **/
-                'updateCountry' => 'App\GraphQL\Mutation\One\Country\UpdateCountry',
-                'destroyCountry' => 'App\GraphQL\Mutation\One\Country\DestroyCountry',
-                'storeEstate' => 'App\GraphQL\Mutation\One\Estate\StoreEstate', /** Estate **/
-                'updateEstate' => 'App\GraphQL\Mutation\One\Estate\UpdateEstate',
-                'destroyEstate' => 'App\GraphQL\Mutation\One\Estate\DestroyEstate',
-                'storeCity' => 'App\GraphQL\Mutation\One\City\StoreCity', /** City **/
-                'updateCity' => 'App\GraphQL\Mutation\One\City\UpdateCity',
-                'destroyCity' => 'App\GraphQL\Mutation\One\City\DestroyCity',
-                'storeOffice' => 'App\GraphQL\Mutation\One\Office\StoreOffice', /** Office **/
-                'updateOffice' => 'App\GraphQL\Mutation\One\Office\UpdateOffice',
-                'destroyOffice' => 'App\GraphQL\Mutation\One\Office\DestroyOffice',
-                /** Two **/
-                'storeProfile' => 'App\GraphQL\Mutation\Two\Profile\StoreProfile', /** Profile **/
-                'updateProfile' => 'App\GraphQL\Mutation\Two\Profile\UpdateProfile',
-                'destroyProfile' => 'App\GraphQL\Mutation\Two\Profile\DestroyProfile',
-                'updateProfileMenu' => 'App\GraphQL\Mutation\Two\ProfileMenu\UpdateProfileMenu', /** ProfileMenu **/
-                'storePerson' => 'App\GraphQL\Mutation\Two\Person\StorePerson', /** Person **/
-                'updatePerson' => 'App\GraphQL\Mutation\Two\Person\UpdatePerson',
-                'destroyPerson' => 'App\GraphQL\Mutation\Two\Person\DestroyPerson',
-                'storeUser' => 'App\GraphQL\Mutation\Two\User\StoreUser', /** User **/
-                'updateUser' => 'App\GraphQL\Mutation\Two\User\UpdateUser',
-                'destroyUser' => 'App\GraphQL\Mutation\Two\User\DestroyUser',
-                'updateUserOffice' => 'App\GraphQL\Mutation\Two\UserOffice\UpdateUserOffice', /** UserOffice **/
-                'destroyUserOffice' => 'App\GraphQL\Mutation\Two\UserOffice\DestroyUserOffice',
+                /** A **/
+                'storeCountry' => 'App\Modules\Features\A\Country\GraphQL\Mutation\StoreCountry', /** Country **/
+                'updateCountry' => 'App\Modules\Features\A\Country\GraphQL\Mutation\UpdateCountry',
+                'destroyCountry' => 'App\Modules\Features\A\Country\GraphQL\Mutation\DestroyCountry',
+                'storeEstate' => 'App\Modules\Features\A\Estate\GraphQL\Mutation\StoreEstate', /** Estate **/
+                'updateEstate' => 'App\Modules\Features\A\Estate\GraphQL\Mutation\UpdateEstate',
+                'destroyEstate' => 'App\Modules\Features\A\Estate\GraphQL\Mutation\DestroyEstate',
+                'storeCity' => 'App\Modules\Features\A\City\GraphQL\Mutation\StoreCity', /** City **/
+                'updateCity' => 'App\Modules\Features\A\City\GraphQL\Mutation\UpdateCity',
+                'destroyCity' => 'App\Modules\Features\A\City\GraphQL\Mutation\DestroyCity',
+                /** B **/
+                'storeOffice' => 'App\Modules\Features\B\Office\GraphQL\Mutation\StoreOffice', /** Office **/
+                'updateOffice' => 'App\Modules\Features\B\Office\GraphQL\Mutation\UpdateOffice',
+                'destroyOffice' => 'App\Modules\Features\B\Office\GraphQL\Mutation\DestroyOffice',
+                /** C **/
+                'storeProfile' => 'App\Modules\Features\C\Profile\GraphQL\Mutation\StoreProfile', /** Profile **/
+                'updateProfile' => 'App\Modules\Features\C\Profile\GraphQL\Mutation\UpdateProfile',
+                'destroyProfile' => 'App\Modules\Features\C\Profile\GraphQL\Mutation\DestroyProfile',
+                'updateProfileMenu' => 'App\Modules\Features\C\ProfileMenu\GraphQL\Mutation\UpdateProfileMenu', /** ProfileMenu **/
+                'storePerson' => 'App\Modules\Features\C\Person\GraphQL\Mutation\StorePerson', /** Person **/
+                'updatePerson' => 'App\Modules\Features\C\Person\GraphQL\Mutation\UpdatePerson',
+                'destroyPerson' => 'App\Modules\Features\C\Person\GraphQL\Mutation\DestroyPerson',
+                'storeUser' => 'App\Modules\Features\C\User\GraphQL\Mutation\StoreUser', /** User **/
+                'updateUser' => 'App\Modules\Features\C\User\GraphQL\Mutation\UpdateUser',
+                'destroyUser' => 'App\Modules\Features\C\User\GraphQL\Mutation\DestroyUser',
+                'updateUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Mutation\UpdateUserOffice', /** UserOffice **/
+                'destroyUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Mutation\DestroyUserOffice',
                 /** Three **/
-                'storeMacroproject' => 'App\GraphQL\Mutation\Three\Macroproject\StoreMacroproject', /** Macroproject **/
-                'updateMacroproject' => 'App\GraphQL\Mutation\Three\Macroproject\UpdateMacroproject',
-                'destroyMacroproject' => 'App\GraphQL\Mutation\Three\Macroproject\DestroyMacroproject',
-                'storeProject' => 'App\GraphQL\Mutation\Three\Project\StoreProject', /** Project **/
-                'updateProject' => 'App\GraphQL\Mutation\Three\Project\UpdateProject',
-                'destroyProject' => 'App\GraphQL\Mutation\Three\Project\DestroyProject',
-                'updateUserOfficeProject' => 'App\GraphQL\Mutation\Three\UserOfficeProject\UpdateUserOfficeProject', /** UserOfficeProject **/
+                'storeMacroproject' => 'App\Modules\Features\D\Macroproject\GraphQL\Mutation\StoreMacroproject', /** Macroproject **/
+                'updateMacroproject' => 'App\Modules\Features\D\Macroproject\GraphQL\Mutation\UpdateMacroproject',
+                'destroyMacroproject' => 'App\Modules\Features\D\Macroproject\GraphQL\Mutation\DestroyMacroproject',
+                'storeProject' => 'App\Modules\Features\D\Project\GraphQL\Mutation\StoreProject', /** Project **/
+                'updateProject' => 'App\Modules\Features\D\Project\GraphQL\Mutation\UpdateProject',
+                'destroyProject' => 'App\Modules\Features\D\Project\GraphQL\Mutation\DestroyProject',
+                'updateUserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Mutation\UpdateUserOfficeProject', /** UserOfficeProject **/
             ],
             'middleware' => []
         ]
@@ -158,29 +160,29 @@ return [
     //
     'types' => [
         /** Auth **/
-        'CheckAuth' => 'App\GraphQL\Type\Auth\CheckAuthType',
-        /** One **/
-        'Country' => 'App\GraphQL\Type\One\CountryType',
-        'Estate' => 'App\GraphQL\Type\One\EstateType',
-        'City' => 'App\GraphQL\Type\One\CityType',
-        'Company' => 'App\GraphQL\Type\One\CompanyType',
-        'Office' => 'App\GraphQL\Type\One\OfficeType',
-        /** Two **/
-        'Profile' => 'App\GraphQL\Type\Two\ProfileType',
-        'Menu' => 'App\GraphQL\Type\Two\MenuType',
-        'ProfileMenu' => 'App\GraphQL\Type\Two\ProfileMenuType',
-        'Menu' => 'App\GraphQL\Type\Two\MenuType',
-        'Person' => 'App\GraphQL\Type\Two\PersonType',
-        'User' => 'App\GraphQL\Type\Two\UserType',
-        'UserOffice' => 'App\GraphQL\Type\Two\UserOfficeType',
+        'CheckAuth' => 'App\Modules\Auth\GraphQL\Type\CheckAuthType',
+        /** A **/
+        'Country' => 'App\Modules\Features\A\Country\GraphQL\Type\CountryType',
+        'Estate' => 'App\Modules\Features\A\Estate\GraphQL\Type\EstateType',
+        'City' => 'App\Modules\Features\A\City\GraphQL\Type\CityType',
+        /** B **/
+        'Company' => 'App\Modules\Features\B\Company\GraphQL\Type\CompanyType',
+        'Office' => 'App\Modules\Features\B\Office\GraphQL\Type\OfficeType',
+        /** C **/
+        'Profile' => 'App\Modules\Features\C\Profile\GraphQL\Type\ProfileType',
+        'Menu' => 'App\Modules\Features\C\Menu\GraphQL\Type\MenuType',
+        'ProfileMenu' => 'App\Modules\Features\C\ProfileMenu\GraphQL\Type\ProfileMenuType',
+        'Person' => 'App\Modules\Features\C\Person\GraphQL\Type\PersonType',
+        'User' => 'App\Modules\Features\C\User\GraphQL\Type\UserType',
+        'UserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Type\UserOfficeType',
         /** Three **/
-        'Macroproject' => 'App\GraphQL\Type\Three\MacroprojectType',
-        'Project' => 'App\GraphQL\Type\Three\ProjectType',
-        'UserOfficeProject' => 'App\GraphQL\Type\Three\UserOfficeProjectType',
+        'Macroproject' => 'App\Modules\Features\D\Macroproject\GraphQL\Type\MacroprojectType',
+        'Project' => 'App\Modules\Features\D\Project\GraphQL\Type\ProjectType',
+        'UserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Type\UserOfficeProjectType',
         /************************* Enum *************************/
         /** Two **/
-        'PersonBusinessTypeEnum' => 'App\GraphQL\Enum\Two\Person\PersonBusinessTypeEnum',
-        'PersonIdentificationTypeEnum' => 'App\GraphQL\Enum\Two\Person\PersonIdentificationTypeEnum',
+        'PersonBusinessTypeEnum' => 'App\Modules\Shared\GraphQL\Enum\C\Person\PersonBusinessTypeEnum',
+        'PersonIdentificationTypeEnum' => 'App\Modules\Shared\GraphQL\Enum\C\Person\PersonIdentificationTypeEnum',
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

@@ -1,10 +1,8 @@
 <?php
 
 use Faker\Generator as Faker;
-use App\Models\One\City;
-use App\Models\Two\Person;
 
-$factory->define(Person::class, function (Faker $faker) {
+$factory->define(App\Modules\Features\C\Person\Models\Person::class, function (Faker $faker) {
 
     $person_business_type =  $faker->randomElement(['1', '2']);
        
@@ -17,6 +15,6 @@ $factory->define(Person::class, function (Faker $faker) {
         'person_first_surname' => ($person_business_type == 1) ? $faker->lastName : '',
         'person_second_surname' => ($person_business_type == 1) ? $faker->lastName : '',
         'person_legal_name' => ($person_business_type != 1) ? $faker->company : '',
-        'city_id' => City::all()->random()->city_id
+        'city_id' => \App\Modules\Features\A\City\Models\City::all()->random()->city_id
     ];
 });

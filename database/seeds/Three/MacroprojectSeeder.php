@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\Three\Macroproject;
 
 class MacroprojectSeeder extends Seeder
 {
@@ -12,8 +11,8 @@ class MacroprojectSeeder extends Seeder
      */
     public function run()
     {
-        Macroproject::truncate();
-        Macroproject::flushEventListeners();
-        factory(Macroproject::class, 5)->create();
+        \App\Modules\Features\D\Macroproject\Models\Macroproject::truncate();
+        \App\Modules\Features\D\Macroproject\Models\Macroproject::flushEventListeners();
+        factory(\App\Modules\Features\D\Macroproject\Models\Macroproject::class, 5)->create();
     }
 }

@@ -11,8 +11,8 @@ class CitySeeder extends Seeder
      */
     public function run()
     {
-        City::truncate();
-        City::flushEventListeners();
+        \App\Modules\Features\A\City\Models\City::truncate();
+        \App\Modules\Features\A\City\Models\City::flushEventListeners();
         factory(\App\Modules\Features\A\City\Models\City::class, 30)->create();
     }
 }

@@ -11,8 +11,8 @@ class ProjectSeeder extends Seeder
      */
     public function run()
     {
-        Project::truncate();
-        Project::flushEventListeners();
+        \App\Modules\Features\D\Project\Models\Project::truncate();
+        \App\Modules\Features\D\Project\Models\Project::flushEventListeners();
         factory(\App\Modules\Features\D\Project\Models\Project::class, 10)->create();
     }
 }

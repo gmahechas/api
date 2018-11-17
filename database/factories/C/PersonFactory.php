@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\Modules\Features\C\Person\Models\Person::class, function (Faker $faker) {
+$factory->define(\App\Modules\Features\C\Person\Models\Person::class, function (Faker $faker) {
 
     $person_business_type =  $faker->randomElement(['1', '2']);
        

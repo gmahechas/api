@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Modules\Features\D\UserOfficeProject\Models\UserOfficeProject;
 
 class UserOfficeProjectSeeder extends Seeder
 {
@@ -12,14 +11,14 @@ class UserOfficeProjectSeeder extends Seeder
      */
     public function run()
     {
-        UserOfficeProject::truncate();
-        UserOfficeProject::flushEventListeners();
-        UserOfficeProject::create([
+        \App\Modules\Features\D\UserOfficeProject\Models\UserOfficeProject::truncate();
+        \App\Modules\Features\D\UserOfficeProject\Models\UserOfficeProject::flushEventListeners();
+        \App\Modules\Features\D\UserOfficeProject\Models\UserOfficeProject::create([
         	'user_office_project_status' => true,
         	'user_office_id' => 1,
         	'project_id' => 1
         ]);
-        UserOfficeProject::create([
+        \App\Modules\Features\D\UserOfficeProject\Models\UserOfficeProject::create([
         	'user_office_project_status' => true,
         	'user_office_id' => 1,
         	'project_id' => 2

@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Modules\Features\C\ProfileMenu\Models\ProfileMenu;
 
 class ProfileMenuSeeder extends Seeder
 {
@@ -12,104 +11,104 @@ class ProfileMenuSeeder extends Seeder
      */
     public function run()
     {
-        ProfileMenu::truncate();
-        ProfileMenu::flushEventListeners();
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::truncate();
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::flushEventListeners();
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
         	'profile_menu_status' => true,
             'profile_id' => 1,
         	'menu_id' => 1
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 2
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 3
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 4
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 5
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 6
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 7
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 8
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 9
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 10
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 1
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 2
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 3
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 4
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 5
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 6
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 7
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 8
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 9
         ]);
-        ProfileMenu::create([
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
             'profile_id' => 2,
             'menu_id' => 10

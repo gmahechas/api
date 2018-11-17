@@ -11,8 +11,8 @@ class PersonSeeder extends Seeder
      */
     public function run()
     {
-        Person::truncate();
-        Person::flushEventListeners();
+        \App\Modules\Features\C\Person\Models\Person::truncate();
+        \App\Modules\Features\C\Person\Models\Person::flushEventListeners();
         factory(\App\Modules\Features\C\Person\Models\Person::class, 30)->create();
     }
 }

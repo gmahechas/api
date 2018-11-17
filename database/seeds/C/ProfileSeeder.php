@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Modules\Features\C\Profile\Models\Profile;
 
 class ProfileSeeder extends Seeder
 {
@@ -12,12 +11,12 @@ class ProfileSeeder extends Seeder
      */
     public function run()
     {
-        Profile::truncate();
-        Profile::flushEventListeners();
-        Profile::create([
+        \App\Modules\Features\C\Profile\Models\Profile::truncate();
+        \App\Modules\Features\C\Profile\Models\Profile::flushEventListeners();
+        \App\Modules\Features\C\Profile\Models\Profile::create([
         	'profile_name' => 'SOPORTE SISTEMA'
         ]);
-        Profile::create([
+        \App\Modules\Features\C\Profile\Models\Profile::create([
         	'profile_name' => 'ACCESO TOTAL'
         ]);
     }

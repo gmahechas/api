@@ -106,7 +106,9 @@ return [
                 /** D **/
                 'paginationMacroproject' => 'App\Modules\Features\D\Macroproject\GraphQL\Query\PaginationMacroproject',
                 'paginationProject' => 'App\Modules\Features\D\Project\GraphQL\Query\PaginationProject',
-                'paginationUserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Query\PaginationUserOfficeProject'
+                'paginationUserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Query\PaginationUserOfficeProject',
+                /** E **/
+                'paginationWorkflow' => 'App\Modules\Features\E\Workflow\GraphQL\Query\PaginationWorkflow',
             ],
             'mutation' => [
                 /** A **/
@@ -136,7 +138,7 @@ return [
                 'destroyUser' => 'App\Modules\Features\C\User\GraphQL\Mutation\DestroyUser',
                 'updateUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Mutation\UpdateUserOffice', /** UserOffice **/
                 'destroyUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Mutation\DestroyUserOffice',
-                /** Three **/
+                /** D **/
                 'storeMacroproject' => 'App\Modules\Features\D\Macroproject\GraphQL\Mutation\StoreMacroproject', /** Macroproject **/
                 'updateMacroproject' => 'App\Modules\Features\D\Macroproject\GraphQL\Mutation\UpdateMacroproject',
                 'destroyMacroproject' => 'App\Modules\Features\D\Macroproject\GraphQL\Mutation\DestroyMacroproject',
@@ -144,6 +146,10 @@ return [
                 'updateProject' => 'App\Modules\Features\D\Project\GraphQL\Mutation\UpdateProject',
                 'destroyProject' => 'App\Modules\Features\D\Project\GraphQL\Mutation\DestroyProject',
                 'updateUserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Mutation\UpdateUserOfficeProject', /** UserOfficeProject **/
+                /** E **/
+                'storeWorkflow' => 'App\Modules\Features\E\Workflow\GraphQL\Mutation\StoreWorkflow', /** Workflow **/
+                'updateWorkflow' => 'App\Modules\Features\E\Workflow\GraphQL\Mutation\UpdateWorkflow',
+                'destroyWorkflow' => 'App\Modules\Features\E\Workflow\GraphQL\Mutation\DestroyWorkflow',
             ],
             'middleware' => []
         ]
@@ -175,12 +181,14 @@ return [
         'Person' => 'App\Modules\Features\C\Person\GraphQL\Type\PersonType',
         'User' => 'App\Modules\Features\C\User\GraphQL\Type\UserType',
         'UserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Type\UserOfficeType',
-        /** Three **/
+        /** D **/
         'Macroproject' => 'App\Modules\Features\D\Macroproject\GraphQL\Type\MacroprojectType',
         'Project' => 'App\Modules\Features\D\Project\GraphQL\Type\ProjectType',
         'UserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Type\UserOfficeProjectType',
+        /** E **/
+        'Workflow' => 'App\Modules\Features\E\Workflow\GraphQL\Type\WorkflowType',
         /************************* Enum *************************/
-        /** Two **/
+        /** C **/
         'PersonBusinessTypeEnum' => 'App\Modules\Shared\GraphQL\Enum\C\Person\PersonBusinessTypeEnum',
         'PersonIdentificationTypeEnum' => 'App\Modules\Shared\GraphQL\Enum\C\Person\PersonIdentificationTypeEnum',
     ],

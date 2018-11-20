@@ -13,7 +13,7 @@ class Macroproject extends Model
 	const UPDATED_AT = 'macroproject_updated_at';
 	const DELETED_AT = 'macroproject_deleted_at';
 
-	protected $table = 'three_macroproject';
+	protected $table = 'd_macroproject';
 	protected $primaryKey = 'macroproject_id';
 	protected $fillable = [
 		'macroproject_name',

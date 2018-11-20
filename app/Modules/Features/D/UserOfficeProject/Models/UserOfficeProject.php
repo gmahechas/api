@@ -13,7 +13,7 @@ class UserOfficeProject extends Model
 	const UPDATED_AT = 'user_office_project_updated_at';
 	const DELETED_AT = 'user_office_project_deleted_at';
 
-	protected $table = 'three_user_office_project';
+	protected $table = 'd_user_office_project';
 	protected $primaryKey = 'user_office_project_id';
 	protected $fillable = [
 		'user_office_project_status',

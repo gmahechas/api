@@ -13,7 +13,7 @@ class Company extends Model
 	const UPDATED_AT = 'company_updated_at';
 	const DELETED_AT = 'company_deleted_at';
 
-	protected $table = 'one_company';
+	protected $table = 'b_company';
 	protected $primaryKey = 'company_id';
 	protected $fillable = [
 		'company_name',

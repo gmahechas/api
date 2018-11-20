@@ -13,7 +13,7 @@ class CreateUserOfficeTable extends Migration
      */
     public function up()
     {
-        Schema::create('two_user_office', function (Blueprint $table) {
+        Schema::create('c_user_office', function (Blueprint $table) {
             $table->increments('user_office_id');
             $table->boolean('user_office_status');
 
@@ -24,14 +24,14 @@ class CreateUserOfficeTable extends Migration
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')
                   ->references('user_id')
-                  ->on('two_user')
+                  ->on('c_user')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
 
             $table->integer('office_id')->unsigned();
             $table->foreign('office_id')
                   ->references('office_id')
-                  ->on('one_office')
+                  ->on('b_office')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
@@ -44,6 +44,6 @@ class CreateUserOfficeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('two_user_office');
+        Schema::dropIfExists('c_user_office');
     }
 }

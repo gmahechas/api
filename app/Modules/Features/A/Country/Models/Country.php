@@ -13,7 +13,7 @@ class Country extends Model
 	const UPDATED_AT = 'country_updated_at';
 	const DELETED_AT = 'country_deleted_at';
 
-	protected $table = 'one_country';
+	protected $table = 'a_country';
 	protected $primaryKey = 'country_id';
 	protected $fillable = [
 		'country_name',

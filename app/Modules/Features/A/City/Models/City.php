@@ -13,7 +13,7 @@ class City extends Model
 	const UPDATED_AT = 'city_updated_at';
 	const DELETED_AT = 'city_deleted_at';
 
-	protected $table = 'one_city';
+	protected $table = 'a_city';
 	protected $primaryKey = 'city_id';
 	protected $fillable = [
 		'city_name',

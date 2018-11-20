@@ -13,7 +13,7 @@ class CreateMenuTable extends Migration
      */
     public function up()
     {
-        Schema::create('two_menu', function (Blueprint $table) {
+        Schema::create('c_menu', function (Blueprint $table) {
             $table->increments('menu_id');
             $table->string('menu_name', 64);
             $table->string('menu_uri', 64);
@@ -25,7 +25,7 @@ class CreateMenuTable extends Migration
             $table->integer('menu_parent_id')->nullable()->unsigned();
             $table->foreign('menu_parent_id')
                   ->references('menu_id')
-                  ->on('two_menu')
+                  ->on('c_menu')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
@@ -38,6 +38,6 @@ class CreateMenuTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('two_menu');
+        Schema::dropIfExists('c_menu');
     }
 }

@@ -13,7 +13,7 @@ class UserOffice extends Model
 	const UPDATED_AT = 'user_office_updated_at';
 	const DELETED_AT = 'user_office_deleted_at';
 
-	protected $table = 'two_user_office';
+	protected $table = 'c_user_office';
 	protected $primaryKey = 'user_office_id';
 	protected $fillable = [
 		'user_office_status',

@@ -13,7 +13,7 @@ class CreatePersonTable extends Migration
      */
     public function up()
     {
-        Schema::create('two_person', function (Blueprint $table) {
+        Schema::create('c_person', function (Blueprint $table) {
             $table->increments('person_id');
             $table->enum('person_business_type', ['1', '2']);
             $table->enum('person_identification_type', ['1', '2']);
@@ -31,7 +31,7 @@ class CreatePersonTable extends Migration
             $table->integer('city_id')->unsigned();
             $table->foreign('city_id')
                   ->references('city_id')
-                  ->on('one_city')
+                  ->on('a_city')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
@@ -44,6 +44,6 @@ class CreatePersonTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('two_person');
+        Schema::dropIfExists('c_person');
     }
 }

@@ -13,7 +13,7 @@ class CreateProjectTable extends Migration
      */
     public function up()
     {
-        Schema::create('three_project', function (Blueprint $table) {
+        Schema::create('d_project', function (Blueprint $table) {
             $table->increments('project_id');
             $table->string('project_name', 128);
             $table->string('project_address', 128);
@@ -26,7 +26,7 @@ class CreateProjectTable extends Migration
             $table->integer('macroproject_id')->unsigned();
             $table->foreign('macroproject_id')
                   ->references('macroproject_id')
-                  ->on('three_macroproject')
+                  ->on('d_macroproject')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
@@ -39,6 +39,6 @@ class CreateProjectTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('three_project');
+        Schema::dropIfExists('d_project');
     }
 }

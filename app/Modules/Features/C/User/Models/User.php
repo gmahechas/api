@@ -15,7 +15,7 @@ class User extends Authenticatable
 	const UPDATED_AT = 'user_updated_at';
 	const DELETED_AT = 'user_deleted_at';
 
-    protected $table = 'two_user';
+    protected $table = 'c_user';
 	protected $primaryKey = 'user_id';
     protected $fillable = [
         'username',

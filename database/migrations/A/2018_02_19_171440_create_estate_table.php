@@ -13,7 +13,7 @@ class CreateEstateTable extends Migration
      */
     public function up()
     {
-        Schema::create('one_estate', function (Blueprint $table) {
+        Schema::create('a_estate', function (Blueprint $table) {
             $table->increments('estate_id');
             $table->string('estate_name', 64);
             $table->string('estate_code', 8);
@@ -25,7 +25,7 @@ class CreateEstateTable extends Migration
             $table->integer('country_id')->unsigned();
             $table->foreign('country_id')
                   ->references('country_id')
-                  ->on('one_country')
+                  ->on('a_country')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
@@ -38,6 +38,6 @@ class CreateEstateTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('one_estate');
+        Schema::dropIfExists('a_estate');
     }
 }

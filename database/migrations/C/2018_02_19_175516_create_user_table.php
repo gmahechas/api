@@ -13,7 +13,7 @@ class CreateUserTable extends Migration
      */
     public function up()
     {
-        Schema::create('two_user', function (Blueprint $table) {
+        Schema::create('c_user', function (Blueprint $table) {
             $table->increments('user_id');
             $table->string('username', 64)->unique();
             $table->string('email')->unique();
@@ -27,14 +27,14 @@ class CreateUserTable extends Migration
             $table->integer('person_id')->unique()->unsigned();
             $table->foreign('person_id')
                   ->references('person_id')
-                  ->on('two_person')
+                  ->on('c_person')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
 
             $table->integer('profile_id')->unsigned();
             $table->foreign('profile_id')
                   ->references('profile_id')
-                  ->on('two_profile')
+                  ->on('c_profile')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
@@ -47,6 +47,6 @@ class CreateUserTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('two_user');
+        Schema::dropIfExists('c_user');
     }
 }

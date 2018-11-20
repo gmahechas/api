@@ -13,7 +13,7 @@ class CreateProfileMenuTable extends Migration
      */
     public function up()
     {
-        Schema::create('two_profile_menu', function (Blueprint $table) {
+        Schema::create('c_profile_menu', function (Blueprint $table) {
             $table->increments('profile_menu_id');
             $table->boolean('profile_menu_status');
 
@@ -24,14 +24,14 @@ class CreateProfileMenuTable extends Migration
             $table->integer('profile_id')->unsigned();
             $table->foreign('profile_id')
                   ->references('profile_id')
-                  ->on('two_profile')
+                  ->on('c_profile')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
 
             $table->integer('menu_id')->unsigned();
             $table->foreign('menu_id')
                   ->references('menu_id')
-                  ->on('two_menu')
+                  ->on('c_menu')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
@@ -44,6 +44,6 @@ class CreateProfileMenuTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('two_profile_menu');
+        Schema::dropIfExists('c_profile_menu');
     }
 }

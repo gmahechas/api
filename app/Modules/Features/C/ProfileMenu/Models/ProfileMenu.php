@@ -13,7 +13,7 @@ class ProfileMenu extends Model
 	const UPDATED_AT = 'profile_menu_updated_at';
 	const DELETED_AT = 'profile_menu_deleted_at';
 
-	protected $table = 'two_profile_menu';
+	protected $table = 'c_profile_menu';
 	protected $primaryKey = 'profile_menu_id';
 	protected $fillable = [
 		'profile_menu_status',

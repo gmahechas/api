@@ -13,7 +13,7 @@ class CreateMacroprojectTable extends Migration
      */
     public function up()
     {
-        Schema::create('three_macroproject', function (Blueprint $table) {
+        Schema::create('d_macroproject', function (Blueprint $table) {
             $table->increments('macroproject_id');
             $table->string('macroproject_name', 128);
             $table->string('macroproject_address', 128);
@@ -26,14 +26,14 @@ class CreateMacroprojectTable extends Migration
             $table->integer('city_id')->unsigned();
             $table->foreign('city_id')
                   ->references('city_id')
-                  ->on('one_city')
+                  ->on('a_city')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
 
             $table->integer('office_id')->unsigned();
             $table->foreign('office_id')
                   ->references('office_id')
-                  ->on('one_office')
+                  ->on('b_office')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
@@ -46,6 +46,6 @@ class CreateMacroprojectTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('three_macroproject');
+        Schema::dropIfExists('d_macroproject');
     }
 }

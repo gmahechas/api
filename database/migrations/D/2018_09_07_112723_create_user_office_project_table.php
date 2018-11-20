@@ -13,7 +13,7 @@ class CreateUserOfficeProjectTable extends Migration
      */
     public function up()
     {
-        Schema::create('three_user_office_project', function (Blueprint $table) {
+        Schema::create('d_user_office_project', function (Blueprint $table) {
             $table->increments('user_office_project_id');
             $table->boolean('user_office_project_status');
 
@@ -24,14 +24,14 @@ class CreateUserOfficeProjectTable extends Migration
             $table->integer('user_office_id')->unsigned();
             $table->foreign('user_office_id')
                   ->references('user_office_id')
-                  ->on('two_user_office')
+                  ->on('c_user_office')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
 
             $table->integer('project_id')->unsigned();
             $table->foreign('project_id')
                   ->references('project_id')
-                  ->on('three_project')
+                  ->on('d_project')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
@@ -44,6 +44,6 @@ class CreateUserOfficeProjectTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('three_user_office_project');
+        Schema::dropIfExists('d_user_office_project');
     }
 }

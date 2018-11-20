@@ -13,7 +13,7 @@ class Profile extends Model
 	const UPDATED_AT = 'profile_updated_at';
 	const DELETED_AT = 'profile_deleted_at';
 
-	protected $table = 'two_profile';
+	protected $table = 'c_profile';
 	protected $primaryKey = 'profile_id';
 	protected $fillable = [
 		'profile_name'

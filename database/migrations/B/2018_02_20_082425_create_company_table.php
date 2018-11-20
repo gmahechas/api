@@ -13,7 +13,7 @@ class CreateCompanyTable extends Migration
      */
     public function up()
     {
-        Schema::create('one_company', function (Blueprint $table) {
+        Schema::create('b_company', function (Blueprint $table) {
             $table->increments('company_id');
             $table->string('company_name', 64);
             $table->string('company_identification', 128);
@@ -25,7 +25,7 @@ class CreateCompanyTable extends Migration
             $table->integer('city_id')->unsigned();
             $table->foreign('city_id')
                   ->references('city_id')
-                  ->on('one_city')
+                  ->on('a_city')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
@@ -38,6 +38,6 @@ class CreateCompanyTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('one_company');
+        Schema::dropIfExists('b_company');
     }
 }

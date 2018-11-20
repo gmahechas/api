@@ -13,7 +13,7 @@ class CreateOfficeTable extends Migration
      */
     public function up()
     {
-        Schema::create('one_office', function (Blueprint $table) {
+        Schema::create('b_office', function (Blueprint $table) {
             $table->increments('office_id');
             $table->string('office_name', 64);
             
@@ -24,14 +24,14 @@ class CreateOfficeTable extends Migration
             $table->integer('company_id')->unsigned();
             $table->foreign('company_id')
                   ->references('company_id')
-                  ->on('one_company')
+                  ->on('b_company')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
 
             $table->integer('city_id')->unsigned();
             $table->foreign('city_id')
                   ->references('city_id')
-                  ->on('one_city')
+                  ->on('a_city')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
@@ -44,6 +44,6 @@ class CreateOfficeTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('one_office');
+        Schema::dropIfExists('b_office');
     }
 }

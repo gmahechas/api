@@ -13,7 +13,7 @@ class Estate extends Model
 	const UPDATED_AT = 'estate_updated_at';
 	const DELETED_AT = 'estate_deleted_at';
 
-	protected $table = 'one_estate';
+	protected $table = 'a_estate';
 	protected $primaryKey = 'estate_id';
 	protected $fillable = [
 		'estate_name',

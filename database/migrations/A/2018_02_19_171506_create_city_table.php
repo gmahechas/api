@@ -13,7 +13,7 @@ class CreateCityTable extends Migration
      */
     public function up()
     {
-        Schema::create('one_city', function (Blueprint $table) {
+        Schema::create('a_city', function (Blueprint $table) {
             $table->increments('city_id');
             $table->string('city_name', 64);
             $table->string('city_code', 8);
@@ -25,7 +25,7 @@ class CreateCityTable extends Migration
             $table->integer('estate_id')->unsigned();
             $table->foreign('estate_id')
                   ->references('estate_id')
-                  ->on('one_estate')
+                  ->on('a_estate')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
         });
@@ -38,6 +38,6 @@ class CreateCityTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('one_city');
+        Schema::dropIfExists('a_city');
     }
 }

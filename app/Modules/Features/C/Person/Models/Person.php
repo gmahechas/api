@@ -13,7 +13,7 @@ class Person extends Model
 	const UPDATED_AT = 'person_updated_at';
 	const DELETED_AT = 'person_deleted_at';
 
-	protected $table = 'two_person';
+	protected $table = 'c_person';
 	protected $primaryKey = 'person_id';
 	protected $fillable = [
 		'person_business_type',

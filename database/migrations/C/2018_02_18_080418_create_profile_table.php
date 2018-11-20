@@ -13,7 +13,7 @@ class CreateProfileTable extends Migration
      */
     public function up()
     {
-        Schema::create('two_profile', function (Blueprint $table) {
+        Schema::create('c_profile', function (Blueprint $table) {
             $table->increments('profile_id');
             $table->string('profile_name', 64);
 
@@ -31,6 +31,6 @@ class CreateProfileTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('two_profile');
+        Schema::dropIfExists('c_profile');
     }
 }

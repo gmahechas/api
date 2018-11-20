@@ -13,7 +13,7 @@ class Menu extends Model
 	const UPDATED_AT = 'menu_updated_at';
 	const DELETED_AT = 'menu_deleted_at';
 
-	protected $table = 'two_menu';
+	protected $table = 'c_menu';
 	protected $primaryKey = 'menu_id';
 	protected $fillable = [
 		'menu_name',

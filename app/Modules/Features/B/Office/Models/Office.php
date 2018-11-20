@@ -13,7 +13,7 @@ class Office extends Model
 	const UPDATED_AT = 'office_updated_at';
 	const DELETED_AT = 'office_deleted_at';
 
-	protected $table = 'one_office';
+	protected $table = 'b_office';
 	protected $primaryKey = 'office_id';
 	protected $fillable = [
 		'office_name',

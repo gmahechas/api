@@ -13,7 +13,7 @@ class Project extends Model
 	const UPDATED_AT = 'project_updated_at';
 	const DELETED_AT = 'project_deleted_at';
 
-	protected $table = 'three_project';
+	protected $table = 'd_project';
 	protected $primaryKey = 'project_id';
 	protected $fillable = [
 		'project_name',

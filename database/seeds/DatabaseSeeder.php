@@ -12,23 +12,26 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 		Schema::disableForeignKeyConstraints();
-        /** One **/
+        /** A **/
         $this->call(CountrySeeder::class);
         $this->call(EstateSeeder::class);
         $this->call(CitySeeder::class);
+        /** B **/
         $this->call(CompanySeeder::class);
         $this->call(OfficeSeeder::class);
-        /** Two **/
+        /** C **/
         $this->call(ProfileSeeder::class);
         $this->call(MenuSeeder::class);
         $this->call(ProfileMenuSeeder::class);
         $this->call(PersonSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(UserOfficeSeeder::class);
-        /** Three **/
+        /** D **/
         $this->call(MacroprojectSeeder::class);
         $this->call(ProjectSeeder::class);
         $this->call(UserOfficeProjectSeeder::class);
+        /** D **/
+        $this->call(WorkflowSeeder::class);
         Schema::enableForeignKeyConstraints();
     }
 }

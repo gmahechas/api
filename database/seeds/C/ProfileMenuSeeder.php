@@ -65,53 +65,13 @@ class ProfileMenuSeeder extends Seeder
         ]);
         \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
-            'profile_id' => 2,
-            'menu_id' => 1
+            'profile_id' => 1,
+            'menu_id' => 11
         ]);
         \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
             'profile_menu_status' => true,
-            'profile_id' => 2,
-            'menu_id' => 2
-        ]);
-        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
-            'profile_menu_status' => true,
-            'profile_id' => 2,
-            'menu_id' => 3
-        ]);
-        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
-            'profile_menu_status' => true,
-            'profile_id' => 2,
-            'menu_id' => 4
-        ]);
-        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
-            'profile_menu_status' => true,
-            'profile_id' => 2,
-            'menu_id' => 5
-        ]);
-        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
-            'profile_menu_status' => true,
-            'profile_id' => 2,
-            'menu_id' => 6
-        ]);
-        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
-            'profile_menu_status' => true,
-            'profile_id' => 2,
-            'menu_id' => 7
-        ]);
-        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
-            'profile_menu_status' => true,
-            'profile_id' => 2,
-            'menu_id' => 8
-        ]);
-        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
-            'profile_menu_status' => true,
-            'profile_id' => 2,
-            'menu_id' => 9
-        ]);
-        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
-            'profile_menu_status' => true,
-            'profile_id' => 2,
-            'menu_id' => 10
-        ]);
+            'profile_id' => 1,
+            'menu_id' => 12
+        ]);      
     }
 }

@@ -68,5 +68,10 @@ class MenuSeeder extends Seeder
             'menu_uri' => 'project',
             'menu_parent_id' => null
         ]);
+        \App\Modules\Features\C\Menu\Models\Menu::create([
+            'menu_name' => 'workflow.plural',
+            'menu_uri' => 'workflow',
+            'menu_parent_id' => null
+        ]);
     }
 }

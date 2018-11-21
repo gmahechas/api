@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Traits;
+namespace App\Modules\Shared\Traits;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Collection;

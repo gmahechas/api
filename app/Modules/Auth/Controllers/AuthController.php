@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Api\Auth;
+namespace App\Modules\Auth\Controllers;
 
-use App\Traits\IssueToken;
+use App\Modules\Auth\Traits\IssueToken;
 use App\Modules\Features\B\Company\Models\Company;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;

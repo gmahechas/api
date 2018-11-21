@@ -21,8 +21,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'auth', 'middleware' => ['cors']], function () {
 	Route::post('token', '\Laravel\Passport\Http\Controllers\AccessTokenController@issueToken');
-	Route::post('login', 'Api\Auth\AuthController@login');
-	Route::post('refresh', 'Api\Auth\AuthController@refresh');
+	Route::post('login', '\App\Modules\Auth\Controllers\AuthController@login');
+	Route::post('refresh', '\App\Modules\Auth\Controllers\AuthController@refresh');
 });
 
 

@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\Traits;
+namespace App\Modules\Auth\Traits;
 
 use App\Modules\Features\C\User\Models\User;
 use App\Modules\Features\B\Company\Models\Company;

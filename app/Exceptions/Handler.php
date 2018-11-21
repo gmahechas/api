@@ -3,7 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
-use App\Traits\ApiResponser;
+use App\Modules\Shared\Traits\ApiResponser;
 use Illuminate\Database\QueryException;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Validation\ValidationException;

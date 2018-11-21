@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Modules\Shared\Controllers;
 
-use App\Traits\ApiResponser;
+use App\Modules\Shared\Traits\ApiResponser;
 use Illuminate\Http\Request;
 
 class ApiController extends Controller

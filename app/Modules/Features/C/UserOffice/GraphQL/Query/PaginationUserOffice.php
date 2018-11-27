@@ -50,7 +50,7 @@ class PaginationUserOffice extends Query
         $with = $fields->getRelations();
 
         $user_office_id = isset($args['user_office_id']) ? $args['user_office_id'] : false;
-        $user_office_status = isset($args['user_office_status']) ? $args['user_office_status'] : false; ;
+        $user_office_status = isset($args['user_office_status']) ? true : false; ;
         $user_id = isset($args['user_id']) ? $args['user_id'] : false;
         $office_id = isset($args['office_id']) ? $args['office_id'] : false;
         

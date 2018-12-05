@@ -61,8 +61,8 @@ class PaginationUserOffice extends Query
                         ->when($user_office_id, function ($query) use ($user_office_id) {
                             return $query->where('user_office_id', '=', $user_office_id);
                         })
-                        ->when(isset($args['user_office_status']), function ($query) use ($user_office_status) {
-                            return $query->where('user_office_status', '=', $user_office_status);
+                        ->when($user_office_status, function ($query) use ($args) {
+                            return $query->where('user_office_status', '=', $args['user_office_status']);
                         })
                         ->when($user_id, function ($query) use ($user_id) {
                             return $query->where('user_id', '=', $user_id);

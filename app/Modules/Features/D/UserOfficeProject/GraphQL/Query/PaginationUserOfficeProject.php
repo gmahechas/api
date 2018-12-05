@@ -27,7 +27,7 @@ class PaginationUserOfficeProject extends Query
                 'type' => Type::id()
             ],
             'user_office_project_status' => [
-                'type' => Type::string()
+                'type' => Type::boolean()
             ],
             'user_office_id' => [
                 'type' => Type::id()
@@ -50,7 +50,7 @@ class PaginationUserOfficeProject extends Query
         $with = $fields->getRelations();
 
         $user_office_project_id = isset($args['user_office_project_id']) ? $args['user_office_project_id'] : false;
-        $user_office_project_status = isset($args['user_office_project_status']) ? $args['user_office_project_status'] : false;
+        $user_office_project_status = (isset($args['user_office_project_status'])) ? true : false;
         $user_office_id = isset($args['user_office_id']) ? $args['user_office_id'] : false;
         $project_id = isset($args['project_id']) ? $args['project_id'] : false;
         
@@ -61,8 +61,8 @@ class PaginationUserOfficeProject extends Query
                         ->when($user_office_project_id, function ($query) use ($user_office_project_id) {
                             return $query->where('user_office_project_id', '=', $user_office_project_id);
                         })
-                        ->when($user_office_project_status, function ($query) use ($user_office_project_status) {
-                            return $query->where('user_office_project_status', 'like', '%'.$user_office_project_status.'%');
+                        ->when($user_office_project_status, function ($query) use ($args)  {
+                            return $query->where('user_office_project_status', '=', $args['user_office_project_status']);
                         })
                         ->when($user_office_id, function ($query) use ($user_office_id) {
                             return $query->where('user_office_id', '=', $user_office_id);

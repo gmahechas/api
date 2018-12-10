@@ -115,6 +115,7 @@ return [
                 'paginationMenu' => 'App\Modules\Features\C\Menu\GraphQL\Query\PaginationMenu',
                 'paginationProfileMenu' => 'App\Modules\Features\C\ProfileMenu\GraphQL\Query\PaginationProfileMenu',
                 'paginationTypePerson' => 'App\Modules\Features\C\TypePerson\GraphQL\Query\PaginationTypePerson',
+                'paginationTypePersonIdentification' => 'App\Modules\Features\C\TypePersonIdentification\GraphQL\Query\PaginationTypePersonIdentification',
                 'paginationPerson' => 'App\Modules\Features\C\Person\GraphQL\Query\PaginationPerson',
                 'paginationUser' => 'App\Modules\Features\C\User\GraphQL\Query\PaginationUser',
                 'paginationUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Query\PaginationUserOffice',
@@ -148,6 +149,9 @@ return [
                 'storeTypePerson' => 'App\Modules\Features\C\TypePerson\GraphQL\Mutation\StoreTypePerson', /** TypePerson **/
                 'updateTypePerson' => 'App\Modules\Features\C\TypePerson\GraphQL\Mutation\UpdateTypePerson',
                 'destroyTypePerson' => 'App\Modules\Features\C\TypePerson\GraphQL\Mutation\DestroyTypePerson',
+                'storeTypePersonIdentification' => 'App\Modules\Features\C\TypePersonIdentification\GraphQL\Mutation\StoreTypePersonIdentification', /** TypePersonIdentification **/
+                'updateTypePersonIdentification' => 'App\Modules\Features\C\TypePersonIdentification\GraphQL\Mutation\UpdateTypePersonIdentification',
+                'destroyTypePersonIdentification' => 'App\Modules\Features\C\TypePersonIdentification\GraphQL\Mutation\DestroyTypePersonIdentification',
                 'storePerson' => 'App\Modules\Features\C\Person\GraphQL\Mutation\StorePerson', /** Person **/
                 'updatePerson' => 'App\Modules\Features\C\Person\GraphQL\Mutation\UpdatePerson',
                 'destroyPerson' => 'App\Modules\Features\C\Person\GraphQL\Mutation\DestroyPerson',
@@ -198,6 +202,7 @@ return [
         'Menu' => 'App\Modules\Features\C\Menu\GraphQL\Type\MenuType',
         'ProfileMenu' => 'App\Modules\Features\C\ProfileMenu\GraphQL\Type\ProfileMenuType',
         'TypePerson' => 'App\Modules\Features\C\TypePerson\GraphQL\Type\TypePersonType',
+        'TypePersonIdentification' => 'App\Modules\Features\C\TypePersonIdentification\GraphQL\Type\TypePersonIdentificationType',
         'Person' => 'App\Modules\Features\C\Person\GraphQL\Type\PersonType',
         'User' => 'App\Modules\Features\C\User\GraphQL\Type\UserType',
         'UserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Type\UserOfficeType',

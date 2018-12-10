@@ -55,7 +55,7 @@ class PaginationTypePerson extends Query
                             return $query->where('type_person_id', '=', $type_person_id);
                         })
                         ->when($type_person_description, function ($query) use ($type_person_description) {
-                            return $query->where('type_person_description', '=', $type_person_description);
+                            return $query->where('type_person_description', 'like', '%'.$type_person_description.'%');
                         })
                         ->with($with)
                         ->paginate($limit, ['*'], 'pages', $page);

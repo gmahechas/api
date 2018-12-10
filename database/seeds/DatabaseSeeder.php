@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call(MenuSeeder::class);
         $this->call(ProfileMenuSeeder::class);
         $this->call(TypePersonSeeder::class);
+        $this->call(TypePersonIdentificationSeeder::class);
         $this->call(PersonSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(UserOfficeSeeder::class);

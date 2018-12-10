@@ -49,6 +49,11 @@ class MenuSeeder extends Seeder
         	'menu_parent_id' => null
         ]);
         \App\Modules\Features\C\Menu\Models\Menu::create([
+        	'menu_name' => 'type_person_identification.plural',
+        	'menu_uri' => 'type_person_identification',
+        	'menu_parent_id' => null
+        ]);
+        \App\Modules\Features\C\Menu\Models\Menu::create([
         	'menu_name' => 'person.plural',
         	'menu_uri' => 'person',
         	'menu_parent_id' => null

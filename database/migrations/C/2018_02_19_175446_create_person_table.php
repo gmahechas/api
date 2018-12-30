@@ -15,8 +15,6 @@ class CreatePersonTable extends Migration
     {
         Schema::create('c_person', function (Blueprint $table) {
             $table->increments('person_id');
-            $table->enum('person_business_type', ['1', '2']);
-            $table->enum('person_identification_type', ['1', '2']);
             $table->string('person_identification', 64);
             $table->string('person_first_name', 64)->nullable();
             $table->string('person_second_name', 64)->nullable();
@@ -27,6 +25,20 @@ class CreatePersonTable extends Migration
             $table->timestamp('person_created_at')->nullable();
             $table->timestamp('person_updated_at')->nullable();
             $table->softDeletes('person_deleted_at');
+
+            $table->integer('type_person_id')->unsigned();
+            $table->foreign('type_person_id')
+                  ->references('type_person_id')
+                  ->on('c_type_person')
+                  ->onDelete('restrict')
+                  ->onUpdate('restrict');
+
+            $table->integer('type_person_identification_id')->unsigned();
+            $table->foreign('type_person_identification_id')
+                    ->references('type_person_identification_id')
+                    ->on('c_type_person_identification')
+                    ->onDelete('restrict')
+                    ->onUpdate('restrict');
 
             $table->integer('city_id')->unsigned();
             $table->foreign('city_id')

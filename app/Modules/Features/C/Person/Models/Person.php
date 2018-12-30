@@ -16,14 +16,14 @@ class Person extends Model
 	protected $table = 'c_person';
 	protected $primaryKey = 'person_id';
 	protected $fillable = [
-		'person_business_type',
-		'person_identification_type',
 		'person_identification',
 		'person_first_name',
 		'person_second_name',
 		'person_first_surname',
 		'person_second_surname',
 		'person_legal_name',
+		'type_person_id',
+		'type_person_identification_id',
 		'city_id'
 	];
 
@@ -36,6 +36,12 @@ class Person extends Model
 	/*In*/
 	public function city(){
 		return $this->belongsTo(\App\Modules\Features\A\City\Models\City::class, 'city_id');
+	}
+	public function type_person(){
+		return $this->belongsTo(\App\Modules\Features\C\TypePerson\Models\TypePerson::class, 'type_person_id');
+	}
+	public function type_person_identification(){
+		return $this->belongsTo(\App\Modules\Features\C\TypePersonIdentification\Models\TypePersonIdentification::class, 'type_person_identification_id');
 	}
 
 	/*Out*/

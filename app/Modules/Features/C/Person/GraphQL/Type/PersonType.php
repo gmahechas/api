@@ -20,12 +20,6 @@ class PersonType extends GraphQLType
             'person_id' => [
             	'type' => Type::id()
             ],
-            'person_business_type' => [
-            	'type' => GraphQL::type('PersonBusinessTypeEnum')
-            ],
-            'person_identification_type' => [
-            	'type' => GraphQL::type('PersonIdentificationTypeEnum')
-            ],
             'person_identification' => [
             	'type' => Type::string()
             ],
@@ -47,10 +41,22 @@ class PersonType extends GraphQLType
             'person_created_at' => DateField::class,
             'person_updated_at' => DateField::class,
             'person_deleted_at' => DateField::class,
+            'type_person_id' => [
+                'type' => Type::id()
+            ],
+            'type_person_identification_id' => [
+                'type' => Type::id()
+            ],
             'city_id' => [
                 'type' => Type::id()
             ],
             /*In*/
+            'type_person' => [
+                'type' => GraphQL::type('TypePerson')
+            ],
+            'type_person_identification' => [
+                'type' => GraphQL::type('TypePersonIdentification')
+            ],
             'city' => [
                 'type' => GraphQL::type('City')
             ],

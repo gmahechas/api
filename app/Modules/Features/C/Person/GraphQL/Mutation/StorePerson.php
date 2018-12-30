@@ -23,14 +23,6 @@ class StorePerson extends Mutation
     public function args()
     {
         return [
-            'person_business_type' => [
-                'type' => Type::string(),
-                'rules' => ['required']
-            ],
-            'person_identification_type' => [
-                'type' => Type::string(),
-                'rules' => ['required']
-            ],
             'person_identification' => [
                 'type' => Type::string(),
                 'rules' => ['required']
@@ -49,6 +41,14 @@ class StorePerson extends Mutation
             ],
             'person_legal_name' => [
                 'type' => Type::string()
+            ],
+            'type_person_id' => [
+                'type' => Type::id(),
+                'rules' => ['required']
+            ],
+            'type_person_identification_id' => [
+                'type' => Type::id(),
+                'rules' => ['required']
             ],
             'city_id' => [
                 'type' => Type::id(),

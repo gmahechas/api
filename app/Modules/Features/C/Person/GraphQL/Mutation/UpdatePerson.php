@@ -27,12 +27,6 @@ class UpdatePerson extends Mutation
                 'type' => Type::nonNull(Type::id()),
                 'rules' => ['required']
             ],
-            'person_business_type' => [
-                'type' => Type::string()
-            ],
-            'person_identification_type' => [
-                'type' => Type::string()
-            ],
             'person_identification' => [
                 'type' => Type::string()
             ],
@@ -50,6 +44,12 @@ class UpdatePerson extends Mutation
             ],
             'person_legal_name' => [
                 'type' => Type::string()
+            ],
+            'type_person_id' => [
+                'type' => Type::id()
+            ],
+            'type_person_identification_id' => [
+                'type' => Type::id()
             ],
             'city_id' => [
                 'type' => Type::id()

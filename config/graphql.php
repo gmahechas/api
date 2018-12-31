@@ -116,7 +116,8 @@ return [
                 'paginationProfileMenu' => 'App\Modules\Features\C\ProfileMenu\GraphQL\Query\PaginationProfileMenu',
                 'paginationTypePerson' => 'App\Modules\Features\C\TypePerson\GraphQL\Query\PaginationTypePerson',
                 'paginationTypePersonIdentification' => 'App\Modules\Features\C\TypePersonIdentification\GraphQL\Query\PaginationTypePersonIdentification',
-                'paginationPerson' => 'App\Modules\Features\C\Person\GraphQL\Query\PaginationPerson',
+                'paginationPerson' => 'App\Modules\Features\C\Person\GraphQL\Query\PaginationPerson', /** Person **/
+                'checkIdentificationPerson' => 'App\Modules\Features\C\Person\GraphQL\Query\CheckIdentificationPerson',
                 'paginationUser' => 'App\Modules\Features\C\User\GraphQL\Query\PaginationUser',
                 'paginationUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Query\PaginationUserOffice',
                 /** D **/
@@ -211,11 +212,7 @@ return [
         'Project' => 'App\Modules\Features\D\Project\GraphQL\Type\ProjectType',
         'UserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Type\UserOfficeProjectType',
         /** E **/
-        'Workflow' => 'App\Modules\Features\E\Workflow\GraphQL\Type\WorkflowType',
-        /************************* Enum *************************/
-        /** C **/
-        'PersonBusinessTypeEnum' => 'App\Modules\Shared\GraphQL\Enum\C\Person\PersonBusinessTypeEnum',
-        'PersonIdentificationTypeEnum' => 'App\Modules\Shared\GraphQL\Enum\C\Person\PersonIdentificationTypeEnum',
+        'Workflow' => 'App\Modules\Features\E\Workflow\GraphQL\Type\WorkflowType'
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

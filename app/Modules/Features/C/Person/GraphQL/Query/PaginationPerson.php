@@ -5,9 +5,9 @@ namespace App\Modules\Features\C\Person\GraphQL\Query;
 use GraphQL;
 use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Query;
-use App\Modules\Features\C\Person\Models\Person;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
+use App\Modules\Features\C\Person\Models\Person;
 
 class PaginationPerson extends Query
 {

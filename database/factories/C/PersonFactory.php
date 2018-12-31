@@ -7,7 +7,7 @@ $factory->define(\App\Modules\Features\C\Person\Models\Person::class, function (
     $type_person_id = \App\Modules\Features\C\TypePerson\Models\TypePerson::all()->random()->type_person_id;
     
     return [
-        'person_identification' => $faker->creditCardNumber,
+        'person_identification' => $faker->ein,
         'person_first_name' => ($type_person_id == 1) ? $faker->firstName : '',
         'person_second_name' => ($type_person_id == 1) ? $faker->firstName : '',
         'person_first_surname' => ($type_person_id == 1) ? $faker->lastName : '',

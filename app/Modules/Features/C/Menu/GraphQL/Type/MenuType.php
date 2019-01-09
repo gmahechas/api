@@ -23,6 +23,12 @@ class MenuType extends GraphQLType
             'menu_name' => [
             	'type' => Type::string()
             ],
+            'menu_title_case' => [
+            	'type' => Type::boolean()
+            ],
+            'menu_upper_case' => [
+            	'type' => Type::boolean()
+            ],
             'menu_uri' => [
             	'type' => Type::string()
             ],

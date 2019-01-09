@@ -82,6 +82,11 @@ class ProfileMenuSeeder extends Seeder
             'profile_menu_status' => true,
             'profile_id' => 1,
             'menu_id' => 14
-        ]);   
+        ]);
+        \App\Modules\Features\C\ProfileMenu\Models\ProfileMenu::create([
+            'profile_menu_status' => true,
+            'profile_id' => 1,
+            'menu_id' => 15
+        ]);
     }
 }

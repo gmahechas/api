@@ -17,6 +17,8 @@ class Menu extends Model
 	protected $primaryKey = 'menu_id';
 	protected $fillable = [
 		'menu_name',
+		'menu_title_case',
+		'menu_upper_case',
 		'menu_uri',
 		'menu_parent_id'
 	];

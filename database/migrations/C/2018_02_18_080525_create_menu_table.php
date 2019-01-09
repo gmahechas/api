@@ -16,7 +16,9 @@ class CreateMenuTable extends Migration
         Schema::create('c_menu', function (Blueprint $table) {
             $table->increments('menu_id');
             $table->string('menu_name', 64);
-            $table->string('menu_uri', 64);
+            $table->boolean('menu_title_case');
+            $table->boolean('menu_upper_case');
+            $table->string('menu_uri', 64)->nullable();
 
             $table->timestamp('menu_created_at')->nullable();
             $table->timestamp('menu_updated_at')->nullable();

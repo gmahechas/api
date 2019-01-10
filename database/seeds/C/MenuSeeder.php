@@ -15,8 +15,8 @@ class MenuSeeder extends Seeder
         \App\Modules\Features\C\Menu\Models\Menu::flushEventListeners();
         \App\Modules\Features\C\Menu\Models\Menu::create([
             'menu_name' => 'dashboard.singular',
-            'menu_title_case' => 0,
-            'menu_upper_case' => 1,
+            'menu_title_case' => 1,
+            'menu_upper_case' => 0,
         	'menu_uri' => 'dashboard',
         	'menu_parent_id' => null
         ]);

@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UserOfficeProjectSeeder::class);
         /** D **/
         $this->call(WorkflowSeeder::class);
+        $this->call(ContextSeeder::class);
         Schema::enableForeignKeyConstraints();
     }
 }

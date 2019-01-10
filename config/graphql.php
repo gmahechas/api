@@ -126,6 +126,7 @@ return [
                 'paginationUserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Query\PaginationUserOfficeProject',
                 /** E **/
                 'paginationWorkflow' => 'App\Modules\Features\E\Workflow\GraphQL\Query\PaginationWorkflow',
+                'paginationContext' => 'App\Modules\Features\E\Context\GraphQL\Query\PaginationContext',
             ],
             'mutation' => [
                 /** A **/
@@ -212,7 +213,8 @@ return [
         'Project' => 'App\Modules\Features\D\Project\GraphQL\Type\ProjectType',
         'UserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Type\UserOfficeProjectType',
         /** E **/
-        'Workflow' => 'App\Modules\Features\E\Workflow\GraphQL\Type\WorkflowType'
+        'Workflow' => 'App\Modules\Features\E\Workflow\GraphQL\Type\WorkflowType',
+        'Context' => 'App\Modules\Features\E\Context\GraphQL\Type\ContextType'
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

@@ -110,6 +110,7 @@ return [
                 /** B **/
                 'paginationCompany' => 'App\Modules\Features\B\Company\GraphQL\Query\PaginationCompany',
                 'paginationOffice' => 'App\Modules\Features\B\Office\GraphQL\Query\PaginationOffice',
+                'paginationDepartment' => 'App\Modules\Features\B\Department\GraphQL\Query\PaginationDepartment',
                 /** C **/
                 'paginationProfile' => 'App\Modules\Features\C\Profile\GraphQL\Query\PaginationProfile',
                 'paginationMenu' => 'App\Modules\Features\C\Menu\GraphQL\Query\PaginationMenu',
@@ -144,6 +145,9 @@ return [
                 'storeOffice' => 'App\Modules\Features\B\Office\GraphQL\Mutation\StoreOffice', /** Office **/
                 'updateOffice' => 'App\Modules\Features\B\Office\GraphQL\Mutation\UpdateOffice',
                 'destroyOffice' => 'App\Modules\Features\B\Office\GraphQL\Mutation\DestroyOffice',
+                'storeDepartment' => 'App\Modules\Features\B\Department\GraphQL\Mutation\StoreDepartment', /** Department **/
+                'updateDepartment' => 'App\Modules\Features\B\Department\GraphQL\Mutation\UpdateDepartment',
+                'destroyDepartment' => 'App\Modules\Features\B\Department\GraphQL\Mutation\DestroyDepartment',
                 /** C **/
                 'storeProfile' => 'App\Modules\Features\C\Profile\GraphQL\Mutation\StoreProfile', /** Profile **/
                 'updateProfile' => 'App\Modules\Features\C\Profile\GraphQL\Mutation\UpdateProfile',
@@ -200,6 +204,7 @@ return [
         /** B **/
         'Company' => 'App\Modules\Features\B\Company\GraphQL\Type\CompanyType',
         'Office' => 'App\Modules\Features\B\Office\GraphQL\Type\OfficeType',
+        'Department' => 'App\Modules\Features\B\Department\GraphQL\Type\DepartmentType',
         /** C **/
         'Profile' => 'App\Modules\Features\C\Profile\GraphQL\Type\ProfileType',
         'Menu' => 'App\Modules\Features\C\Menu\GraphQL\Type\MenuType',

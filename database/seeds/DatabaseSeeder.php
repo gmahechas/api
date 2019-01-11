@@ -19,6 +19,7 @@ class DatabaseSeeder extends Seeder
         /** B **/
         $this->call(CompanySeeder::class);
         $this->call(OfficeSeeder::class);
+        $this->call(DepartmentSeeder::class);
         /** C **/
         $this->call(ProfileSeeder::class);
         $this->call(MenuSeeder::class);

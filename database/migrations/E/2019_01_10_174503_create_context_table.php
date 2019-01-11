@@ -15,7 +15,7 @@ class CreateContextTable extends Migration
     {
         Schema::create('e_context', function (Blueprint $table) {
             $table->increments('context_id');
-            $table->string('context_description', 128)->unique();
+            $table->string('context_description', 128);
 
             $table->timestamp('context_created_at')->nullable();
             $table->timestamp('context_updated_at')->nullable();

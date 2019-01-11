@@ -33,6 +33,10 @@ class ContextType extends GraphQLType
             'menu' => [
             	'type' => GraphQL::type('Menu')
             ],
+            /*Out*/
+            'context_vars' => [
+                'type' => Type::listOf(GraphQL::type('ContextVar'))
+            ],
         ];
     }
 }

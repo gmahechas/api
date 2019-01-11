@@ -116,7 +116,7 @@ return [
                 'paginationProfileMenu' => 'App\Modules\Features\C\ProfileMenu\GraphQL\Query\PaginationProfileMenu',
                 'paginationTypePerson' => 'App\Modules\Features\C\TypePerson\GraphQL\Query\PaginationTypePerson',
                 'paginationTypePersonIdentification' => 'App\Modules\Features\C\TypePersonIdentification\GraphQL\Query\PaginationTypePersonIdentification',
-                'paginationPerson' => 'App\Modules\Features\C\Person\GraphQL\Query\PaginationPerson', /** Person **/
+                'paginationPerson' => 'App\Modules\Features\C\Person\GraphQL\Query\PaginationPerson',
                 'checkIdentificationPerson' => 'App\Modules\Features\C\Person\GraphQL\Query\CheckIdentificationPerson',
                 'paginationUser' => 'App\Modules\Features\C\User\GraphQL\Query\PaginationUser',
                 'paginationUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Query\PaginationUserOffice',
@@ -127,6 +127,7 @@ return [
                 /** E **/
                 'paginationWorkflow' => 'App\Modules\Features\E\Workflow\GraphQL\Query\PaginationWorkflow',
                 'paginationContext' => 'App\Modules\Features\E\Context\GraphQL\Query\PaginationContext',
+                'paginationContextVar' => 'App\Modules\Features\E\ContextVar\GraphQL\Query\PaginationContextVar',
             ],
             'mutation' => [
                 /** A **/
@@ -214,7 +215,8 @@ return [
         'UserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Type\UserOfficeProjectType',
         /** E **/
         'Workflow' => 'App\Modules\Features\E\Workflow\GraphQL\Type\WorkflowType',
-        'Context' => 'App\Modules\Features\E\Context\GraphQL\Type\ContextType'
+        'Context' => 'App\Modules\Features\E\Context\GraphQL\Type\ContextType',
+        'ContextVar' => 'App\Modules\Features\E\ContextVar\GraphQL\Type\ContextVarType'
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

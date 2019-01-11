@@ -30,4 +30,8 @@ class Context extends Model
 	public function menu(){
 		return $this->belongsTo(\App\Modules\Features\C\Menu\Models\Menu::class, 'menu_id');
 	}
+	/*Out*/
+	public function context_vars(){
+		return $this->hasMany(\App\Modules\Features\E\ContextVar\Models\ContextVar::class, 'context_id');
+	}
 }

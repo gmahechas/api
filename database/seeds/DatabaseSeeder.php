@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
         $this->call(PersonSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(UserOfficeSeeder::class);
+        $this->call(EmployeeSeeder::class);
         /** D **/
         $this->call(MacroprojectSeeder::class);
         $this->call(ProjectSeeder::class);

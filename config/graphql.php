@@ -121,6 +121,7 @@ return [
                 'checkIdentificationPerson' => 'App\Modules\Features\C\Person\GraphQL\Query\CheckIdentificationPerson',
                 'paginationUser' => 'App\Modules\Features\C\User\GraphQL\Query\PaginationUser',
                 'paginationUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Query\PaginationUserOffice',
+                'paginationEmployee' => 'App\Modules\Features\C\Employee\GraphQL\Query\PaginationEmployee',
                 /** D **/
                 'paginationMacroproject' => 'App\Modules\Features\D\Macroproject\GraphQL\Query\PaginationMacroproject',
                 'paginationProject' => 'App\Modules\Features\D\Project\GraphQL\Query\PaginationProject',
@@ -167,6 +168,9 @@ return [
                 'destroyUser' => 'App\Modules\Features\C\User\GraphQL\Mutation\DestroyUser',
                 'updateUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Mutation\UpdateUserOffice', /** UserOffice **/
                 'destroyUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Mutation\DestroyUserOffice',
+                'storeEmployee' => 'App\Modules\Features\C\Employee\GraphQL\Mutation\StoreEmployee', /** Employee **/
+                'updateEmployee' => 'App\Modules\Features\C\Employee\GraphQL\Mutation\UpdateEmployee',
+                'destroyEmployee' => 'App\Modules\Features\C\Employee\GraphQL\Mutation\DestroyEmployee',
                 /** D **/
                 'storeMacroproject' => 'App\Modules\Features\D\Macroproject\GraphQL\Mutation\StoreMacroproject', /** Macroproject **/
                 'updateMacroproject' => 'App\Modules\Features\D\Macroproject\GraphQL\Mutation\UpdateMacroproject',
@@ -214,6 +218,7 @@ return [
         'Person' => 'App\Modules\Features\C\Person\GraphQL\Type\PersonType',
         'User' => 'App\Modules\Features\C\User\GraphQL\Type\UserType',
         'UserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Type\UserOfficeType',
+        'Employee' => 'App\Modules\Features\C\Employee\GraphQL\Type\EmployeeType',
         /** D **/
         'Macroproject' => 'App\Modules\Features\D\Macroproject\GraphQL\Type\MacroprojectType',
         'Project' => 'App\Modules\Features\D\Project\GraphQL\Type\ProjectType',

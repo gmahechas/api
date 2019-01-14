@@ -49,26 +49,33 @@ class MenuSeeder extends Seeder
         	'menu_parent_id' => 2
         ]);
         \App\Modules\Features\C\Menu\Models\Menu::create([
-            'menu_name' => 'office.plural',
-            'menu_title_case' => 1,
-            'menu_upper_case' => 0,
-        	'menu_uri' => 'office',
-        	'menu_parent_id' => 2
-        ]);
-        \App\Modules\Features\C\Menu\Models\Menu::create([
-            'menu_name' => 'department.plural',
-            'menu_title_case' => 1,
-            'menu_upper_case' => 0,
-        	'menu_uri' => 'department',
-        	'menu_parent_id' => 2
-        ]);
-        \App\Modules\Features\C\Menu\Models\Menu::create([
             'menu_name' => 'company.singular',
-            'menu_title_case' => 1,
-            'menu_upper_case' => 0,
-        	'menu_uri' => 'company',
+            'menu_title_case' => 0,
+            'menu_upper_case' => 1,
+        	'menu_uri' => null,
         	'menu_parent_id' => 2
         ]);
+            \App\Modules\Features\C\Menu\Models\Menu::create([
+                'menu_name' => 'company.singular',
+                'menu_title_case' => 1,
+                'menu_upper_case' => 0,
+                'menu_uri' => 'company',
+                'menu_parent_id' => 6
+            ]);
+            \App\Modules\Features\C\Menu\Models\Menu::create([
+                'menu_name' => 'office.plural',
+                'menu_title_case' => 1,
+                'menu_upper_case' => 0,
+                'menu_uri' => 'office',
+                'menu_parent_id' => 6
+            ]);
+            \App\Modules\Features\C\Menu\Models\Menu::create([
+                'menu_name' => 'department.plural',
+                'menu_title_case' => 1,
+                'menu_upper_case' => 0,
+                'menu_uri' => 'department',
+                'menu_parent_id' => 6
+            ]);
         \App\Modules\Features\C\Menu\Models\Menu::create([
             'menu_name' => 'type_person.plural',
             'menu_title_case' => 1,

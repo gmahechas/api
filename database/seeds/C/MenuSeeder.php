@@ -127,10 +127,17 @@ class MenuSeeder extends Seeder
         ]);
         \App\Modules\Features\C\Menu\Models\Menu::create([
             'menu_name' => 'workflow.plural',
-            'menu_title_case' => 1,
-            'menu_upper_case' => 0,
-            'menu_uri' => 'workflow',
+            'menu_title_case' => 0,
+            'menu_upper_case' => 1,
+            'menu_uri' => null,
             'menu_parent_id' => 2
         ]);
+            \App\Modules\Features\C\Menu\Models\Menu::create([
+                'menu_name' => 'workflow.plural',
+                'menu_title_case' => 1,
+                'menu_upper_case' => 0,
+                'menu_uri' => 'workflow',
+                'menu_parent_id' => 17
+            ]);
     }
 }

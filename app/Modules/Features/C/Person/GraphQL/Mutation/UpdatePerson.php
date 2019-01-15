@@ -30,6 +30,9 @@ class UpdatePerson extends Mutation
             'person_identification' => [
                 'type' => Type::string()
             ],
+            'person_identification_date_issue' => [
+                'type' => Type::string()
+            ],
             'person_first_name' => [
                 'type' => Type::string()
             ],
@@ -45,13 +48,25 @@ class UpdatePerson extends Mutation
             'person_legal_name' => [
                 'type' => Type::string()
             ],
+            'person_address' => [
+                'type' => Type::string()
+            ],
+            'person_email' => [
+                'type' => Type::string()
+            ],
+            'person_phone' => [
+                'type' => Type::string()
+            ],
             'type_person_id' => [
                 'type' => Type::id()
             ],
             'type_person_identification_id' => [
                 'type' => Type::id()
             ],
-            'city_id' => [
+            'city_issue_id' => [
+                'type' => Type::id()
+            ],
+            'city_location_id' => [
                 'type' => Type::id()
             ],
         ];

@@ -27,6 +27,9 @@ class StorePerson extends Mutation
                 'type' => Type::string(),
                 'rules' => ['required']
             ],
+            'person_identification_date_issue' => [
+                'type' => Type::string()
+            ],
             'person_first_name' => [
                 'type' => Type::string()
             ],
@@ -42,6 +45,15 @@ class StorePerson extends Mutation
             'person_legal_name' => [
                 'type' => Type::string()
             ],
+            'person_address' => [
+                'type' => Type::string()
+            ],
+            'person_email' => [
+                'type' => Type::string()
+            ],
+            'person_phone' => [
+                'type' => Type::string()
+            ],
             'type_person_id' => [
                 'type' => Type::id(),
                 'rules' => ['required']
@@ -50,7 +62,11 @@ class StorePerson extends Mutation
                 'type' => Type::id(),
                 'rules' => ['required']
             ],
-            'city_id' => [
+            'city_issue_id' => [
+                'type' => Type::id(),
+                'rules' => ['required']
+            ],
+            'city_location_id' => [
                 'type' => Type::id(),
                 'rules' => ['required']
             ],

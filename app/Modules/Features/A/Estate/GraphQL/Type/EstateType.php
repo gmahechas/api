@@ -26,16 +26,16 @@ class EstateType extends GraphQLType
             'estate_code' => [
             	'type' => Type::string()
             ],
-            'estate_created_at' => DateField::class,
-            'estate_updated_at' => DateField::class,
-            'estate_deleted_at' => DateField::class,
+            /*In*/
             'country_id' => [
                 'type' => Type::id()
             ],
-            /*In*/
             'country' => [
                 'type' => GraphQL::type('Country')
             ],
+            'estate_created_at' => DateField::class,
+            'estate_updated_at' => DateField::class,
+            'estate_deleted_at' => DateField::class,
             /*Out*/
             'cities' => [
                 'type' => Type::listOf(GraphQL::type('City'))

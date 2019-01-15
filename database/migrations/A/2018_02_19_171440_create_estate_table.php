@@ -17,10 +17,6 @@ class CreateEstateTable extends Migration
             $table->increments('estate_id');
             $table->string('estate_name', 64);
             $table->string('estate_code', 8);
-            
-            $table->timestamp('estate_created_at')->nullable();
-            $table->timestamp('estate_updated_at')->nullable();
-            $table->softDeletes('estate_deleted_at');
 
             $table->integer('country_id')->unsigned();
             $table->foreign('country_id')
@@ -28,6 +24,10 @@ class CreateEstateTable extends Migration
                   ->on('a_country')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
+
+            $table->timestamp('estate_created_at')->nullable();
+            $table->timestamp('estate_updated_at')->nullable();
+            $table->softDeletes('estate_deleted_at');
         });
     }
 

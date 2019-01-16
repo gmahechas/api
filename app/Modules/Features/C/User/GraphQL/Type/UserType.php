@@ -32,22 +32,22 @@ class UserType extends GraphQLType
             'remember_token' => [
             	'type' => Type::string()
             ],
-            'user_created_at' => DateField::class,
-            'user_updated_at' => DateField::class,
-            'user_deleted_at' => DateField::class,
+            /*In*/
             'person_id' => [
                 'type' => Type::id()
+            ],
+            'person' => [
+                'type' => GraphQL::type('Person')
             ],
             'profile_id' => [
                 'type' => Type::id()
             ],
-            /*In*/
-            'person' => [
-                'type' => GraphQL::type('Person')
-            ],
             'profile' => [
                 'type' => GraphQL::type('Profile')
             ],
+            'user_created_at' => DateField::class,
+            'user_updated_at' => DateField::class,
+            'user_deleted_at' => DateField::class
         ];
     }
 }

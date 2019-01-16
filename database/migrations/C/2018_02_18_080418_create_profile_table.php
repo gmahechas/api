@@ -20,7 +20,6 @@ class CreateProfileTable extends Migration
             $table->timestamp('profile_created_at')->nullable();
             $table->timestamp('profile_updated_at')->nullable();
             $table->softDeletes('profile_deleted_at');
-
         });
     }
 

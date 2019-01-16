@@ -17,16 +17,16 @@ class CreateContextTable extends Migration
             $table->increments('context_id');
             $table->string('context_description', 128);
 
-            $table->timestamp('context_created_at')->nullable();
-            $table->timestamp('context_updated_at')->nullable();
-            $table->softDeletes('context_deleted_at');
-
             $table->integer('menu_id')->unsigned();
             $table->foreign('menu_id')
                   ->references('menu_id')
                   ->on('c_menu')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
+                  
+            $table->timestamp('context_created_at')->nullable();
+            $table->timestamp('context_updated_at')->nullable();
+            $table->softDeletes('context_deleted_at');
         });
     }
 

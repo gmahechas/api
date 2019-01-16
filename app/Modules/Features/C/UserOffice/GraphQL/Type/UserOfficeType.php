@@ -23,22 +23,22 @@ class UserOfficeType extends GraphQLType
             'user_office_status' => [
             	'type' => Type::boolean()
             ],
-            'user_office_created_at' => DateField::class,
-            'user_office_updated_at' => DateField::class,
-            'user_office_deleted_at' => DateField::class,
+            /*In*/
             'user_id' => [
                 'type' => Type::id()
+            ],
+            'user' => [
+                'type' => GraphQL::type('User')
             ],
             'office_id' => [
                 'type' => Type::id()
             ],
-            /*In*/
-            'user' => [
-                'type' => GraphQL::type('User')
-            ],
             'office' => [
                 'type' => GraphQL::type('Office')
             ],
+            'user_office_created_at' => DateField::class,
+            'user_office_updated_at' => DateField::class,
+            'user_office_deleted_at' => DateField::class,
         ];
     }
 }

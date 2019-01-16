@@ -17,10 +17,6 @@ class CreateOfficeTable extends Migration
             $table->increments('office_id');
             $table->string('office_name', 64);
             
-            $table->timestamp('office_created_at')->nullable();
-            $table->timestamp('office_updated_at')->nullable();
-            $table->softDeletes('office_deleted_at');
-
             $table->integer('company_id')->unsigned();
             $table->foreign('company_id')
                   ->references('company_id')
@@ -34,6 +30,10 @@ class CreateOfficeTable extends Migration
                   ->on('a_city')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
+
+            $table->timestamp('office_created_at')->nullable();
+            $table->timestamp('office_updated_at')->nullable();
+            $table->softDeletes('office_deleted_at');
         });
     }
 

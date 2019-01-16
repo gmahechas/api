@@ -29,22 +29,22 @@ class MacroprojectType extends GraphQLType
             'macroproject_phone' => [
             	'type' => Type::string()
             ],
-            'macroproject_created_at' => DateField::class,
-            'macroproject_updated_at' => DateField::class,
-            'macroproject_deleted_at' => DateField::class,
+            /*In*/
             'city_id' => [
                 'type' => Type::id()
+            ],
+            'city' => [
+                'type' => GraphQL::type('City')
             ],
             'office_id' => [
                 'type' => Type::id()
             ],
-            /*In*/
-            'city' => [
-                'type' => GraphQL::type('City')
-            ],
             'office' => [
                 'type' => GraphQL::type('Office')
             ],
+            'macroproject_created_at' => DateField::class,
+            'macroproject_updated_at' => DateField::class,
+            'macroproject_deleted_at' => DateField::class,
         ];
     }
 }

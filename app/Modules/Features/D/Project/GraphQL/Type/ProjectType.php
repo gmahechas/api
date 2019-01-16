@@ -29,16 +29,16 @@ class ProjectType extends GraphQLType
             'project_phone' => [
             	'type' => Type::string()
             ],
-            'project_created_at' => DateField::class,
-            'project_updated_at' => DateField::class,
-            'project_deleted_at' => DateField::class,
+            /*In*/
             'macroproject_id' => [
                 'type' => Type::id()
             ],
-            /*In*/
             'macroproject' => [
                 'type' => GraphQL::type('Macroproject')
             ],
+            'project_created_at' => DateField::class,
+            'project_updated_at' => DateField::class,
+            'project_deleted_at' => DateField::class,
         ];
     }
 }

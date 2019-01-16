@@ -17,10 +17,6 @@ class CreateCityTable extends Migration
             $table->increments('city_id');
             $table->string('city_name', 64);
             $table->string('city_code', 8);
-                  
-            $table->timestamp('city_created_at')->nullable();
-            $table->timestamp('city_updated_at')->nullable();
-            $table->softDeletes('city_deleted_at');
 
             $table->integer('estate_id')->unsigned();
             $table->foreign('estate_id')
@@ -28,6 +24,10 @@ class CreateCityTable extends Migration
                   ->on('a_estate')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
+
+            $table->timestamp('city_created_at')->nullable();
+            $table->timestamp('city_updated_at')->nullable();
+            $table->softDeletes('city_deleted_at');
         });
     }
 

@@ -20,9 +20,7 @@ class CreateUserTable extends Migration
             $table->string('password', 128);
             $table->rememberToken();
 
-            $table->timestamp('user_created_at')->nullable();
-            $table->timestamp('user_updated_at')->nullable();
-            $table->softDeletes('user_deleted_at');
+            
 
             $table->integer('person_id')->unique()->unsigned();
             $table->foreign('person_id')
@@ -37,6 +35,10 @@ class CreateUserTable extends Migration
                   ->on('c_profile')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
+                  
+            $table->timestamp('user_created_at')->nullable();
+            $table->timestamp('user_updated_at')->nullable();
+            $table->softDeletes('user_deleted_at');
         });
     }
 

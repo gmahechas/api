@@ -32,16 +32,16 @@ class ContextVarType extends GraphQLType
             'context_var_order' => [
             	'type' => Type::string()
             ],
-            'context_var_created_at' => DateField::class,
-            'context_var_updated_at' => DateField::class,
-            'context_var_deleted_at' => DateField::class,
+            /*In*/
             'context_id' => [
             	'type' => Type::id()
             ],
-            /*In*/
             'context' => [
                 'type' => GraphQL::type('Context')
             ],
+            'context_var_created_at' => DateField::class,
+            'context_var_updated_at' => DateField::class,
+            'context_var_deleted_at' => DateField::class,
         ];
     }
 }

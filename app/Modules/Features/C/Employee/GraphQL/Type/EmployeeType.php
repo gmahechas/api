@@ -32,9 +32,6 @@ class EmployeeType extends GraphQLType
             'employee_business_mail' => [
             	'type' => Type::string()
             ],
-            'employee_created_at' => DateField::class,
-            'employee_updated_at' => DateField::class,
-            'employee_deleted_at' => DateField::class,
             /*In*/
             'person_id' => [
             	'type' => Type::id()
@@ -48,6 +45,9 @@ class EmployeeType extends GraphQLType
             'city_birth' => [
                 'type' => GraphQL::type('City')
             ],
+            'employee_created_at' => DateField::class,
+            'employee_updated_at' => DateField::class,
+            'employee_deleted_at' => DateField::class,
         ];
     }
 }

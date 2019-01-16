@@ -26,16 +26,16 @@ class CityType extends GraphQLType
             'city_code' => [
             	'type' => Type::string()
             ],
-            'city_created_at' => DateField::class,
-            'city_updated_at' => DateField::class,
-            'city_deleted_at' => DateField::class,
+            /*In*/
             'estate_id' => [
                 'type' => Type::id()
             ],
-            /*In*/
             'estate' => [
                 'type' => GraphQL::type('Estate')
             ],
+            'city_created_at' => DateField::class,
+            'city_updated_at' => DateField::class,
+            'city_deleted_at' => DateField::class,
             /*Out*/
             'persons' => [
                 'type' => Type::listOf(GraphQL::type('Person'))

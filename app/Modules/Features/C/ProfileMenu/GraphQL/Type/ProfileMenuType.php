@@ -23,22 +23,22 @@ class ProfileMenuType extends GraphQLType
             'profile_menu_status' => [
             	'type' => Type::boolean()
             ],
-            'profile_menu_created_at' => DateField::class,
-            'profile_menu_updated_at' => DateField::class,
-            'profile_menu_deleted_at' => DateField::class,
-         	'profile_id' => [
-                'type' => Type::id()
-            ],
-         	'menu_id' => [
-                'type' => Type::id()
-            ],
             /*In*/
+            'profile_id' => [
+                'type' => Type::id()
+            ],
             'profile' => [
                 'type' => GraphQL::type('Profile')
+            ],
+            'menu_id' => [
+                'type' => Type::id()
             ],
             'menu' => [
                 'type' => GraphQL::type('Menu')
             ],
+            'profile_menu_created_at' => DateField::class,
+            'profile_menu_updated_at' => DateField::class,
+            'profile_menu_deleted_at' => DateField::class,
         ];
     }
 }

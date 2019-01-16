@@ -18,10 +18,6 @@ class CreateMacroprojectTable extends Migration
             $table->string('macroproject_name', 128);
             $table->string('macroproject_address', 128);
             $table->string('macroproject_phone', 32);
-
-            $table->timestamp('macroproject_created_at')->nullable();
-            $table->timestamp('macroproject_updated_at')->nullable();
-            $table->softDeletes('macroproject_deleted_at');
             
             $table->integer('city_id')->unsigned();
             $table->foreign('city_id')
@@ -36,6 +32,10 @@ class CreateMacroprojectTable extends Migration
                   ->on('b_office')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
+
+            $table->timestamp('macroproject_created_at')->nullable();
+            $table->timestamp('macroproject_updated_at')->nullable();
+            $table->softDeletes('macroproject_deleted_at');
         });
     }
 

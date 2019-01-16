@@ -26,16 +26,16 @@ class CompanyType extends GraphQLType
             'company_identification' => [
             	'type' => Type::string()
             ],
-            'company_created_at' => DateField::class,
-            'company_updated_at' => DateField::class,
-            'company_deleted_at' => DateField::class,
+            /*In*/
             'city_id' => [
                 'type' => Type::id()
             ],
-			/*In*/
             'city' => [
                 'type' => GraphQL::type('City')
             ],
+            'company_created_at' => DateField::class,
+            'company_updated_at' => DateField::class,
+            'company_deleted_at' => DateField::class,
             /*Out*/
             'offices' => [
                 'type' => Type::listOf(GraphQL::type('Office'))

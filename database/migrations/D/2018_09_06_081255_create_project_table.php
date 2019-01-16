@@ -19,16 +19,16 @@ class CreateProjectTable extends Migration
             $table->string('project_address', 128);
             $table->string('project_phone', 32);
 
-            $table->timestamp('project_created_at')->nullable();
-            $table->timestamp('project_updated_at')->nullable();
-            $table->softDeletes('project_deleted_at');
-
             $table->integer('macroproject_id')->unsigned();
             $table->foreign('macroproject_id')
                   ->references('macroproject_id')
                   ->on('d_macroproject')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
+                  
+            $table->timestamp('project_created_at')->nullable();
+            $table->timestamp('project_updated_at')->nullable();
+            $table->softDeletes('project_deleted_at');
         });
     }
 

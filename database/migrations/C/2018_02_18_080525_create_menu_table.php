@@ -20,16 +20,16 @@ class CreateMenuTable extends Migration
             $table->boolean('menu_upper_case');
             $table->string('menu_uri', 64)->nullable();
 
-            $table->timestamp('menu_created_at')->nullable();
-            $table->timestamp('menu_updated_at')->nullable();
-            $table->softDeletes('menu_deleted_at');
-
             $table->integer('menu_parent_id')->nullable()->unsigned();
             $table->foreign('menu_parent_id')
                   ->references('menu_id')
                   ->on('c_menu')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
+
+            $table->timestamp('menu_created_at')->nullable();
+            $table->timestamp('menu_updated_at')->nullable();
+            $table->softDeletes('menu_deleted_at');
         });
     }
 

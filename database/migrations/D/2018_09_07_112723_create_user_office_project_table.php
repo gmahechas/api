@@ -17,10 +17,6 @@ class CreateUserOfficeProjectTable extends Migration
             $table->increments('user_office_project_id');
             $table->boolean('user_office_project_status');
 
-            $table->timestamp('user_office_project_created_at')->nullable();
-            $table->timestamp('user_office_project_updated_at')->nullable();
-            $table->softDeletes('user_office_project_deleted_at');
-
             $table->integer('user_office_id')->unsigned();
             $table->foreign('user_office_id')
                   ->references('user_office_id')
@@ -34,6 +30,10 @@ class CreateUserOfficeProjectTable extends Migration
                   ->on('d_project')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
+                  
+            $table->timestamp('user_office_project_created_at')->nullable();
+            $table->timestamp('user_office_project_updated_at')->nullable();
+            $table->softDeletes('user_office_project_deleted_at');
         });
     }
 

@@ -23,16 +23,16 @@ class ContextType extends GraphQLType
             'context_description' => [
             	'type' => Type::string()
             ],
-            'context_created_at' => DateField::class,
-            'context_updated_at' => DateField::class,
-            'context_deleted_at' => DateField::class,
+            /*In*/
             'menu_id' => [
             	'type' => Type::id()
             ],
-            /*In*/
             'menu' => [
             	'type' => GraphQL::type('Menu')
             ],
+            'context_created_at' => DateField::class,
+            'context_updated_at' => DateField::class,
+            'context_deleted_at' => DateField::class,
             /*Out*/
             'context_vars' => [
                 'type' => Type::listOf(GraphQL::type('ContextVar'))

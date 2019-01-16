@@ -20,10 +20,6 @@ class CreateEmployeeTable extends Migration
             $table->date('employee_hire_date');
             $table->string('employee_business_mail', 64);
 
-            $table->timestamp('employee_created_at')->nullable();
-            $table->timestamp('employee_updated_at')->nullable();
-            $table->softDeletes('employee_deleted_at');
-
             $table->integer('person_id')->unique()->unsigned();
             $table->foreign('person_id')
                   ->references('person_id')
@@ -37,6 +33,10 @@ class CreateEmployeeTable extends Migration
                   ->on('a_city')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
+                  
+            $table->timestamp('employee_created_at')->nullable();
+            $table->timestamp('employee_updated_at')->nullable();
+            $table->softDeletes('employee_deleted_at');
         });
     }
 

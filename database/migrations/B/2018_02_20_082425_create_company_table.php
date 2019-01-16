@@ -17,10 +17,6 @@ class CreateCompanyTable extends Migration
             $table->increments('company_id');
             $table->string('company_name', 64);
             $table->string('company_identification', 128);
-            
-            $table->timestamp('company_created_at')->nullable();
-            $table->timestamp('company_updated_at')->nullable();
-            $table->softDeletes('company_deleted_at');
 
             $table->integer('city_id')->unsigned();
             $table->foreign('city_id')
@@ -28,6 +24,10 @@ class CreateCompanyTable extends Migration
                   ->on('a_city')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
+                  
+            $table->timestamp('company_created_at')->nullable();
+            $table->timestamp('company_updated_at')->nullable();
+            $table->softDeletes('company_deleted_at');
         });
     }
 

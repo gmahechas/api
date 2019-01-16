@@ -23,24 +23,22 @@ class OfficeType extends GraphQLType
             'office_name' => [
             	'type' => Type::string()
             ],
-            'office_created_at' => DateField::class,
-            'office_updated_at' => DateField::class,
-            'office_deleted_at' => DateField::class,
+            /*In*/
             'company_id' => [
                 'type' => Type::id()
+            ],
+            'company' => [
+                'type' => GraphQL::type('Company')
             ],
             'city_id' => [
                 'type' => Type::id()
             ],
-			/*In*/
-            'company' => [
-                'type' => GraphQL::type('Company')
-            ],
             'city' => [
                 'type' => GraphQL::type('City')
             ],
-            /*Out*/
-            //TODO
+            'office_created_at' => DateField::class,
+            'office_updated_at' => DateField::class,
+            'office_deleted_at' => DateField::class,
         ];
     }
 }

@@ -17,10 +17,6 @@ class CreateProfileMenuTable extends Migration
             $table->increments('profile_menu_id');
             $table->boolean('profile_menu_status');
 
-            $table->timestamp('profile_menu_created_at')->nullable();
-            $table->timestamp('profile_menu_updated_at')->nullable();
-            $table->softDeletes('profile_menu_deleted_at');
-
             $table->integer('profile_id')->unsigned();
             $table->foreign('profile_id')
                   ->references('profile_id')
@@ -34,6 +30,10 @@ class CreateProfileMenuTable extends Migration
                   ->on('c_menu')
                   ->onDelete('restrict')
                   ->onUpdate('restrict');
+
+            $table->timestamp('profile_menu_created_at')->nullable();
+            $table->timestamp('profile_menu_updated_at')->nullable();
+            $table->softDeletes('profile_menu_deleted_at');
         });
     }
 

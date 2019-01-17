@@ -111,6 +111,7 @@ return [
                 'paginationCompany' => 'App\Modules\Features\B\Company\GraphQL\Query\PaginationCompany',
                 'paginationOffice' => 'App\Modules\Features\B\Office\GraphQL\Query\PaginationOffice',
                 'paginationDepartment' => 'App\Modules\Features\B\Department\GraphQL\Query\PaginationDepartment',
+                'paginationOfficeDepartment' => 'App\Modules\Features\B\OfficeDepartment\GraphQL\Query\PaginationOfficeDepartment',
                 /** C **/
                 'paginationProfile' => 'App\Modules\Features\C\Profile\GraphQL\Query\PaginationProfile',
                 'paginationMenu' => 'App\Modules\Features\C\Menu\GraphQL\Query\PaginationMenu',
@@ -149,6 +150,9 @@ return [
                 'storeDepartment' => 'App\Modules\Features\B\Department\GraphQL\Mutation\StoreDepartment', /** Department **/
                 'updateDepartment' => 'App\Modules\Features\B\Department\GraphQL\Mutation\UpdateDepartment',
                 'destroyDepartment' => 'App\Modules\Features\B\Department\GraphQL\Mutation\DestroyDepartment',
+                'storeOfficeDepartment' => 'App\Modules\Features\B\OfficeDepartment\GraphQL\Mutation\StoreOfficeDepartment', /** OfficeDepartment **/
+                'updateOfficeDepartment' => 'App\Modules\Features\B\OfficeDepartment\GraphQL\Mutation\UpdateOfficeDepartment',
+                'destroyOfficeDepartment' => 'App\Modules\Features\B\OfficeDepartment\GraphQL\Mutation\DestroyOfficeDepartment',
                 /** C **/
                 'storeProfile' => 'App\Modules\Features\C\Profile\GraphQL\Mutation\StoreProfile', /** Profile **/
                 'updateProfile' => 'App\Modules\Features\C\Profile\GraphQL\Mutation\UpdateProfile',
@@ -209,6 +213,7 @@ return [
         'Company' => 'App\Modules\Features\B\Company\GraphQL\Type\CompanyType',
         'Office' => 'App\Modules\Features\B\Office\GraphQL\Type\OfficeType',
         'Department' => 'App\Modules\Features\B\Department\GraphQL\Type\DepartmentType',
+        'OfficeDepartment' => 'App\Modules\Features\B\OfficeDepartment\GraphQL\Type\OfficeDepartmentType',
         /** C **/
         'Profile' => 'App\Modules\Features\C\Profile\GraphQL\Type\ProfileType',
         'Menu' => 'App\Modules\Features\C\Menu\GraphQL\Type\MenuType',

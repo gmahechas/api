@@ -183,6 +183,7 @@ return [
                 'updateProject' => 'App\Modules\Features\D\Project\GraphQL\Mutation\UpdateProject',
                 'destroyProject' => 'App\Modules\Features\D\Project\GraphQL\Mutation\DestroyProject',
                 'updateUserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Mutation\UpdateUserOfficeProject', /** UserOfficeProject **/
+                'destroyUserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Mutation\DestroyUserOfficeProject',
                 /** E **/
                 'storeWorkflow' => 'App\Modules\Features\E\Workflow\GraphQL\Mutation\StoreWorkflow', /** Workflow **/
                 'updateWorkflow' => 'App\Modules\Features\E\Workflow\GraphQL\Mutation\UpdateWorkflow',

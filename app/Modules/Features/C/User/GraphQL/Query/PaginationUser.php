@@ -29,9 +29,6 @@ class PaginationUser extends Query
             'username' => [
                 'type' => Type::string()
             ],
-            'email' => [
-                'type' => Type::string()
-            ],
             'person_id' => [
                 'type' => Type::id()
             ],
@@ -54,7 +51,6 @@ class PaginationUser extends Query
 
         $user_id = isset($args['user_id']) ? $args['user_id'] : false;
         $username = isset($args['username']) ? $args['username'] : false;
-        $email = isset($args['email']) ? $args['email'] : false;
         $person_id = isset($args['person_id']) ? $args['person_id'] : false;
         $profile_id = isset($args['profile_id']) ? $args['profile_id'] : false;
 
@@ -67,9 +63,6 @@ class PaginationUser extends Query
                         })
                         ->when($username, function ($query) use ($username) {
                             return $query->where('username', 'like', '%'.$username.'%');
-                        })
-                        ->when($email, function ($query) use ($email) {
-                            return $query->where('email', 'like', '%'.$email.'%');
                         })
                         ->when($person_id, function ($query) use ($person_id) {
                             return $query->where('person_id', '=', $person_id);

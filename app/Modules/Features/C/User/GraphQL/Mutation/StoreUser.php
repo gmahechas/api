@@ -27,10 +27,6 @@ class StoreUser extends Mutation
                 'type' => Type::string(),
                 'rules' => ['required']
             ],
-            'email' => [
-                'type' => Type::string(),
-                'rules' => ['required']
-            ],
             'password' => [
                 'type' => Type::string(),
                 'rules' => ['required']

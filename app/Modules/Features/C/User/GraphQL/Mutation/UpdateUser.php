@@ -30,9 +30,6 @@ class UpdateUser extends Mutation
             'username' => [
                 'type' => Type::string()
             ],
-            'email' => [
-                'type' => Type::string()
-            ],
             'password' => [
                 'type' => Type::string()
             ],

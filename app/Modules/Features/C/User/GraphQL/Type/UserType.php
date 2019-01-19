@@ -23,13 +23,7 @@ class UserType extends GraphQLType
             'username' => [
             	'type' => Type::string()
             ],
-            'email' => [
-            	'type' => Type::string()
-            ],
             'password' => [
-            	'type' => Type::string()
-            ],
-            'remember_token' => [
             	'type' => Type::string()
             ],
             /*In*/

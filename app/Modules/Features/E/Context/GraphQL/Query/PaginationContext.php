@@ -29,6 +29,9 @@ class PaginationContext extends Query
             'context_description' => [
                 'type' => Type::string()
             ],
+            'menu_id' => [
+                'type' => Type::id()
+            ],
             'limit' => [
                 'type' => Type::int()
             ],
@@ -45,6 +48,7 @@ class PaginationContext extends Query
 
         $context_id = isset($args['context_id']) ? $args['context_id'] : false;
         $context_description = isset($args['context_description']) ? $args['context_description'] : false;
+        $menu_id = isset($args['menu_id']) ? $args['menu_id'] : false;
 
         $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
@@ -55,6 +59,9 @@ class PaginationContext extends Query
                         })
                         ->when($context_description, function ($query) use ($context_description) {
                             return $query->where('context_description', 'like', '%'.$context_description.'%');
+                        })
+                        ->when($menu_id, function ($query) use ($menu_id) {
+                            return $query->where('menu_id', '=', $menu_id);
                         })
                         ->with($with)
                         ->paginate($limit, ['*'], 'pages', $page);

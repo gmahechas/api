@@ -26,6 +26,15 @@ class WorkflowType extends GraphQLType
             'workflow_description' => [
             	'type' => Type::string()
             ],
+            'workflow_first_activities' => [
+            	'type' => Type::string()
+            ],
+            'workflow_edit_activities' => [
+            	'type' => Type::string()
+            ],
+            'workflow_latest_activities' => [
+            	'type' => Type::string()
+            ],
             'workflow_created_at' => DateField::class,
             'workflow_updated_at' => DateField::class,
             'workflow_deleted_at' => DateField::class,

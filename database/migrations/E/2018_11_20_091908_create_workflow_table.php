@@ -17,6 +17,9 @@ class CreateWorkflowTable extends Migration
             $table->increments('workflow_id');
             $table->string('workflow_name', 128);
             $table->string('workflow_description', 256);
+            $table->string('workflow_first_activities', 64)->nullable();
+            $table->string('workflow_edit_activities', 64)->nullable();
+            $table->string('workflow_latest_activities')->nullable();
 
             $table->timestamp('workflow_created_at')->nullable();
             $table->timestamp('workflow_updated_at')->nullable();

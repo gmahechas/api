@@ -15,7 +15,10 @@ class WorkflowSeeder extends Seeder
         \App\Modules\Features\E\Workflow\Models\Workflow::flushEventListeners();
         \App\Modules\Features\E\Workflow\Models\Workflow::create([
         	'workflow_name' => 'WORKFLOW 1',
-        	'workflow_description' => 'WORKFLOW DESCRIPCION 1'
+            'workflow_description' => 'WORKFLOW DESCRIPCION 1',
+            'workflow_first_activities' => null,
+            'workflow_edit_activities' => null,
+            'workflow_latest_activities' => null
         ]);
     }
 }

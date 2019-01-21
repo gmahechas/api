@@ -17,13 +17,16 @@ class Workflow extends Model
 	protected $primaryKey = 'workflow_id';
 	protected $fillable = [
 		'workflow_name',
-		'workflow_description'
+		'workflow_description',
+		'workflow_first_activities',
+		'workflow_edit_activities',
+		'workflow_latest_activities'
 	];
 
 	protected $dates = [
 		'workflow_created_at',
 		'workflow_updated_at',
 		'workflow_deleted_at'
-    ];
-    
+	];
+	
 }

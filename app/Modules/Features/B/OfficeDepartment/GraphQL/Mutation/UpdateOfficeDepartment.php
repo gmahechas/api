@@ -27,7 +27,7 @@ class UpdateOfficeDepartment extends Mutation
                 'type' => Type::nonNull(Type::id()),
                 'rules' => ['required']
             ],
-            'user_office_project_status' => [
+            'office_department_status' => [
                 'type' => Type::boolean()
             ]
         ];

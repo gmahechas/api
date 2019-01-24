@@ -39,6 +39,8 @@ class DatabaseSeeder extends Seeder
         $this->call(WorkflowSeeder::class);
         $this->call(ContextSeeder::class);
         $this->call(ContextVarSeeder::class);
+        /** F **/
+        $this->call(DaySeeder::class);
         Schema::enableForeignKeyConstraints();
     }
 }

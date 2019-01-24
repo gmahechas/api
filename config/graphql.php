@@ -131,6 +131,8 @@ return [
                 'paginationWorkflow' => 'App\Modules\Features\E\Workflow\GraphQL\Query\PaginationWorkflow',
                 'paginationContext' => 'App\Modules\Features\E\Context\GraphQL\Query\PaginationContext',
                 'paginationContextVar' => 'App\Modules\Features\E\ContextVar\GraphQL\Query\PaginationContextVar',
+                /** F **/
+                'paginationDay' => 'App\Modules\Features\F\Day\GraphQL\Query\PaginationDay',
             ],
             'mutation' => [
                 /** A **/
@@ -232,7 +234,9 @@ return [
         /** E **/
         'Workflow' => 'App\Modules\Features\E\Workflow\GraphQL\Type\WorkflowType',
         'Context' => 'App\Modules\Features\E\Context\GraphQL\Type\ContextType',
-        'ContextVar' => 'App\Modules\Features\E\ContextVar\GraphQL\Type\ContextVarType'
+        'ContextVar' => 'App\Modules\Features\E\ContextVar\GraphQL\Type\ContextVarType',
+        /** F **/
+        'Day' => 'App\Modules\Features\F\Day\GraphQL\Type\DayType'
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

@@ -42,6 +42,7 @@ class DatabaseSeeder extends Seeder
         /** F **/
         $this->call(DaySeeder::class);
         $this->call(ScheduleSeeder::class);
+        $this->call(ScheduleDaySeeder::class);
         Schema::enableForeignKeyConstraints();
     }
 }

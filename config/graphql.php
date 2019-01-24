@@ -133,6 +133,7 @@ return [
                 'paginationContextVar' => 'App\Modules\Features\E\ContextVar\GraphQL\Query\PaginationContextVar',
                 /** F **/
                 'paginationDay' => 'App\Modules\Features\F\Day\GraphQL\Query\PaginationDay',
+                'paginationSchedule' => 'App\Modules\Features\F\Schedule\GraphQL\Query\PaginationSchedule',
             ],
             'mutation' => [
                 /** A **/
@@ -190,6 +191,10 @@ return [
                 'storeWorkflow' => 'App\Modules\Features\E\Workflow\GraphQL\Mutation\StoreWorkflow', /** Workflow **/
                 'updateWorkflow' => 'App\Modules\Features\E\Workflow\GraphQL\Mutation\UpdateWorkflow',
                 'destroyWorkflow' => 'App\Modules\Features\E\Workflow\GraphQL\Mutation\DestroyWorkflow',
+                /** F **/
+                'storeSchedule' => 'App\Modules\Features\F\Schedule\GraphQL\Mutation\StoreSchedule', /** Schedule **/
+                'updateSchedule' => 'App\Modules\Features\F\Schedule\GraphQL\Mutation\UpdateSchedule',
+                'destroySchedule' => 'App\Modules\Features\F\Schedule\GraphQL\Mutation\DestroySchedule',
             ],
             'middleware' => [],
             'method' => ['post'],
@@ -236,7 +241,8 @@ return [
         'Context' => 'App\Modules\Features\E\Context\GraphQL\Type\ContextType',
         'ContextVar' => 'App\Modules\Features\E\ContextVar\GraphQL\Type\ContextVarType',
         /** F **/
-        'Day' => 'App\Modules\Features\F\Day\GraphQL\Type\DayType'
+        'Day' => 'App\Modules\Features\F\Day\GraphQL\Type\DayType',
+        'Schedule' => 'App\Modules\Features\F\Schedule\GraphQL\Type\ScheduleType'
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

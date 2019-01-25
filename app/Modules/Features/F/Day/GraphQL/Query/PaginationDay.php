@@ -26,6 +26,9 @@ class PaginationDay extends Query
             'day_id' => [
                 'type' => Type::id()
             ],
+            'day_name' => [
+                'type' => Type::string()
+            ],
             'limit' => [
                 'type' => Type::int()
             ],
@@ -41,6 +44,7 @@ class PaginationDay extends Query
         $with = $fields->getRelations();
 
         $day_id = isset($args['day_id']) ? $args['day_id'] : false;
+        $day_name = isset($args['day_name']) ? $args['day_name'] : false;
 
         $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
@@ -48,6 +52,9 @@ class PaginationDay extends Query
         return Day::select($select)
                         ->when($day_id, function ($query) use ($day_id) {
                             return $query->where('day_id', '=', $day_id);
+                        })
+                        ->when($day_name, function ($query) use ($day_name) {
+                            return $query->where('day_name', 'like', '%'.$day_name.'%');
                         })
                         ->with($with)
                         ->paginate($limit, ['*'], 'pages', $page);

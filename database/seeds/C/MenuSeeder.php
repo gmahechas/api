@@ -139,5 +139,19 @@ class MenuSeeder extends Seeder
                 'menu_uri' => 'workflow',
                 'menu_parent_id' => 17
             ]);
+        \App\Modules\Features\C\Menu\Models\Menu::create([
+            'menu_name' => 'schedule.plural',
+            'menu_title_case' => 0,
+            'menu_upper_case' => 1,
+            'menu_uri' => null,
+            'menu_parent_id' => 2
+        ]);
+            \App\Modules\Features\C\Menu\Models\Menu::create([
+                'menu_name' => 'schedule.plural',
+                'menu_title_case' => 1,
+                'menu_upper_case' => 0,
+                'menu_uri' => 'schedule',
+                'menu_parent_id' => 19
+            ]);
     }
 }

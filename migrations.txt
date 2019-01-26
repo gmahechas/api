@@ -1,0 +1,9 @@
+php artisan migrate
+php artisan migrate --path=database/migrations/A
+php artisan migrate --path=database/migrations/B
+php artisan migrate --path=database/migrations/C
+php artisan migrate --path=database/migrations/D
+php artisan migrate --path=database/migrations/E
+php artisan migrate --path=database/migrations/F
+
+php artisan db:seed

@@ -43,6 +43,7 @@ class DatabaseSeeder extends Seeder
         $this->call(DaySeeder::class);
         $this->call(ScheduleSeeder::class);
         $this->call(ScheduleDaySeeder::class);
+        $this->call(HourRangeSeeder::class);
         Schema::enableForeignKeyConstraints();
     }
 }

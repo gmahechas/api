@@ -153,5 +153,12 @@ class MenuSeeder extends Seeder
                 'menu_uri' => 'schedule',
                 'menu_parent_id' => 19
             ]);
+            \App\Modules\Features\C\Menu\Models\Menu::create([
+                'menu_name' => 'hour_range.plural',
+                'menu_title_case' => 1,
+                'menu_upper_case' => 0,
+                'menu_uri' => 'hour_range',
+                'menu_parent_id' => 19
+            ]);
     }
 }

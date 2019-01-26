@@ -135,6 +135,7 @@ return [
                 'paginationDay' => 'App\Modules\Features\F\Day\GraphQL\Query\PaginationDay',
                 'paginationSchedule' => 'App\Modules\Features\F\Schedule\GraphQL\Query\PaginationSchedule',
                 'paginationScheduleDay' => 'App\Modules\Features\F\ScheduleDay\GraphQL\Query\PaginationScheduleDay',
+                'paginationHourRange' => 'App\Modules\Features\F\HourRange\GraphQL\Query\PaginationHourRange',
             ],
             'mutation' => [
                 /** A **/
@@ -199,6 +200,9 @@ return [
                 'storeScheduleDay' => 'App\Modules\Features\F\ScheduleDay\GraphQL\Mutation\StoreScheduleDay', /** ScheduleDay **/
                 'updateScheduleDay' => 'App\Modules\Features\F\ScheduleDay\GraphQL\Mutation\UpdateScheduleDay',
                 'destroyScheduleDay' => 'App\Modules\Features\F\ScheduleDay\GraphQL\Mutation\DestroyScheduleDay',
+                'storeHourRange' => 'App\Modules\Features\F\HourRange\GraphQL\Mutation\StoreHourRange', /** HourRange **/
+                'updateHourRange' => 'App\Modules\Features\F\HourRange\GraphQL\Mutation\UpdateHourRange',
+                'destroyHourRange' => 'App\Modules\Features\F\HourRange\GraphQL\Mutation\DestroyHourRange',
             ],
             'middleware' => [],
             'method' => ['post'],
@@ -247,7 +251,8 @@ return [
         /** F **/
         'Day' => 'App\Modules\Features\F\Day\GraphQL\Type\DayType',
         'Schedule' => 'App\Modules\Features\F\Schedule\GraphQL\Type\ScheduleType',
-        'ScheduleDay' => 'App\Modules\Features\F\ScheduleDay\GraphQL\Type\ScheduleDayType'
+        'ScheduleDay' => 'App\Modules\Features\F\ScheduleDay\GraphQL\Type\ScheduleDayType',
+        'HourRange' => 'App\Modules\Features\F\HourRange\GraphQL\Type\HourRangeType'
     ],
     
     // This callable will be passed the Error object for each errors GraphQL catch.

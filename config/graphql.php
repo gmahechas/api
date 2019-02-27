@@ -175,7 +175,8 @@ return [
                 'storeUser' => 'App\Modules\Features\C\User\GraphQL\Mutation\StoreUser', /** User **/
                 'updateUser' => 'App\Modules\Features\C\User\GraphQL\Mutation\UpdateUser',
                 'destroyUser' => 'App\Modules\Features\C\User\GraphQL\Mutation\DestroyUser',
-                'updateUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Mutation\UpdateUserOffice', /** UserOffice **/
+                'storeUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Mutation\StoreUserOffice', /** UserOffice **/
+                'updateUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Mutation\UpdateUserOffice',
                 'destroyUserOffice' => 'App\Modules\Features\C\UserOffice\GraphQL\Mutation\DestroyUserOffice',
                 'storeEmployee' => 'App\Modules\Features\C\Employee\GraphQL\Mutation\StoreEmployee', /** Employee **/
                 'updateEmployee' => 'App\Modules\Features\C\Employee\GraphQL\Mutation\UpdateEmployee',

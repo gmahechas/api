@@ -188,7 +188,8 @@ return [
                 'storeProject' => 'App\Modules\Features\D\Project\GraphQL\Mutation\StoreProject', /** Project **/
                 'updateProject' => 'App\Modules\Features\D\Project\GraphQL\Mutation\UpdateProject',
                 'destroyProject' => 'App\Modules\Features\D\Project\GraphQL\Mutation\DestroyProject',
-                'updateUserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Mutation\UpdateUserOfficeProject', /** UserOfficeProject **/
+                'storeUserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Mutation\StoreUserOfficeProject', /** UserOfficeProject **/
+                'updateUserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Mutation\UpdateUserOfficeProject',
                 'destroyUserOfficeProject' => 'App\Modules\Features\D\UserOfficeProject\GraphQL\Mutation\DestroyUserOfficeProject',
                 /** E **/
                 'storeWorkflow' => 'App\Modules\Features\E\Workflow\GraphQL\Mutation\StoreWorkflow', /** Workflow **/

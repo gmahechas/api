@@ -13,6 +13,20 @@ class OfficeSeeder extends Seeder
     {
         \App\Modules\Features\B\Office\Models\Office::truncate();
         \App\Modules\Features\B\Office\Models\Office::flushEventListeners();
-        factory(\App\Modules\Features\B\Office\Models\Office::class, 23)->create();
+        \App\Modules\Features\B\Office\Models\Office::create([
+        	'office_name' => 'Sucursal 1',
+        	'company_id' => 1,
+        	'city_id' => 1
+        ]);
+        \App\Modules\Features\B\Office\Models\Office::create([
+        	'office_name' => 'Sucursal 2',
+        	'company_id' => 1,
+        	'city_id' => 2
+        ]);
+        \App\Modules\Features\B\Office\Models\Office::create([
+        	'office_name' => 'Sucursal 3',
+        	'company_id' => 1,
+        	'city_id' => 3
+        ]);
     }
 }

@@ -32,6 +32,9 @@ class PaginationProject extends Query
             'macroproject_id' => [
                 'type' => Type::id()
             ],
+            'office_id' => [
+                'type' => Type::id()
+            ],
             'limit' => [
                 'type' => Type::int()
             ],
@@ -49,6 +52,7 @@ class PaginationProject extends Query
         $project_id = isset($args['project_id']) ? $args['project_id'] : false;
         $project_name = isset($args['project_name']) ? $args['project_name'] : false;
         $macroproject_id = isset($args['macroproject_id']) ? $args['macroproject_id'] : false;
+        $office_id = isset($args['office_id']) ? $args['office_id'] : false;
         
         $limit = isset($args['limit']) ? $args['limit'] : config('app.page_limit');
         $page = isset($args['page']) ? $args['page'] : 1;
@@ -62,6 +66,11 @@ class PaginationProject extends Query
                         })
                         ->when($macroproject_id, function ($query) use ($macroproject_id) {
                             return $query->where('macroproject_id', '=', $macroproject_id);
+                        })
+                        ->when($office_id, function ($query) use ($office_id) {
+                            return $query->whereHas('macroproject', function ($query) use ($office_id) {
+                                $query->where('office_id', '=', $office_id);
+                            });
                         })
                         ->with($with)
                         ->paginate($limit, ['*'], 'pages', $page);

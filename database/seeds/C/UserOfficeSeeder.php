@@ -20,18 +20,13 @@ class UserOfficeSeeder extends Seeder
         ]);
         \App\Modules\Features\C\UserOffice\Models\UserOffice::create([
         	'user_office_status' => true,
-        	'user_id' => 1,
+        	'user_id' => 2,
         	'office_id' => 2
         ]);
         \App\Modules\Features\C\UserOffice\Models\UserOffice::create([
         	'user_office_status' => true,
-        	'user_id' => 2,
-        	'office_id' => 1
-        ]);
-        \App\Modules\Features\C\UserOffice\Models\UserOffice::create([
-        	'user_office_status' => true,
-        	'user_id' => 2,
-        	'office_id' => 2
+        	'user_id' => 3,
+        	'office_id' => 3
         ]);
     }
 }

@@ -20,18 +20,13 @@ class UserOfficeProjectSeeder extends Seeder
         ]);
         \App\Modules\Features\D\UserOfficeProject\Models\UserOfficeProject::create([
         	'user_office_project_status' => true,
-        	'user_office_id' => 1,
-        	'project_id' => 2
-        ]);
-        \App\Modules\Features\D\UserOfficeProject\Models\UserOfficeProject::create([
-        	'user_office_project_status' => true,
-        	'user_office_id' => 3,
+        	'user_office_id' => 2,
         	'project_id' => 3
         ]);
         \App\Modules\Features\D\UserOfficeProject\Models\UserOfficeProject::create([
         	'user_office_project_status' => true,
-        	'user_office_id' => 4,
-        	'project_id' => 4
+        	'user_office_id' => 3,
+        	'project_id' => 5
         ]);
     }
 }

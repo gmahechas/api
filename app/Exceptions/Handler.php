@@ -65,7 +65,7 @@ class Handler extends ExceptionHandler
             return $this->errorResponse("Model {$model} not found.", 404);
         }
         if ($exception instanceof AuthenticationException) {
-            return $this->errorResponse('No authenticated.', 401);
+            return $this->errorResponse('no_authenticated', 401);
         }
         if ($exception instanceof AuthorizationException) {
             return $this->errorResponse('No authorization.', 403);

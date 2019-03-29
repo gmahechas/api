@@ -211,7 +211,7 @@ return [
                 'destroyScheduleDayHourRange' => 'App\Modules\Features\F\ScheduleDayHourRange\GraphQL\Mutation\DestroyScheduleDayHourRange',
             ],
             'middleware' => [],
-            'method' => ['post'],
+            'method' => ['get', 'post'],
         ],
     ],
 
@@ -261,7 +261,7 @@ return [
         'HourRange' => 'App\Modules\Features\F\HourRange\GraphQL\Type\HourRangeType',
         'ScheduleDayHourRange' => 'App\Modules\Features\F\ScheduleDayHourRange\GraphQL\Type\ScheduleDayHourRangeType',
     ],
-    
+
     // This callable will be passed the Error object for each errors GraphQL catch.
     // The method should return an array representing the error.
     // Typically:
@@ -270,6 +270,15 @@ return [
     //     'locations' => []
     // ]
     'error_formatter' => ['\Rebing\GraphQL\GraphQL', 'formatError'],
+
+    /**
+     * Custom Error Handling
+     *
+     * Expected handler signature is: function (array $errors, callable $formatter): array
+     *
+     * The default handler will pass exceptions to laravel Error Handling mechanism
+     */
+    'errors_handler' => ['\Rebing\GraphQL\GraphQL', 'handleErrors'],
 
     // You can set the key, which will be used to retrieve the dynamic variables
     'params_key'    => 'variables',
@@ -285,13 +294,11 @@ return [
         'disable_introspection' => false
     ],
 
-    // You can define custom paginators to override the out-of-the-box fields
-    // Useful if you want to inject some parameters of your own that apply at the top
-    // level of the collection rather than to each instance returned. Can also use this
-    // to add in more of the Laravel pagination data (e.g. last_page).
-    'custom_paginators' => [
-        // 'my_custom_pagination' => \Path\To\Your\CustomPagination::class,
-    ],
+    /*
+     * You can define your own pagination type.
+     * Reference \Rebing\GraphQL\Support\PaginationType::class
+     */
+    'pagination_type' => \Rebing\GraphQL\Support\PaginationType::class,
 
     /*
      * Config for GraphiQL (see (https://github.com/graphql/graphiql).
